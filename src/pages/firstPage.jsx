@@ -59,14 +59,14 @@ const FirstPage = () => {
         <Stack spacing={2} direction="column" mt={isLargeScreen && 20 }>
           <Grid alignItems='center'>
           <Stack spacing={isLargeScreen ? 4 : 2} direction={isLargeScreen ? 'row' : 'column'}>
-            <BlueBtn width={isLargeScreen ? '300px' : '200px'} height={isLargeScreen ? '70px'  : '46px'} title='Wedding' />
-            <BlueBtn width={isLargeScreen ? '300px' : '200px'} height={isLargeScreen ? '70px'  : '46px'}  title='Conference' />
+            <BlueBtn width={isLargeScreen ? '300px' : '200px'} height={isLargeScreen ? '70px'  : '46px'} fontSz={isLargeScreen ? '28px' : '16px'} title='Wedding' />
+            <BlueBtn width={isLargeScreen ? '300px' : '200px'} height={isLargeScreen ? '70px'  : '46px'} fontSz={isLargeScreen ? '28px' : '16px'} title='Conference' />
           </Stack>
           </Grid>
           <Grid alignItems='center'>
           <Stack spacing={isLargeScreen ? 4 : 2} direction={isLargeScreen ? 'row' : 'column'}>
-              <BlueBtn width={isLargeScreen ? '300px' : '200px'} height={isLargeScreen ? '70px'  : '46px'} title='Birthday' />
-              <BlueBtn width={isLargeScreen ? '300px' : '200px'} height={isLargeScreen ? '70px'  : '46px'} title='Concert' />
+              <BlueBtn width={isLargeScreen ? '300px' : '200px'} height={isLargeScreen ? '70px'  : '46px'} fontSz={isLargeScreen ? '28px' : '16px'} title='Birthday' />
+              <BlueBtn width={isLargeScreen ? '300px' : '200px'} height={isLargeScreen ? '70px'  : '46px'} fontSz={isLargeScreen ? '28px' : '16px'} title='Concert' />
             </Stack>
             <Stack spacing={1} direction="column" alignItems="center" mt={5}>
             <Typography sx={{ color: blue, textAlign: 'center', fontWeight: '800', fontFamily: 'Montserrat', fontSize: isLargeScreen ? '22.29px' : '9px', lineHeight: '28.4px', letterSpacing: '1%' }}>Didn't find the answer?</Typography>

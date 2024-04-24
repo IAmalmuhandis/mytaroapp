@@ -8,7 +8,7 @@ const BlueBtn = (props) => {
         height: props.height, 
         borderRadius: '20px', 
         padding: '5.6px', 
-        fontSize: '16px',
+        fontSize: props.fontSz,
         textTransform: 'none',
         backgroundColor: blue,
         fontFamily: 'Montserrat',
