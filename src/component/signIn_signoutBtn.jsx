@@ -2,13 +2,13 @@ import React from 'react'
 import Button from '@mui/material/Button';
 import { red } from '../utils/colors';
 
-const SigninBtn = () => {
+const SigninBtn = (props) => {
   const btnStyle = {
-    height: '32px', 
-    width: '120px', 
+    width: props.width, 
+    height: props.height, 
     borderRadius: '32px', 
     padding: '5.6px', 
-    fontSize: '9px',
+    fontSize: props.fontSz,
     textTransform: 'none',
     backgroundColor: red,
     fontFamily: 'Montserrat',

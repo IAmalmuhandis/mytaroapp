@@ -4,8 +4,8 @@ import { blue } from '../utils/colors'
 
 const BlueBtn = (props) => {
     const btnStyle = {
-        height: '46px', 
-        width: '200px', 
+        width: props.width, 
+        height: props.height, 
         borderRadius: '20px', 
         padding: '5.6px', 
         fontSize: '16px',
