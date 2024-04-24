@@ -1,0 +1,1 @@
+export const red = '#E41D24'
