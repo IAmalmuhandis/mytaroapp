@@ -1,10 +1,17 @@
-import './App.css';
+import React from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import FirstPage from './pages/firstPage';
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      Mytaro app
-    </div>
+    <>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<FirstPage />} />
+      </Routes>
+    </BrowserRouter>
+  </>
   );
 }
 
