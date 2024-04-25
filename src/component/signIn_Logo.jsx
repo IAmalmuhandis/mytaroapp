@@ -5,8 +5,12 @@ import { Stack } from '@mui/material';
 import { ReactComponent as Logo } from '../assets/logo/Logo.svg';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useNavigate } from 'react-router-dom';
 
 const SigninBtn = (props) => {
+
+  const navigate = useNavigate();
+
   const btnStyle = {
     width: props.width, 
     height: props.height, 
@@ -20,8 +24,13 @@ const SigninBtn = (props) => {
     lineHeight: '10.97px',
     letterSpacing: '-3%'
   }
+
+  const onClick = () =>{
+    navigate('/signup')
+  }
+  
   return (
-    <Button color='primary' disableElevation sx={btnStyle} variant="contained">Signin/Signup</Button>
+    <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Signin/Signup</Button>
   )
 }
 

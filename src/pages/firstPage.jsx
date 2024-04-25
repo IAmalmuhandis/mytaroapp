@@ -9,7 +9,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useNavigate } from 'react-router-dom';
-import Logo_Btn from '../component/signIn_signoutBtn';
+import Logo_Btn from '../component/signIn_Logo';
 
 const FirstPage = () => {
   const theme = useTheme();
