@@ -1,6 +1,10 @@
 import React from 'react'
 import Button from '@mui/material/Button';
 import { red } from '../utils/colors';
+import { Stack } from '@mui/material';
+import { ReactComponent as Logo } from '../assets/logo/Logo.svg';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const SigninBtn = (props) => {
   const btnStyle = {
@@ -21,4 +25,18 @@ const SigninBtn = (props) => {
   )
 }
 
-export default SigninBtn
+const Logo_Btn = () =>{
+  const theme = useTheme();
+  const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
+  const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
+  const isDesktopScreen = useMediaQuery(theme.breakpoints.up('lg'));
+  const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
+  return(
+    <Stack spacing={2} direction="row" mx={1} mt={{ xs: 3, sm: 5, md: 7 }} justifyContent='space-between'>
+      <Logo width={isLargeScreen ? 187 : 57} height={isLargeScreen ? 109 : 57}/>
+      <SigninBtn width={isLargeScreen ? '200px' : '120px'} height={isLargeScreen ? '50px' : '32px'} fontSz={isLargeScreen ? '18px' : '9px'}/> 
+    </Stack>
+  )
+}
+
+export default Logo_Btn
