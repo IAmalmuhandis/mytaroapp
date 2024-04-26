@@ -8,7 +8,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LockIcon from '@mui/icons-material/Lock';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { blue, red } from '../utils/colors';
+import { blue, grey, red } from '../utils/colors';
 import Signin_SignupBtn from '../component/sigin_signupBtn';
 import { Link } from 'react-router-dom';
 
@@ -20,17 +20,52 @@ const SignUp = () => {
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
 
   const typeSomtingStyle = {
-    backgroundColor: '#E7E7E7',
+    backgroundColor: grey,
     borderRadius: isLargeScreen ? '50px' : '25px',
     fontWeight: '8.77px',
+    '&:hover': {
+      backgroundColor: 'rgba(255,255,255,0.8)', 
+      borderColor: blue, 
+    },
     '& .MuiOutlinedInput-root': {
-      height: isLargeScreen ? '70px' : '43px', 
+      height: isLargeScreen ? '70px' : '43px',
       width: isLargeScreen ? '450px' : '244px',
       fontSize: isLargeScreen ? '18px' : '12px',
       '& fieldset': {
-        border: 'none', 
+        border: 0,
+        borderRadius: isLargeScreen ? '50px' : '25px',
+      },
+      '&:hover fieldset': {
+        border: 1,
+        borderColor: blue, 
+      },
+      '&.Mui-focused fieldset': {
+        border: 1,
+        borderColor: blue, // Change border color when focused
       },
     },
+    '& .MuiSvgIcon-root': {
+      color: 'grey', // Set initial icon color to grey
+      fontSize: isLargeScreen ? '35px' : '20px', // Adjust icon size
+      transition: 'color 0.3s', // Add transition for color change
+    },
+    '&:hover .MuiSvgIcon-root': {
+      color: blue, // Change icon color on hover
+    },
+    '& .MuiTypography-root': {
+      color: blue, // Change text color
+      fontSize: isLargeScreen ? '16.3px' : '11px', // Adjust text size
+      lineHeight: isLargeScreen ? '19.9px' : '13.45px', // Adjust line height
+      fontWeight: '400',
+      letterSpacing: '1%',
+      textAlign: 'center',
+    },
+  };
+  
+  
+
+  const inputAdornmentStyle = {
+    fontSize: isLargeScreen ? '35px' : '20px',
   }
 
   return (
@@ -50,7 +85,7 @@ const SignUp = () => {
                 Create New Account
             </Typography>
         </Stack>
-        <Stack mt={5} sx={{justifyContent: 'space-around', alignItems: 'center'}} spacing={isDesktopScreen ? 10 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
+        <Stack mt={5} sx={{justifyContent: 'space-around', alignItems: 'center'}} spacing={isDesktopScreen ? 20 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
             <Illustration width={isLargeScreen ? 509 : 168.82} height={isLargeScreen ? 509 : 168.82} />
             <Stack spacing={3}>
                 <Stack spacing={3}>
@@ -59,8 +94,8 @@ const SignUp = () => {
                         placeholder="Full Name"
                         InputProps={{
                         startAdornment: (
-                            <InputAdornment position="start">
-                            <AccountCircleIcon   sx={{fontSize: isLargeScreen ? '35px' : '20px'}}/>
+                            <InputAdornment position="start" >
+                            <AccountCircleIcon   sx={inputAdornmentStyle}/>
                             </InputAdornment>
                         ),
                         }}
@@ -72,7 +107,7 @@ const SignUp = () => {
                         InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">
-                            <EmailIcon   sx={{fontSize: isLargeScreen ? '35px' : '20px'}}/>
+                            <EmailIcon   sx={inputAdornmentStyle}/>
                             </InputAdornment>
                         ),
                         }}
@@ -84,7 +119,7 @@ const SignUp = () => {
                         InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">
-                            <PhoneIcon   sx={{fontSize: isLargeScreen ? '35px' : '20px'}}/>
+                            <PhoneIcon  sx={inputAdornmentStyle}/>
                             </InputAdornment>
                         ),
                         }}
@@ -96,14 +131,14 @@ const SignUp = () => {
                         InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">
-                            <LockIcon   sx={{fontSize: isLargeScreen ? '35px' : '20px'}}/>
+                            <LockIcon   sx={inputAdornmentStyle}/>
                             </InputAdornment>
                         ),
                         }}
                     />
                 </Stack>
                 <Stack mb={5} sx={{justifyContent: 'center', alignItems: 'center'}} spacing={2}>
-                    <Signin_SignupBtn title='Sign in' />
+                    <Signin_SignupBtn title='Sign Up' />
                     <Typography sx={{ 
                         fontFamily: 'Montserrat', 
                         fontSize: isLargeScreen ? '16.3px' : '11px', 
@@ -114,7 +149,7 @@ const SignUp = () => {
                         textAlign: 'center' 
                         }}
                         >
-                        Already have an account? <Link style={{color: red}}>Sign in</Link>
+                        Already have an account? <Link to='/signin' style={{color: red}}>Sign in</Link>
                     </Typography>
                 </Stack>
             </Stack>
