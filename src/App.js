@@ -6,7 +6,7 @@ import Manual_Ai from './pages/manual_ai';
 import SignUp from './pages/signUp';
 import SignIn from './pages/signIn';
 import Ai_assistant from './pages/Ai_assistant';
-import StepperPage from './pages/stepper';
+import S from './Layout/stepper';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         <Route path='/signup' element={<SignUp />} />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/AiAssistant' element={<Ai_assistant />} />
+        <Route path='/stepper' element={<S />} />
       </Routes>
     </BrowserRouter>
   </>

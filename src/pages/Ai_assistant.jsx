@@ -7,19 +7,26 @@ import { ReactComponent as Illustration } from '../assets/svg/Robot face-pana (1
 import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import ContinueBtn from '../component/continueBtn';
+import { useNavigate } from 'react-router-dom';
 
 const Ai_assistant = () => {
+    const navigate = useNavigate()
     const theme = useTheme();
     const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
     const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
     const isDesktopScreen = useMediaQuery(theme.breakpoints.up('lg'));
     const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
     const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1024  
+
+    const onContinue = () =>{
+      navigate('/stepper')
+    }
+
   return (
     <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
         <Back_Avater />
         <Container maxWidth="none" sx={{minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-        <Stack mt={0} sx={{justifyContent: 'space-around', alignItems: 'center'}} spacing={isDesktopScreen ? 20 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
+        <Stack mt={0} sx={{justifyContent: 'space-around', alignItems: 'center'}} spacing={isDesktopScreen ? 10 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
             <Illustration width={isLargeScreen ? 700 : 281} height={isLargeScreen ? 700 : 270} />
             <Stack spacing={3}>
               <Typography sx={{ 
@@ -50,7 +57,7 @@ const Ai_assistant = () => {
                   >With few questions, we will be able to organize your event base on your given details
                 </Typography>
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
-                  <ContinueBtn color={blue}/>
+                  <ContinueBtn onClick={onContinue} color={blue}/>
                 </div>
               </Stack>
             </Stack>
