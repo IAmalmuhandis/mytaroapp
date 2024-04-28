@@ -6,6 +6,8 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Back_Avater from '../component/Back_Avater';
 import { green, purple, red} from '@mui/material/colors';
 import Question1 from '../pages/Question1';
+import Question2 from '../pages/Question2';
+import { useNavigate } from 'react-router-dom';
 
 const theme = createTheme({
     palette: {
@@ -14,6 +16,7 @@ const theme = createTheme({
   });
 
 const StepperPage = () => {
+  
     const [activeStep, setActiveStep] = useState(0); // Tracks the current step of the stepper
   
     const handleNext = () => {
@@ -29,7 +32,7 @@ const StepperPage = () => {
         case 0:
           return <Question1 onNext={handleNext}/>;
         case 1:
-          return '';
+          return <Question2 onNext={handleNext} />;
         // Add cases for other questions
         default:
           return 'Unknown step';
@@ -78,6 +81,7 @@ const StepperPage = () => {
   };
 
 const S = () => {
+    const navigate = useNavigate()
     const theme = useTheme();
     const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
     const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
@@ -87,7 +91,7 @@ const S = () => {
   return (
     <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
         <Stack mt={4} spacing={4}>
-            <Back_Avater />
+            <Back_Avater onClick={() => navigate('/AiAssistant')} />
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
                 <StepperPage />
             </div>

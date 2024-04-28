@@ -49,17 +49,13 @@ const SigninBtn = (props) => {
   )
 }
 
-const Back_Avater = () =>{
+const Back_Avater = ({onClick}) =>{
   const navigate = useNavigate();
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
   const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
   const isDesktopScreen = useMediaQuery(theme.breakpoints.up('lg'));
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
-
-  const onClick = () =>{
-    navigate('/choose')
-  }
 
   return(
     <Stack spacing={2} direction="row" mx={1} mt={{ xs: 3, sm: 5, md: 7 }} justifyContent='space-between'>
