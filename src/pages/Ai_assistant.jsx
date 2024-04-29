@@ -19,7 +19,7 @@ const Ai_assistant = () => {
     const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1024  
 
     const onContinue = () =>{
-      navigate('/stepper')
+      navigate('/AiAssistant/stepper')
     }
 
   return (

@@ -41,11 +41,11 @@ const SigninBtn = (props) => {
   }
 
   const onClick = () =>{
-    navigate('/signup')
+    navigate('/signin')
   }
   
   return (
-    <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Signin/Signup</Button>
+    <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Sign in</Button>
   )
 }
 

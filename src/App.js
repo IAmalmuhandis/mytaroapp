@@ -18,7 +18,7 @@ function App() {
         <Route path='/signup' element={<SignUp />} />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/AiAssistant' element={<Ai_assistant />} />
-        <Route path='/stepper' element={<S />} />
+        <Route path='/AiAssistant/stepper' element={<S />} />
       </Routes>
     </BrowserRouter>
   </>
