@@ -42,7 +42,7 @@ const Logo_Btn = () =>{
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
   return(
     <Stack spacing={2} direction="row" mx={1} mt={{ xs: 3, sm: 5, md: 7 }} justifyContent='space-between'>
-      <Logo width={isLargeScreen ? 187 : 57} height={isLargeScreen ? 109 : 57}/>
+      <Logo width={isLargeScreen ? 187 : 65} height={isLargeScreen ? 109 : 65}/>
       <SigninBtn width={isLargeScreen ? '200px' : '120px'} height={isLargeScreen ? '50px' : '32px'} fontSz={isLargeScreen ? '18px' : '9px'}/> 
     </Stack>
   )

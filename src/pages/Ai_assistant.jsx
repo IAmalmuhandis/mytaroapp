@@ -18,7 +18,7 @@ const Ai_assistant = () => {
     const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
     const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1024  
 
-    const onContinue = () =>{
+    const onContinue = () => {
       navigate('/AiAssistant/stepper')
     }
 

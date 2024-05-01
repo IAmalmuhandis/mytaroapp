@@ -45,14 +45,13 @@ const Question1 = ({ onNext }) => {
           <Typography
             sx={{
               fontFamily: 'Montserrat',
-              fontSize: isLargeScreen ? '44px' : '18px',
-              lineHeight: isLargeScreen ? '85px' : '20px',
+              fontSize: isLargeScreen ? '44px' : '16px',
+              lineHeight: isLargeScreen ? '85px' : '25px',
               color: blue,
               fontWeight: '800',
-              textAlign: isLargeScreen ? 'center' : 'left',
+              textAlign: 'center',
             }}
             mt={3}
-            ml={-7}
           >
             Please Answer the Questions!
           </Typography>
@@ -64,24 +63,21 @@ const Question1 = ({ onNext }) => {
               color: blue,
               fontWeight: '700',
               letterSpacing: '1%',
-              textAlign: isLargeScreen ? 'center' : 'left',
+              textAlign: 'center',
             }}
             mt={2}
-            ml={-7}
           >
             Do you have a budget?
           </Typography>
           <div
-            style={
-              isLargeScreen
-                ? { marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: 'center' }
-                : { marginTop: '5px' }
-            }
+            style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
             <Arrow width={isLargeScreen || isSmallLaptop ? '193px' : '112px'} height={isLargeScreen || isSmallLaptop ? '37px' : '23px'} />
           </div>
-          <Stack sx={{ alignItems: 'center' }} spacing={isLaptopScreen || isDesktopScreen ? 30 : 5} direction={isLaptopScreen || isDesktopScreen ? 'row' : 'column'}>
-            <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 509 : 335} />
+          <Stack sx={{ alignItems: 'center', justifyContent: 'space-between' }} spacing={isLaptopScreen || isDesktopScreen ? 30 : 5} direction={isLaptopScreen || isDesktopScreen ? 'row' : 'column'}>
+            <Stack>
+              <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 509 : 335} />
+            </Stack>
             <Stack spacing={3}>
               <BlueBtn title="Yes" onClick={handleYesClick} />
               <BlueBtn title="No" onClick={handleNoClick} />

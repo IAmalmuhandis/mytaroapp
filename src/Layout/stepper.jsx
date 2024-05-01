@@ -4,7 +4,7 @@ import { TextField, Typography, Stack } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Back_Avater from '../component/Back_Avater';
-import { green, purple, red} from '@mui/material/colors';
+import { blue, blueGrey, green, purple, red} from '@mui/material/colors';
 import Question1 from '../pages/Question1';
 import Question2 from '../pages/Question2';
 import { useNavigate } from 'react-router-dom';
@@ -90,7 +90,7 @@ const S = () => {
     const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1024  
   return (
     <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
-        <Stack mt={4} spacing={4}>
+        <Stack mt={3} spacing={4}>
             <Back_Avater onClick={() => navigate('/AiAssistant')} />
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
                 <StepperPage />

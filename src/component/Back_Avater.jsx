@@ -37,7 +37,8 @@ const SigninBtn = (props) => {
     fontFamily: 'Montserrat',
     fontWeight: '500px',
     lineHeight: '10.97px',
-    letterSpacing: '-3%'
+    letterSpacing: '-3%',
+    marginRight: '-10px'
   }
 
   const onClick = () =>{
@@ -58,8 +59,8 @@ const Back_Avater = ({onClick}) =>{
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
 
   return(
-    <Stack spacing={2} direction="row" mx={1} mt={{ xs: 3, sm: 5, md: 7 }} justifyContent='space-between'>
-      <Button sx={{color: 'black'}} variant='text' onClick={onClick}><ArrowBackIosIcon sx={{fontSize: isLargeScreen ? '40px' : '30px'}} /></Button>
+    <Stack spacing={5} direction="row" mx={1} mt={{ xs: 3, sm: 5, md: 7 }} justifyContent='space-between'>
+      <Button sx={{color: 'black', marginLeft: '-10px'}} variant='text' onClick={onClick}><ArrowBackIosIcon sx={{fontSize: isLargeScreen ? '40px' : '30px'}} /></Button>
       <SigninBtn width={isLargeScreen ? '200px' : '120px'} height={isLargeScreen ? '50px' : '32px'} fontSz={isLargeScreen ? '18px' : '9px'}/> 
     </Stack>
   )
