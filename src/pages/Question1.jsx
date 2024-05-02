@@ -49,9 +49,10 @@ const Question1 = ({ onNext }) => {
               lineHeight: isLargeScreen ? '85px' : '25px',
               color: blue,
               fontWeight: '800',
-              textAlign: 'center',
+              textAlign: isLargeScreen ? 'center' : 'left',
             }}
             mt={3}
+            ml={isLargeScreen ? 0 : -3}
           >
             Please Answer the Questions!
           </Typography>
@@ -63,14 +64,15 @@ const Question1 = ({ onNext }) => {
               color: blue,
               fontWeight: '700',
               letterSpacing: '1%',
-              textAlign: 'center',
+              textAlign: isLargeScreen ? 'center' : 'left',
             }}
             mt={2}
+            ml={isLargeScreen ? 0 : -3}
           >
             Do you have a budget?
           </Typography>
           <div
-            style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'flex-start' }}
           >
             <Arrow width={isLargeScreen || isSmallLaptop ? '193px' : '112px'} height={isLargeScreen || isSmallLaptop ? '37px' : '23px'} />
           </div>

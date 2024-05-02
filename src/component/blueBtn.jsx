@@ -24,7 +24,7 @@ const BlueBtn = (props) => {
         lineHeight: '19.5px',
     }
     return (
-        <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={props.onClick}>{props.title}</Button>
+        <Button   color='primary' disableElevation sx={btnStyle} variant="contained" onClick={props.onClick}>{props.title}</Button>
     )
 }
 

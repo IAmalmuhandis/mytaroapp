@@ -11,6 +11,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { blue, grey, red } from '../utils/colors';
 import Signin_SignupBtn from '../component/sigin_signupBtn';
 import { Link } from 'react-router-dom';
+import SocialMedia from '../component/SocialMedia';
 
 const SignIn = () => {
     const theme = useTheme();
@@ -128,6 +129,10 @@ const SignIn = () => {
                         >
                         Don't have an account? <Link to='/signup' style={{color: red}}>Sign up</Link>
                     </Typography>
+                    <Typography variant='h4' sx={{color: grey}}>or</Typography>
+                    <div style={{marginTop: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <SocialMedia />
+                    </div>
                 </Stack>
             </Stack>
         </Stack>

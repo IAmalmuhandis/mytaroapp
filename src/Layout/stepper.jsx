@@ -8,6 +8,7 @@ import { blue, blueGrey, green, purple, red} from '@mui/material/colors';
 import Question1 from '../pages/Question1';
 import Question2 from '../pages/Question2';
 import { useNavigate } from 'react-router-dom';
+import Question3 from '../pages/Question3';
 
 const theme = createTheme({
     palette: {
@@ -33,7 +34,8 @@ const StepperPage = () => {
           return <Question1 onNext={handleNext}/>;
         case 1:
           return <Question2 onNext={handleNext} />;
-        // Add cases for other questions
+        case 2:
+          return <Question3 onNext={handleNext} />
         default:
           return 'Unknown step';
       }

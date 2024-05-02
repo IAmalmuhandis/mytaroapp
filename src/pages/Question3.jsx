@@ -4,7 +4,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { Button, Container, Stack, TextField, Typography } from '@mui/material';
 import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
-import { ReactComponent as Illustration } from '../assets/svg/Honeymoon-pana 1.svg';
+import { ReactComponent as Illustration } from '../assets/svg/Address-cuate 1.svg';
 import ContinueBtn from '../component/continueBtn';
 
 const Btn = (props) => {
@@ -15,8 +15,8 @@ const Btn = (props) => {
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
   const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1090
   const btnStyle = {
-      width: isLargeScreen ? '149px' : '77px', 
-      height: isLargeScreen ? '63px'  : '33px', 
+      width: isLargeScreen ? '230px' : '140px', 
+      height: isLargeScreen ? '70px'  : '45px', 
       borderRadius: isLargeScreen ? '27px' : '14px', 
       padding: '5.6px', 
       fontSize: isLargeScreen ? '28px' : '16px',
@@ -31,7 +31,7 @@ const Btn = (props) => {
   )
 }
 
-const Question2 = ({onNext}) => {
+const Question3 = ({onNext}) => {
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.up('sm'));
   const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
@@ -86,49 +86,38 @@ const Question2 = ({onNext}) => {
             mt={2}
             ml={isLargeScreen ? 0 : -3}
           >
-            How many guest are you expecting to attend?
+            What is the prefered location?
           </Typography>
           <div
             style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'flex-start' }}
           >
             <Arrow width={isLargeScreen || isSmallLaptop ? '193px' : '112px'} height={isLargeScreen || isSmallLaptop ? '37px' : '23px'} />
           </div>
-          <Stack mt={3} sx={{ alignItems: 'center', justifyContent: 'center' }} spacing={isDesktopScreen ? 30 : 5} direction={isDesktopScreen ? 'row' : 'column'}>
+          <Stack mt={3} sx={{ alignItems: 'center', justifyContent: 'center' }} spacing={isDesktopScreen ? 30 : 2} direction={isDesktopScreen ? 'row' : 'column'}>
              <Stack>
              <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 509 : 335} />
              </Stack>
              <Stack spacing={3}>
-                <Stack spacing={2} direction='row'>
-                  <Btn title='100' onClick={handleNext} />
-                  <Btn title='200' onClick={handleNext} />
-                  <Btn title='300' onClick={handleNext} />
+                <Stack spacing={isLargeScreen ? 4 : 2} direction='row'>
+                    <Btn title='Kano' onClick={handleNext} />
+                    <Btn title='Kaduna' onClick={handleNext} />    
                 </Stack>
-                <Stack spacing={2} direction='row'>
-                  <Btn title='400' onClick={handleNext} />
-                  <Btn title='500' onClick={handleNext} />
-                  <Btn title='600' onClick={handleNext} />
+                <Stack spacing={isLargeScreen ? 4 : 2} direction='row'>
+                    <Btn title='Abuja' onClick={handleNext} />
+                    <Btn title='Katsina' onClick={handleNext} />    
                 </Stack>
-                <Stack spacing={2} direction='row'>
-                  <Btn title='700' onClick={handleNext} />
-                  <Btn title='800' onClick={handleNext} />
-                  <Btn title='900' onClick={handleNext} />
+                <Stack spacing={isLargeScreen ? 4 : 2} direction='row'>
+                    <Btn title='Jigawa' onClick={handleNext} />
+                    <Btn title='Bauchi' onClick={handleNext} />    
                 </Stack>
-                <Stack spacing={0} direction="column" alignItems="center" mt={5}>
-                <Typography sx={{ color: blue, textAlign: 'center', fontWeight: '800', fontFamily: 'Montserrat', fontSize: isLargeScreen ? '22.29px' : '9px', lineHeight: '28.4px', letterSpacing: '1%' }}>Didn't find the answer?</Typography>
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <TextField
-                sx={typeSomtingStyle}
-                placeholder="Type something.........."
-              />
-              </div>
-               </Stack>
-             </Stack> 
+                <Stack spacing={isLargeScreen ? 4 : 2} direction='row'>
+                    <Btn title='Kebbi' onClick={handleNext} />
+                    <Btn title='Borno' onClick={handleNext} />    
+                </Stack>
+             </Stack>  
           </Stack>
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px', marginBottom: '5px' }}>
-              <ContinueBtn onClick={handleNext} />
-          </div>
     </Container>
   )
 }
 
-export default Question2
+export default Question3
