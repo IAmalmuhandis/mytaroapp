@@ -62,7 +62,7 @@ const Question5 = ({onNext}) => {
              </Stack>
              <Stack sx={{justifyContent:'center', alignItems: 'center'}} spacing={2}>
                 <DateTimePicker />
-                <ContinueBtn />
+                <ContinueBtn onClick={onNext} />
              </Stack>  
           </Stack>
     </Container>

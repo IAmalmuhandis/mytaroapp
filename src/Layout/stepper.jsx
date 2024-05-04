@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import Question3 from '../pages/Question3';
 import Question4 from '../pages/Question4';
 import Question5 from '../pages/Question5';
+import Question6 from '../pages/Question6';
 
 const theme = createTheme({
     palette: {
@@ -19,6 +20,8 @@ const theme = createTheme({
   });
 
 const StepperPage = () => {
+
+    const navigate = useNavigate()
   
     const [activeStep, setActiveStep] = useState(0); // Tracks the current step of the stepper
   
@@ -27,7 +30,7 @@ const StepperPage = () => {
     };
   
     const handleBack = () => {
-      setActiveStep((prevActiveStep) => prevActiveStep - 1); // Move to the previous step
+      activeStep === 0 ? navigate('/AiAssistant') : setActiveStep((prevActiveStep) => prevActiveStep - 1); // Move to the previous step
     };
   
     const getStepContent = (step) => {
@@ -42,12 +45,17 @@ const StepperPage = () => {
           return <Question4 onNext={handleNext} />
         case 4:
           return <Question5 onNext={handleNext} />
+        case 5: 
+          return <Question6 onNext={handleNext} />
         default:
           return 'Unknown step';
       }
     };
   
     return (
+      <>
+      <Back_Avater onClick={handleBack} />
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
       <Container>
         <ThemeProvider theme={theme}>
         <Stepper activeStep={activeStep} alternativeLabel>
@@ -85,11 +93,12 @@ const StepperPage = () => {
           </div> */}
         </Container>
       </Container>
+      </div>
+      </>
     );
   };
 
 const S = () => {
-    const navigate = useNavigate()
     const theme = useTheme();
     const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
     const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
@@ -99,10 +108,7 @@ const S = () => {
   return (
     <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
         <Stack mt={3} spacing={4}>
-            <Back_Avater onClick={() => navigate('/AiAssistant')} />
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
-                <StepperPage />
-            </div>
+             <StepperPage />
         </Stack>    
     </Container>
   )
