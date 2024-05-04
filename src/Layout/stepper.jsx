@@ -10,6 +10,7 @@ import Question2 from '../pages/Question2';
 import { useNavigate } from 'react-router-dom';
 import Question3 from '../pages/Question3';
 import Question4 from '../pages/Question4';
+import Question5 from '../pages/Question5';
 
 const theme = createTheme({
     palette: {
@@ -39,6 +40,8 @@ const StepperPage = () => {
           return <Question3 onNext={handleNext} />
         case 3:
           return <Question4 onNext={handleNext} />
+        case 4:
+          return <Question5 onNext={handleNext} />
         default:
           return 'Unknown step';
       }
