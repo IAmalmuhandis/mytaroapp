@@ -45,36 +45,34 @@ const Question6 = ({ onNext }) => {
           <Typography
             sx={{
               fontFamily: 'Montserrat',
-              fontSize: isLargeScreen ? '44px' : '16px',
-              lineHeight: isLargeScreen ? '85px' : '25px',
+              fontSize: isLargeScreen ? '30px' : '14px',
+              lineHeight: isLargeScreen ? '70px' : '20px',
               color: blue,
               fontWeight: '800',
-              textAlign: isLargeScreen ? 'center' : 'left',
+              textAlign: 'center',
             }}
             mt={3}
-            ml={isLargeScreen ? 0 : -3}
           >
             Please Answer the Questions!
           </Typography>
           <Typography
             sx={{
               fontFamily: 'Montserrat',
-              fontSize: isLargeScreen ? '32px' : '15px',
-              lineHeight: isLargeScreen ? '40px' : '20px',
+              fontSize: isLargeScreen ? '22px' : '15px',
+              lineHeight: isLargeScreen ? '40px' : '25px',
               color: blue,
               fontWeight: '700',
               letterSpacing: '1%',
-              textAlign: isLargeScreen ? 'center' : 'left',
+              textAlign: 'center',
             }}
             mt={2}
-            ml={isLargeScreen ? 0 : -3}
           >
-            Are there any additional details, preference or requirement that you would like to share for the event?
+             Are there any additional details, preference or requirement that you would like to share for the event?
           </Typography>
           <div
-            style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'flex-start' }}
+            style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'center' }}
           >
-            <Arrow width={isLargeScreen || isSmallLaptop ? '193px' : '112px'} height={isLargeScreen || isSmallLaptop ? '37px' : '23px'} />
+            <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
           <Stack mt={isLargeScreen && -5} sx={{ alignItems: 'center', justifyContent: 'space-between' }} spacing={isLaptopScreen || isDesktopScreen ? 30 : 5} direction={isLaptopScreen || isDesktopScreen ? 'row' : 'column'}>
             <Stack>

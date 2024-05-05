@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import { blue } from '../utils/colors'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import styles from '../assets/css/bluebtn.module.css'
 
 const BlueBtn = (props) => {
     const theme = useTheme();
@@ -22,9 +23,10 @@ const BlueBtn = (props) => {
         fontFamily: 'Montserrat',
         fontWeight: '500',
         lineHeight: '19.5px',
+        color: '#fff'
     }
     return (
-        <Button   color='primary' disableElevation sx={btnStyle} variant="contained" onClick={props.onClick}>{props.title}</Button>
+        <button className={styles.button} style={btnStyle} onClick={props.onClick}>{props.title}</button>
     )
 }
 
