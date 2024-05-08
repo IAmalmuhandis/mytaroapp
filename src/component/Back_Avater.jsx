@@ -9,6 +9,15 @@ import { useNavigate } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { deepOrange } from '@mui/material/colors';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const customTheme = createTheme({
+    palette: {
+      primary: {
+        main: red, 
+      },
+    },
+});
 
 const Avt = () =>{
     return(
@@ -46,12 +55,13 @@ const SigninBtn = (props) => {
   }
   
   return (
-    <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Sign in</Button>
+    <ThemeProvider theme={customTheme}>
+        <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Sign in</Button>
+    </ThemeProvider>
   )
 }
 
 const Back_Avater = ({onClick}) =>{
-  const navigate = useNavigate();
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
   const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));

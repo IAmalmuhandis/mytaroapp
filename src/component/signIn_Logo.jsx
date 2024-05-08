@@ -5,7 +5,16 @@ import { Stack } from '@mui/material';
 import { ReactComponent as Logo } from '../assets/logo/Logo.svg';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const customTheme = createTheme({
+    palette: {
+      primary: {
+        main: red, 
+      },
+    },
+});
 
 const SigninBtn = (props) => {
 
@@ -18,7 +27,6 @@ const SigninBtn = (props) => {
     padding: '5.6px', 
     fontSize: props.fontSz,
     textTransform: 'none',
-    backgroundColor: red,
     fontFamily: 'Montserrat',
     fontWeight: '500px',
     lineHeight: '10.97px',
@@ -30,7 +38,9 @@ const SigninBtn = (props) => {
   }
   
   return (
-    <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Sign in</Button>
+    <ThemeProvider theme={customTheme}>
+        <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Sign in</Button>
+    </ThemeProvider>
   )
 }
 
@@ -42,8 +52,8 @@ const Logo_Btn = () =>{
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
   return(
     <Stack spacing={2} direction="row" mx={1} mt={{ xs: 3, sm: 5, md: 7 }} justifyContent='space-between'>
-      <Logo width={isLargeScreen ? 187 : 65} height={isLargeScreen ? 109 : 65}/>
-      <SigninBtn width={isLargeScreen ? '200px' : '120px'} height={isLargeScreen ? '50px' : '32px'} fontSz={isLargeScreen ? '18px' : '9px'}/> 
+      <Link to='/'><Logo width={isLargeScreen ? 187 : 65} height={isLargeScreen ? 109 : 65}/></Link>
+      <SigninBtn width={isLargeScreen ? '200px' : '120px'} height={isLargeScreen ? '50px' : '32px'} fontSz={isLargeScreen ? '18px' : '9px'}/>
     </Stack>
   )
 }

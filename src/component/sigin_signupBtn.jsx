@@ -2,7 +2,16 @@ import React from 'react'
 import Button from '@mui/material/Button';
 import { red } from '../utils/colors'
 import { useTheme } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+
+// const customTheme = createTheme({
+//     palette: {
+//       primary: {
+//         main: blue, 
+//       },
+//     },
+//   });
 
 const Signin_SignupBtn = (props) => {
     const theme = useTheme();
