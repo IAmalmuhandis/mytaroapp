@@ -7,6 +7,7 @@ import SignUp from './pages/signUp';
 import SignIn from './pages/signIn';
 import Ai_assistant from './pages/Ai_assistant';
 import S from './Layout/stepper';
+import Confirm from './pages/Confirm';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/signin' element={<SignIn />} />
         <Route path='/AiAssistant' element={<Ai_assistant />} />
         <Route path='/AiAssistant/stepper' element={<S />} />
+        <Route path='/AiAssistant/Confirm' element={<Confirm />} />
       </Routes>
     </BrowserRouter>
   </>

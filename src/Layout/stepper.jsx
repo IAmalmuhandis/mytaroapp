@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Stepper, Step, StepLabel, Container, Button, ThemeProvider, createTheme } from '@mui/material';
-import { TextField, Typography, Stack } from '@mui/material';
+import { Stepper, Step, StepLabel, Container, ThemeProvider, createTheme } from '@mui/material';
+import {Stack } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Back_Avater from '../component/Back_Avater';
-import { blue, blueGrey, green, purple, red} from '@mui/material/colors';
+import {red} from '@mui/material/colors';
 import Question1 from '../pages/Question1';
 import Question2 from '../pages/Question2';
 import { useNavigate } from 'react-router-dom';
@@ -26,7 +26,7 @@ const StepperPage = () => {
     const [activeStep, setActiveStep] = useState(0); // Tracks the current step of the stepper
   
     const handleNext = () => {
-      setActiveStep((prevActiveStep) => prevActiveStep + 1); // Move to the next step
+      activeStep === 5 ? navigate('/AiAssistant/Confirm') :  setActiveStep((prevActiveStep) => prevActiveStep + 1) // Move to the next step
     };
   
     const handleBack = () => {
@@ -82,15 +82,6 @@ const StepperPage = () => {
         </ThemeProvider>
         <Container maxWidth="none" sx={{minHeight: '60vh', display: 'flex', flexDirection: 'column' }}>
           {getStepContent(activeStep)}
-          {/* Show appropriate question component based on activeStep */}
-          {/* <div>
-            {activeStep !== 0 && (
-              <Button onClick={handleBack}>Back</Button>
-            )}
-            {activeStep !== 2 && (
-              <Button onClick={handleNext}>Next</Button>
-            )}
-          </div> */}
         </Container>
       </Container>
       </div>
