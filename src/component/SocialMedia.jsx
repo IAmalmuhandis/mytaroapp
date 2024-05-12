@@ -46,7 +46,6 @@ const SocialMedia = () => {
     </svg>
   </li>
 </ul>
-
   )
 }
 

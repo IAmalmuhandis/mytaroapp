@@ -5,7 +5,14 @@ import Back_Avater from '../component/Back_Avater';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
+import { ReactComponent as Wedding } from '../assets/svg/building-3.svg';
+import { ReactComponent as Budget } from '../assets/svg/money-recive.svg';
+import { ReactComponent as Location } from '../assets/svg/location.svg';
+import { ReactComponent as Calender } from '../assets/svg/calendar.svg';
+import { ReactComponent as Capacity } from '../assets/svg/people.svg';
+import { ReactComponent as Color } from '../assets/svg/colorfilter.svg';
 import { blue } from '../utils/colors';
+import ContinueBtn from '../component/continueBtn';
 
 
 const Confirm = () => {
@@ -20,14 +27,16 @@ const Confirm = () => {
         navigate('/AiAssistant/stepper')
     }
     const paperStyle = {
-        width: isLargeScreen ? '200px' : '150px',
-        height: isLargeScreen ? '180px' : '150px'
+        width: isLargeScreen ? '230px' : '130px',
+        height: isLargeScreen ? '180px' : '130px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     }
   return (
     <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
         <Back_Avater onClick={handleBack} />
-        <Container maxWidth="none" sx={{minHeight: '60vh', display: 'flex', flexDirection: 'column' }}>
-            <div>
+        <div style={{marginTop: isLargeScreen && '-20px'}}>
             <Typography
             sx={{
               fontFamily: 'Montserrat',
@@ -39,7 +48,21 @@ const Confirm = () => {
             }}
             mt={3}
           >
-            Please Confirm Your Details!
+            Please Confirm Your Details And Continue
+          </Typography>
+          <Typography
+            sx={{
+              fontFamily: 'Montserrat',
+              fontSize: isLargeScreen ? '22px' : '15px',
+              lineHeight: isLargeScreen ? '40px' : '25px',
+              color: blue,
+              fontWeight: '700',
+              letterSpacing: '1%',
+              textAlign: 'center',
+            }}
+            mt={isLargeScreen ? 0 : 2}
+          >
+            Click to change your details
           </Typography>
           <div
             style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'center' }}
@@ -47,20 +70,168 @@ const Confirm = () => {
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
             </div>
-            <Stack mt={2} direction={isLargeScreen ? 'row' : 'column'} spacing={3} sx={{justifyContent: 'center', alignItems: 'center'}}>  
-                <Stack direction={isLargeScreen ? 'column' : 'row'} spacing={3}>
-                    <Paper sx={paperStyle} elevation={4}><Typography variant='body2'>paper 1</Typography></Paper>
-                    <Paper sx={paperStyle} elevation={4}><Typography variant='body2'>paper 1</Typography></Paper>
+        <Container sx={{display: 'flex', flexDirection: 'column', maxHeight: '100vh'}}>
+            <Stack mt={isLargeScreen ? 2 : 4} direction={isLargeScreen ? 'row' : 'column'} spacing={3} sx={{justifyContent: 'center', alignItems: 'center'}}>  
+                <Stack direction={isLargeScreen ? 'column' : 'row'} spacing={isLargeScreen ? 5 : 4}>
+                    <Paper sx={paperStyle} elevation={4}>
+                      <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
+                          <Typography
+                            sx={{
+                              fontFamily: 'Montserrat',
+                              fontSize: isLargeScreen ? '15px' : '8px',
+                              color: blue,
+                              fontWeight: '600',
+                              letterSpacing: '1%',
+                              textAlign: 'center',
+                            }}
+                          >Event Type</Typography>
+                          <Wedding width={isLargeScreen ? '77px' : '36px'} height={isLargeScreen ? '77px' : '36px'} />
+                          <Typography
+                            sx={{
+                              fontFamily: 'Montserrat',
+                              fontSize: isLargeScreen ? '22px' : '11px',
+                              color: blue,
+                              fontWeight: '700',
+                              letterSpacing: '1%',
+                              textAlign: 'center',
+                            }}
+                          >Wedding</Typography>
+                      </Stack>
+                    </Paper>
+                    <Paper sx={paperStyle} elevation={4}>
+                      <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
+                            <Typography
+                              sx={{
+                                fontFamily: 'Montserrat',
+                                fontSize: isLargeScreen ? '15px' : '8px',
+                                color: blue,
+                                fontWeight: '600',
+                                letterSpacing: '1%',
+                                textAlign: 'center',
+                              }}
+                            >Budget</Typography>
+                            <Budget width={isLargeScreen ? '77px' : '36px'} height={isLargeScreen ? '77px' : '36px'} />
+                            <Typography
+                              sx={{
+                                fontFamily: 'Montserrat',
+                                fontSize: isLargeScreen ? '22px' : '11px',
+                                color: blue,
+                                fontWeight: '700',
+                                letterSpacing: '1%',
+                                textAlign: 'center',
+                              }}
+                            >6,000,000</Typography>
+                        </Stack>
+                    </Paper>
                 </Stack>
-                <Stack direction={isLargeScreen ? 'column' : 'row'} spacing={3}>
-                    <Paper sx={paperStyle} elevation={4}><Typography variant='body2'>paper 2</Typography></Paper>
-                    <Paper sx={paperStyle} elevation={4}><Typography variant='body2'>paper 2</Typography></Paper>
+                <Stack direction={isLargeScreen ? 'column' : 'row'} spacing={isLargeScreen ? 5 : 4}>
+                    <Paper sx={paperStyle} elevation={4}>
+                    <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
+                            <Typography
+                              sx={{
+                                fontFamily: 'Montserrat',
+                                fontSize: isLargeScreen ? '15px' : '8px',
+                                color: blue,
+                                fontWeight: '600',
+                                letterSpacing: '1%',
+                                textAlign: 'center',
+                              }}
+                            >Location</Typography>
+                            <Location width={isLargeScreen ? '77px' : '36px'} height={isLargeScreen ? '77px' : '36px'} />
+                            <Typography
+                              sx={{
+                                fontFamily: 'Montserrat',
+                                fontSize: isLargeScreen ? '22px' : '11px',
+                                color: blue,
+                                fontWeight: '700',
+                                letterSpacing: '1%',
+                                textAlign: 'center',
+                              }}
+                            >Kano</Typography>
+                        </Stack>
+                    </Paper>
+                    <Paper sx={paperStyle} elevation={4}>
+                    <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
+                            <Typography
+                              sx={{
+                                fontFamily: 'Montserrat',
+                                fontSize: isLargeScreen ? '15px' : '8px',
+                                color: blue,
+                                fontWeight: '600',
+                                letterSpacing: '1%',
+                                textAlign: 'center',
+                              }}
+                            >Guest</Typography>
+                            <Capacity width={isLargeScreen ? '77px' : '36px'} height={isLargeScreen ? '77px' : '36px'} />
+                            <Typography
+                              sx={{
+                                fontFamily: 'Montserrat',
+                                fontSize: isLargeScreen ? '22px' : '11px',
+                                color: blue,
+                                fontWeight: '700',
+                                letterSpacing: '1%',
+                                textAlign: 'center',
+                              }}
+                            >400</Typography>
+                        </Stack>
+                    </Paper>
                 </Stack>
-                <Stack direction={isLargeScreen ? 'column' : 'row'} spacing={3}>
-                    <Paper sx={paperStyle} elevation={4}><Typography variant='body2'>paper 3</Typography></Paper>
-                    <Paper sx={paperStyle} elevation={4}><Typography variant='body2'>paper 3</Typography></Paper>
+                <Stack direction={isLargeScreen ? 'column' : 'row'} spacing={isLargeScreen ? 5 : 4}>
+                    <Paper sx={paperStyle} elevation={4}>
+                    <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
+                            <Typography
+                              sx={{
+                                fontFamily: 'Montserrat',
+                                fontSize: isLargeScreen ? '15px' : '8px',
+                                color: blue,
+                                fontWeight: '600',
+                                letterSpacing: '1%',
+                                textAlign: 'center',
+                              }}
+                            >Date</Typography>
+                            <Calender width={isLargeScreen ? '77px' : '36px'} height={isLargeScreen ? '77px' : '36px'} />
+                            <Typography
+                              sx={{
+                                fontFamily: 'Montserrat',
+                                fontSize: isLargeScreen ? '20px' : '9px',
+                                color: blue,
+                                fontWeight: '700',
+                                letterSpacing: '1%',
+                                textAlign: 'center',
+                              }}
+                            >5th March 2024 {'\n'} 12:00pm</Typography>
+                        </Stack>
+                    </Paper>
+                    <Paper sx={paperStyle} elevation={4}>
+                    <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
+                            <Typography
+                              sx={{
+                                fontFamily: 'Montserrat',
+                                fontSize: isLargeScreen ? '15px' : '8px',
+                                color: blue,
+                                fontWeight: '600',
+                                letterSpacing: '1%',
+                                textAlign: 'center',
+                              }}
+                            >Color</Typography>
+                            <Color width={isLargeScreen ? '77px' : '36px'} height={isLargeScreen ? '77px' : '36px'} />
+                            <Typography
+                              sx={{
+                                fontFamily: 'Montserrat',
+                                fontSize: isLargeScreen ? '22px' : '11px',
+                                color: blue,
+                                fontWeight: '700',
+                                letterSpacing: '1%',
+                                textAlign: 'center',
+                              }}
+                            >Royal Blue</Typography>
+                        </Stack>
+                    </Paper>
                 </Stack>
             </Stack>
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '30px'}}>
+                <ContinueBtn />
+            </div>
         </Container>
     </Container>
   )

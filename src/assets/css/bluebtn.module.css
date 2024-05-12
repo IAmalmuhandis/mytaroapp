@@ -1,17 +1,31 @@
-.button{
+button{
     -webkit-animation: jello-horizontal 0.9s both;
-    animation: jello-horizontal 0.9s both;
-    outline: none;
+    animation: jello-horizontal 0.5s both;
     cursor: pointer;
 }
 
-.button:hover {
+button:hover {
     background: #016dd9;
     color: #ffffff;
-    animation: squeeze3124 0.9s both;
+    animation: squeeze3124 0.5s both; 
 }
+
+ @keyframes squeeze3124 {
+   0% {
+    transform: scaleX(1.05)
+   }
+   50% {
+    transform: scaleX(1.1)
+   }
+   75%{
+    transform: scaleX(0.9);
+   }
+   100% {
+    transform: scaleX(1)
+   }
+  } 
   
-  @keyframes squeeze3124 {
+  /* @keyframes squeeze3124 {
     0% {
       -webkit-transform: scale3d(1, 1, 1);
       transform: scale3d(1, 1, 1);
@@ -46,5 +60,5 @@
       -webkit-transform: scale3d(1, 1, 1);
       transform: scale3d(1, 1, 1);
     }
-  }
+  } */
   
