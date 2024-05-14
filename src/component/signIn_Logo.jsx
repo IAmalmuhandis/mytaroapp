@@ -7,6 +7,7 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Link, useNavigate } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import styles from '../assets/css/bluebtn.module.css'
 
 const customTheme = createTheme({
     palette: {
@@ -39,7 +40,7 @@ const SigninBtn = (props) => {
   
   return (
     <ThemeProvider theme={customTheme}>
-        <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Sign in</Button>
+        <Button className={styles.button} color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Sign in</Button>
     </ThemeProvider>
   )
 }

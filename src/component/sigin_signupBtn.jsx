@@ -4,14 +4,15 @@ import { red } from '../utils/colors'
 import { useTheme } from '@mui/material/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import styles from '../assets/css/bluebtn.module.css'
 
-// const customTheme = createTheme({
-//     palette: {
-//       primary: {
-//         main: blue, 
-//       },
-//     },
-//   });
+const customTheme = createTheme({
+    palette: {
+      primary: {
+        main: red, 
+      },
+    },
+  });
 
 const Signin_SignupBtn = (props) => {
     const theme = useTheme();
@@ -33,7 +34,9 @@ const Signin_SignupBtn = (props) => {
         lineHeight: '22px',
     }
     return (
-        <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={props.onClick}>{props.title}</Button>
+        <ThemeProvider theme={customTheme}>
+            <Button className={styles.button} color='primary' disableElevation sx={btnStyle} variant="contained" onClick={props.onClick}>{props.title}</Button>
+        </ThemeProvider>
     )
 }
 

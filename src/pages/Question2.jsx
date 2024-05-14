@@ -5,7 +5,16 @@ import { Button, Container, Stack, TextField, Typography } from '@mui/material';
 import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { ReactComponent as Illustration } from '../assets/svg/Honeymoon-pana 1.svg';
-import ContinueBtn from '../component/continueBtn';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import styles from '../assets/css/bluebtn.module.css'
+
+const customTheme = createTheme({
+    palette: {
+      primary: {
+        main: blue, 
+      },
+    },
+});
 
 const Btn = (props) => {
   const theme = useTheme();
@@ -27,7 +36,9 @@ const Btn = (props) => {
       lineHeight: '19.5px',
   }
   return (
-      <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={props.onClick}>{props.title}</Button>
+      <ThemeProvider theme={customTheme}>
+        <Button className={styles.button} color='primary' disableElevation sx={btnStyle} variant="contained" onClick={props.onClick}>{props.title}</Button>
+      </ThemeProvider>
   )
 }
 

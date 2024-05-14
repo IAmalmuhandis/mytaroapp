@@ -1,10 +1,10 @@
-button{
+.button{
     -webkit-animation: jello-horizontal 0.9s both;
     animation: jello-horizontal 0.5s both;
     cursor: pointer;
 }
 
-button:hover {
+.button:hover {
     background: #016dd9;
     color: #ffffff;
     animation: squeeze3124 0.5s both; 

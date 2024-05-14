@@ -4,8 +4,26 @@ import { blue, red } from '../utils/colors'
 import { useTheme } from '@mui/material/styles';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import styles from '../assets/css/bluebtn.module.css'
 
-const ContinueBtn = ({onClick, color=red}) => {
+const RedcustomTheme = createTheme({
+    palette: {
+      primary: {
+        main: red, 
+      },
+    },
+});
+
+const BluecustomTheme = createTheme({
+    palette: {
+      primary: {
+        main: blue, 
+      },
+    },
+});
+
+const ContinueBtn = ({onClick, color=red, disable}) => {
     const theme = useTheme();
     const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
     const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
@@ -23,9 +41,14 @@ const ContinueBtn = ({onClick, color=red}) => {
         fontFamily: 'Montserrat',
         fontWeight: '500',
         lineHeight: '19.5px',
+        '.&:hover' : {
+            backgroundColor: 'black'
+        }
     }
     return (
-        <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Continue <ChevronRightIcon sx={{fontSize: isLargeScreen ? '35px' : '20px'}} /></Button>
+        <ThemeProvider theme={color === red ? RedcustomTheme : BluecustomTheme }>
+            <Button disabled={disable} className={styles.button} color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Continue <ChevronRightIcon sx={{fontSize: isLargeScreen ? '35px' : '20px'}} /></Button>
+        </ThemeProvider>
     )
 }
 

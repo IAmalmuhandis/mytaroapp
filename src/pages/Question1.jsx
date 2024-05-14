@@ -19,6 +19,7 @@ const Question1 = ({ onNext }) => {
 
   const [answer, setAnswer] = useState('');
   const [inputValue, setInputValue] = useState('');
+  const [disable, setDisable] = useState(true)
 
   const handleNext = () => {
     onNext();
@@ -35,6 +36,7 @@ const Question1 = ({ onNext }) => {
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
+    !inputValue.trim() ? setDisable(true) : setDisable(false)
   };
 
   return (
@@ -167,7 +169,7 @@ const Question1 = ({ onNext }) => {
               </Stack>
               </Stack>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <ContinueBtn onClick={handleNext} />
+                  <ContinueBtn disable={disable} onClick={handleNext} />
                </div> 
             </Stack>
          </Container>

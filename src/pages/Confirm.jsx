@@ -193,7 +193,7 @@ const Confirm = () => {
                             <Typography
                               sx={{
                                 fontFamily: 'Montserrat',
-                                fontSize: isLargeScreen ? '20px' : '9px',
+                                fontSize: isLargeScreen ? '20px' : '11px',
                                 color: blue,
                                 fontWeight: '700',
                                 letterSpacing: '1%',

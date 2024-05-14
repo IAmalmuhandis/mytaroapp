@@ -10,6 +10,7 @@ import Avatar from '@mui/material/Avatar';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { deepOrange } from '@mui/material/colors';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import styles from '../assets/css/bluebtn.module.css'
 
 const customTheme = createTheme({
     palette: {
@@ -56,7 +57,7 @@ const SigninBtn = (props) => {
   
   return (
     <ThemeProvider theme={customTheme}>
-        <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Sign in</Button>
+        <Button className={styles.button} color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Sign in</Button>
     </ThemeProvider>
   )
 }
