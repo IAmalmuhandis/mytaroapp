@@ -15,6 +15,7 @@ import SocialMedia from '../component/SocialMedia';
 import Separator from '../component/separator';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
+import { Helmet } from 'react-helmet';
 
 const SignIn = () => {
     const theme = useTheme();
@@ -71,6 +72,10 @@ const SignIn = () => {
     };
 
     return (
+        <>
+        <Helmet>
+            <title>Sign in</title>
+        </Helmet>
         <Container
             maxWidth="none"
             sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
@@ -148,6 +153,7 @@ const SignIn = () => {
                 </Stack>
             </Stack>
         </Container>
+        </>
     );
 };
 

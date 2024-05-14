@@ -10,6 +10,7 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useNavigate } from 'react-router-dom';
 import Logo_Btn from '../component/signIn_Logo';
+import { Helmet } from 'react-helmet';
 
 const FirstPage = () => {
   const theme = useTheme();
@@ -39,6 +40,10 @@ const FirstPage = () => {
   }
 
   return (
+    <>
+    <Helmet>
+      <title>MyTaroApp: Plan your dream event with few clicks</title>
+    </Helmet>
     <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
       <Logo_Btn />
       <Container>
@@ -97,6 +102,7 @@ const FirstPage = () => {
       </Stack>
     </Grid>
     </Container>
+    </>
   );
 }
 

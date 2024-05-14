@@ -13,6 +13,7 @@ import { ReactComponent as Capacity } from '../assets/svg/people.svg';
 import { ReactComponent as Color } from '../assets/svg/colorfilter.svg';
 import { blue } from '../utils/colors';
 import ContinueBtn from '../component/continueBtn';
+import { Helmet } from 'react-helmet';
 
 
 const Confirm = () => {
@@ -34,6 +35,10 @@ const Confirm = () => {
         alignItems: 'center'
     }
   return (
+    <>
+    <Helmet>
+      <title>Confirm your answers</title>
+    </Helmet>
     <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
         <Back_Avater onClick={handleBack} />
         <div style={{marginTop: isLargeScreen && '-20px'}}>
@@ -234,6 +239,7 @@ const Confirm = () => {
             </div>
         </Container>
     </Container>
+    </>
   )
 }
 

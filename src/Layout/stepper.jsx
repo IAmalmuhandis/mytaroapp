@@ -12,6 +12,7 @@ import Question3 from '../pages/Question3';
 import Question4 from '../pages/Question4';
 import Question5 from '../pages/Question5';
 import Question6 from '../pages/Question6';
+import { Helmet } from 'react-helmet';
 
 const theme = createTheme({
     palette: {
@@ -54,6 +55,9 @@ const StepperPage = () => {
   
     return (
       <>
+      <Helmet>
+        <title>Answer the Questions</title>
+      </Helmet>
       <Back_Avater onClick={handleBack} />
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
       <Container>

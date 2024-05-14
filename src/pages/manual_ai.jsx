@@ -8,6 +8,7 @@ import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import BlueBtn from '../component/blueBtn';
 import { blue } from '../utils/colors';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Manual_Ai = () => {
   const navigate = useNavigate();
@@ -23,6 +24,10 @@ const Manual_Ai = () => {
   } 
 
   return (
+    <>
+    <Helmet>
+      <title>Select</title>
+    </Helmet>
     <Container maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', }}>
         <Logo_Btn />
         <Container maxWidth="none" sx={{minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
@@ -50,6 +55,7 @@ const Manual_Ai = () => {
             </Stack>
         </Container>
     </Container>
+    </>
   )
 }
 

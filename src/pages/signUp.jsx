@@ -15,6 +15,7 @@ import Separator from '../component/separator';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
 import SocialMedia from '../component/SocialMedia';
+import { Helmet } from 'react-helmet';
 
 const SignUp = () => {
   const theme = useTheme();
@@ -73,6 +74,10 @@ const SignUp = () => {
   }
 
   return (
+    <>
+    <Helmet>
+      <title>Sign up</title>
+    </Helmet>
     <Container maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
         <Stack mt={3} sx={{justifyContent: 'center', alignItems: 'center'}} spacing={1}>
             <Logo width={isLargeScreen ? 187 : 57} height={isLargeScreen ? 109 : 57}/>
@@ -163,6 +168,7 @@ const SignUp = () => {
             </Stack>
         </Stack>
     </Container>
+    </>
   )
 }
 

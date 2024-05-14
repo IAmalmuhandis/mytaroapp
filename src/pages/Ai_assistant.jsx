@@ -8,6 +8,7 @@ import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import ContinueBtn from '../component/continueBtn';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Ai_assistant = () => {
     const navigate = useNavigate()
@@ -23,6 +24,10 @@ const Ai_assistant = () => {
     }
 
   return (
+    <>
+    <Helmet>
+      <title>AI Assitant</title>
+    </Helmet>
     <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
         <Back_Avater onClick={() => navigate('/choose')} />
         <Container maxWidth="none" sx={{minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
@@ -64,6 +69,7 @@ const Ai_assistant = () => {
          </Stack>
         </Container>
     </Container>
+    </>
   )
 }
 
