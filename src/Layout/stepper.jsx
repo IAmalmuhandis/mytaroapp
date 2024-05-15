@@ -16,7 +16,7 @@ import { Helmet } from 'react-helmet';
 
 const theme = createTheme({
     palette: {
-      primary: red, // Customize primary color
+      primary: red, 
     },
   });
 

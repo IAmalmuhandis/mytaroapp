@@ -19,9 +19,13 @@ const Question1 = ({ onNext }) => {
 
   const [answer, setAnswer] = useState('');
   const [inputValue, setInputValue] = useState('');
-  const [disable, setDisable] = useState(true)
+  const [err, setErr] = useState(false)
 
   const handleNext = () => {
+    if(!inputValue.trim()){
+      setErr(true)
+      return;
+    }
     onNext();
   };
 
@@ -36,7 +40,7 @@ const Question1 = ({ onNext }) => {
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-    !inputValue.trim() ? setDisable(true) : setDisable(false)
+    setErr(false)
   };
 
   return (
@@ -132,7 +136,7 @@ const Question1 = ({ onNext }) => {
                   borderRadius: isLargeScreen ? '53px' : '30px',
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
                   }}>
                    <Typography
                       sx={{
@@ -146,6 +150,7 @@ const Question1 = ({ onNext }) => {
                    >NGR</Typography>
                 </Paper>
                 <TextField
+                    error={err}
                     value={inputValue}
                     onChange={handleInputChange}
                     type='number'
@@ -160,7 +165,8 @@ const Question1 = ({ onNext }) => {
                       fontSize: isLargeScreen ? '25px' : '15px',
                       lineHeight: isLargeScreen ? '31px' : '18px',
                       '& fieldset': {
-                        border: 'none', 
+                        // border: 'none', 
+                        borderRadius: isLargeScreen ? '53px' : '30px',
                         color: blue,
                       },
                     },}}
@@ -169,7 +175,7 @@ const Question1 = ({ onNext }) => {
               </Stack>
               </Stack>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <ContinueBtn disable={disable} onClick={handleNext} />
+                  <ContinueBtn onClick={handleNext} />
                </div> 
             </Stack>
          </Container>

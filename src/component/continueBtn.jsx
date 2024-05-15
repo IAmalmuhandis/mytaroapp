@@ -23,7 +23,7 @@ const BluecustomTheme = createTheme({
     },
 });
 
-const ContinueBtn = ({onClick, color=red, disable}) => {
+const ContinueBtn = ({onClick, color=red}) => {
     const theme = useTheme();
     const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
     const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
@@ -47,7 +47,7 @@ const ContinueBtn = ({onClick, color=red, disable}) => {
     }
     return (
         <ThemeProvider theme={color === red ? RedcustomTheme : BluecustomTheme }>
-            <Button disabled={disable} className={styles.button} color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Continue <ChevronRightIcon sx={{fontSize: isLargeScreen ? '35px' : '20px'}} /></Button>
+            <Button className={styles.button} color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Continue <ChevronRightIcon sx={{fontSize: isLargeScreen ? '35px' : '20px'}} /></Button>
         </ThemeProvider>
     )
 }
