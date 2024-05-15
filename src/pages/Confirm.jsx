@@ -130,7 +130,7 @@ const Confirm = () => {
                     </Paper>
                 </Stack>
                 <Stack direction={isLargeScreen ? 'column' : 'row'} spacing={isLargeScreen ? 5 : 4}>
-                    <Paper sx={paperStyle} elevation={4}>
+                    <Paper sx={paperStyle} elevation={2}>
                     <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
                             <Typography
                               sx={{

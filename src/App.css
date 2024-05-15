@@ -1,5 +1,11 @@
 @font-face {
   font-family: 'Montserrat';
   src: url('./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype'),
-  /* Add additional font properties if necessary, like font-weight and font-style */
+}
+
+body {
+  background-image: url('./assets/Vector\ for\ deskop.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

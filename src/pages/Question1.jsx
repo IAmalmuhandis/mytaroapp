@@ -80,7 +80,7 @@ const Question1 = ({ onNext }) => {
           >
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
-          <Stack sx={{ alignItems: 'center', justifyContent: 'space-between' }} spacing={isDesktopScreen ? 30 : 5} direction={isDesktopScreen ? 'row' : 'column'}>
+          <Stack sx={{ alignItems: 'center', justifyContent: 'space-between' }} spacing={isDesktopScreen ? 30 : 5} direction={isDesktopScreen ? 'row-reverse' : 'column'}>
             <Stack>
               <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 509 : 335} />
             </Stack>
