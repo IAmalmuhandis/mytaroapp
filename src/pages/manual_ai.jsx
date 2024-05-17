@@ -23,6 +23,10 @@ const Manual_Ai = () => {
     navigate('/AiAssistant')
   } 
 
+  const onManualPress = () =>{
+    navigate('/Manual/event_centers')
+  }
+
   return (
     <>
     <Helmet>
@@ -49,7 +53,7 @@ const Manual_Ai = () => {
                     <Arrow width={isLargeScreen ? '193px' : '112px'} height={isLargeScreen ? '37px' : '23px'}/>
                 </Stack>
                 <Stack spacing={2} direction={isLargeScreen ? 'row' : 'column'}>
-                    <BlueBtn title='Manually' />
+                    <BlueBtn title='Manually' onClick={onManualPress} />
                     <BlueBtn title='Ai Assistant' onClick={onAiPress} />
                 </Stack>
             </Stack>
