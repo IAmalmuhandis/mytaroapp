@@ -24,7 +24,7 @@ const Manual_Ai = () => {
   } 
 
   const onManualPress = () =>{
-    navigate('/Manual/event_centers')
+    navigate('/Manual')
   }
 
   return (

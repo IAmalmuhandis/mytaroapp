@@ -7,7 +7,7 @@
 .button:hover {
     background: #016dd9;
     color: #ffffff;
-    animation: squeeze3124 0.5s both; 
+    animation: squeeze3124 0.4s both; 
 }
 
  @keyframes squeeze3124 {
@@ -18,7 +18,7 @@
     transform: scaleX(1.1)
    }
    75%{
-    transform: scaleX(0.9);
+    transform: scaleX(0.8);
    }
    100% {
     transform: scaleX(1)

@@ -9,6 +9,7 @@ import Ai_assistant from './pages/Ai_assistant';
 import S from './Layout/stepper';
 import Confirm from './pages/Confirm';
 import EventCenters from './pages/EventCenters';
+import Manual from './pages/manual';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/AiAssistant' element={<Ai_assistant />} />
         <Route path='/AiAssistant/stepper' element={<S />} />
         <Route path='/AiAssistant/Confirm' element={<Confirm />} />
+        <Route path='/Manual' element={<Manual />} />
         <Route path='/Manual/event_centers' element={<EventCenters />} />
       </Routes>
     </BrowserRouter>

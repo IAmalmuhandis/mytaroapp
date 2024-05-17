@@ -4,7 +4,10 @@ import Back_Avater from '../component/Back_Avater'
 import { Container, Grid, Paper, Typography } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { blue } from '../utils/colors'
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import MediaCard from '../component/card'
+import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import Img1 from '../assets/images/Wedding tables decorated with flowers.png'
 import Img2 from '../assets/images/Screenshot (27) 1.png'
 import Img3 from '../assets/images/Screenshot (28) 1.png'
@@ -13,13 +16,19 @@ import Img5 from '../assets/images/Screenshot (25) 1.png'
 
 const EventCenters = () => {
   const navigate = useNavigate()
+  const theme = useTheme();
+  const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
+  const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
+  const isDesktopScreen = useMediaQuery(theme.breakpoints.up('lg'));
+  const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
+  const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1090
   return (
     <>
     <Helmet>
         <title>Select Event Center</title>
     </Helmet>
     <Container maxWidth="none" sx={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-        <Back_Avater onClick={() => navigate('/choose')} />
+        <Back_Avater onClick={() => navigate('/Manual')} />
         <Grid>
             <Typography 
                 color={blue}
@@ -42,6 +51,9 @@ const EventCenters = () => {
             >
                 Click to view Venue Information
             </Typography>
+            <div style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
+            </div>
         </Grid>
         <Grid container mt={2} spacing={2} justifyContent='center'>
             <Grid item>
