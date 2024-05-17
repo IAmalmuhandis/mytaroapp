@@ -28,6 +28,7 @@ const SignUp = () => {
     backgroundColor: grey,
     borderRadius: isLargeScreen ? '50px' : '25px',
     fontWeight: '8.77px',
+    fontFamily: 'Montserrat',
     '&:hover': {
       backgroundColor: 'rgba(255,255,255,0.8)', 
       borderColor: blue, 

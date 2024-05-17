@@ -30,9 +30,9 @@ const Ai_assistant = () => {
     </Helmet>
     <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
         <Back_Avater onClick={() => navigate('/choose')} />
-        <Container maxWidth="none" sx={{minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-        <Stack mt={0} sx={{justifyContent: 'space-around', alignItems: 'center'}} spacing={isDesktopScreen ? 10 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
-            <Illustration width={isLargeScreen ? 700 : 281} height={isLargeScreen ? 700 : 270} />
+        <Container maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+        <Stack  sx={{justifyContent: 'space-around', alignItems: 'center'}} spacing={isDesktopScreen ? 10 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
+            <Illustration width={isLargeScreen ? 700 : 281} height={isLargeScreen ? 600 : 270} />
             <Stack spacing={3}>
               <Typography sx={{ 
                 fontFamily: 'Montserrat', 

@@ -49,34 +49,31 @@ const FirstPage = () => {
       <Container>
         <Typography sx={{ 
           fontFamily: 'Montserrat', 
-          fontSize: isLargeScreen ? '44px' : '22px', 
-          lineHeight: '40px', 
+          fontSize: isLargeScreen ? '44px' : '22px',  
           color: blue, 
           fontWeight: '800', 
           letterSpacing: '1%', 
           textAlign: 'center' 
           }}
           mt={3}
+          lineHeight={{xl: 1, lg: 1, md: 2, sm: 2, xs: 2}}
           >What Type Of Event Are You Planning?
         </Typography>
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3px'}}>
           <Arrow width={isLargeScreen ? '193px' : '112px'} height={isLargeScreen ? '37px' : '23px'}/>
         </div>
       </Container>
-
-      <Grid container justifyContent="space-around" mt={isLargeScreen ? -12 : 0}>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Anniversary width={isLargeScreen ? 500 : 283} height={isLargeScreen ? 639 : 293}/>
+      <Grid container justifyContent="space-around" alignItems='flex-end' mt={isLargeScreen ? -12 : 0}>
+        <div style={{ display: 'flex', justifyContent: 'center'}}>
+          <Anniversary width={isLargeScreen ? 500 : 283} height={isLargeScreen ? 530 : 293}/>
         </div>
-        <Stack spacing={2} direction="column" mt={isSmallLaptop && -10 || isLaptopScreen && 20 || isTablet && -10 || isDesktopScreen && 20 }>
-
+        <Stack spacing={2} direction="column" mt={{xl: 0, lg: 0, md: -5, sm: 0, xs: 0}}>
           <Grid alignItems='center'>  
           <Stack spacing={isLargeScreen ? 4 : 2} direction={isLargeScreen ? 'row' : 'column'}>
             <BlueBtn title='Wedding' onClick={onWeddingClick} />
             <BlueBtn title='Conference' />
           </Stack>
           </Grid>
-
           <Grid alignItems='center'>
           <Stack spacing={isLargeScreen ? 4 : 2} direction={isLargeScreen ? 'row' : 'column'}>
               <BlueBtn title='Birthday' />
