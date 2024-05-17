@@ -47,14 +47,12 @@ const FirstPage = () => {
     <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
       <Logo_Btn />
       <Container>
-        <Typography sx={{ 
-          fontFamily: 'Montserrat', 
-          fontSize: isLargeScreen ? '44px' : '22px',  
-          color: blue, 
-          fontWeight: '800', 
-          letterSpacing: '1%', 
-          textAlign: 'center' 
-          }}
+        <Typography
+          fontFamily='Montserrat'
+          fontSize={{lg: 40, md: 35, xs: 15, xl: 45, sm: 25}}
+          color={blue}
+          fontWeight={800}
+          textAlign='center'
           mt={3}
           lineHeight={{xl: 1, lg: 1, md: 2, sm: 2, xs: 2}}
           >What Type Of Event Are You Planning?

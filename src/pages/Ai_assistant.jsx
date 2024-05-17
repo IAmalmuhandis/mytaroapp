@@ -34,16 +34,14 @@ const Ai_assistant = () => {
         <Stack  sx={{justifyContent: 'space-around', alignItems: 'center'}} spacing={isDesktopScreen ? 10 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
             <Illustration width={isLargeScreen ? 700 : 281} height={isLargeScreen ? 600 : 270} />
             <Stack spacing={3}>
-              <Typography sx={{ 
-                fontFamily: 'Montserrat', 
-                fontSize: isLargeScreen ? '44px' : '22px', 
-                lineHeight: '40px', 
-                color: blue, 
-                fontWeight: '800', 
-                letterSpacing: '1%', 
-                textAlign: 'center' 
-                }}
+              <Typography
                 mt={3}
+                fontFamily='Montserrat'
+                fontSize={{xl: 35, lg: 35, md: 35, sm: 30, xs: 25 }}
+                color={blue}
+                fontWeight={800}
+                lineHeight={1.5}
+                textAlign='center'
                 >Welcome To My Taro Ai Assistant
               </Typography>
               <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3px'}}>

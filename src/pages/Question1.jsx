@@ -49,34 +49,31 @@ const Question1 = ({ onNext }) => {
       {answer !== 'Yes' && (
         <div>
           <Typography
-            sx={{
-              fontFamily: 'Montserrat',
-              fontSize: isLargeScreen ? '30px' : '14px',
-              lineHeight: isLargeScreen ? '70px' : '20px',
-              color: blue,
-              fontWeight: '800',
-              textAlign: 'center',
-            }}
             mt={3}
+            fontFamily='Montserrat'
+            fontSize={{xl: 30, lg: 30, md: 30, sm: 30, xs: 15 }}
+            lineHeight={2}
+            color={blue}
+            fontWeight={800}
+            textAlign={{xl: 'center', lg: 'center', md: 'center', xs: 'left', sm: 'center'}}
+            ml={{sm: -5, xs: -5}}
           >
             Please Answer the Questions!
           </Typography>
           <Typography
-            sx={{
-              fontFamily: 'Montserrat',
-              fontSize: isLargeScreen ? '22px' : '15px',
-              lineHeight: isLargeScreen ? '40px' : '25px',
-              color: blue,
-              fontWeight: '700',
-              letterSpacing: '1%',
-              textAlign: 'center',
-            }}
             mt={2}
+            fontFamily='Montserrat'
+            fontSize={{xl: 20, lg: 20, md: 20, sm: 25, xs: 12 }}
+            lineHeight={2}
+            color={blue}
+            fontWeight={700}
+            textAlign={{xl: 'center', lg: 'center', md: 'center', xs: 'left', sm: 'center'}}
+            ml={{sm: -5, xs: -5}}
           >
             Do you have a budget?
           </Typography>
           <div
-            style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'center' }}
+            style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'left' }}
           >
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
