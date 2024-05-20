@@ -5,16 +5,16 @@
 
 body {
   background-image: url('./assets/Vector\ for\ deskop.png');
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: scroll;
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
   body {
     background-image: url('./assets/Vector\ for\ mobile.png');
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: scroll;
   } 
 }

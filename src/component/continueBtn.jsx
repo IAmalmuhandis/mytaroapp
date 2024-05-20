@@ -40,10 +40,7 @@ const ContinueBtn = ({onClick, color=red}) => {
         backgroundColor: color,
         fontFamily: 'Montserrat',
         fontWeight: '500',
-        lineHeight: '19.5px',
-        '.&:hover' : {
-            backgroundColor: 'black'
-        }
+        lineHeight: '19.5px'
     }
     return (
         <ThemeProvider theme={color === red ? RedcustomTheme : BluecustomTheme }>

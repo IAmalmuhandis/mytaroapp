@@ -43,8 +43,7 @@ const Manual_Ai = () => {
                         fontSize: isLargeScreen ? '44px' : '22px', 
                         lineHeight: '40px', 
                         color: blue, 
-                        fontWeight: '800', 
-                        letterSpacing: '1%', 
+                        fontWeight: '800',  
                         textAlign: 'center' 
                         }}
                         mt={3}

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Back_Avater from '../component/Back_Avater'
-import { Container, Grid, Paper, Typography } from '@mui/material'
+import { Container, Grid, Typography } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { blue } from '../utils/colors'
 import { useTheme } from '@mui/material/styles';
@@ -70,6 +70,9 @@ const EventCenters = () => {
             </Grid>
             <Grid item>
                 <MediaCard img={Img1} title='Meena Event Center' experience='9 years of experience' capacity='Up to 1000 capacity' rating={4} />
+            </Grid>
+            <Grid item>
+                <MediaCard title='Star Event Center' experience='9 years of experience' capacity='Up to 1000 capacity' rating={2} />
             </Grid>
         </Grid>
     </Container>
