@@ -35,7 +35,7 @@ const Question4 = ({ onNext }) => {
 
   return (
     <Container maxWidth="none">
-      {/* Conditionally render initial UI based on the answer state */}
+      {/* Conditionally render initial UI based on the  answer state */}
       {answer !== 'Yes' && (
         <div>
          <Typography

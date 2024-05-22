@@ -1,10 +1,8 @@
-import React from 'react';
-import { Container, Stack, Typography, TextField, InputAdornment, Button } from '@mui/material';
+import React, { useState } from 'react';
+import { Container, Stack, Typography, TextField, InputAdornment} from '@mui/material';
 import { ReactComponent as Logo } from '../assets/logo/Logo.svg';
 import { ReactComponent as Illustration } from '../assets/svg/signin.svg';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import EmailIcon from '@mui/icons-material/Email';
-import PhoneIcon from '@mui/icons-material/Phone';
 import LockIcon from '@mui/icons-material/Lock';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -13,8 +11,6 @@ import Signin_SignupBtn from '../component/sigin_signupBtn';
 import { Link } from 'react-router-dom';
 import SocialMedia from '../component/SocialMedia';
 import Separator from '../component/separator';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import GoogleIcon from '@mui/icons-material/Google';
 import { Helmet } from 'react-helmet';
 
 const SignIn = () => {
@@ -24,11 +20,23 @@ const SignIn = () => {
     const isDesktopScreen = useMediaQuery(theme.breakpoints.up('lg'));
     const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen;
 
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [err, setErr] = useState(false)
+
+    const onSignIn = () =>{
+        if(!email.trim() || !password.trim()){
+            return setErr(true)
+        }
+        setErr(false)
+    }
+
     const typeSomtingStyle = {
         backgroundColor: grey,
         borderRadius: isLargeScreen ? '50px' : '25px',
         fontWeight: '8.77px',
         fontFamily: 'Montserrat',
+        borderColor: blue,
         '&:hover': {
             backgroundColor: 'rgba(255,255,255,0.8)',
             borderColor: blue,
@@ -38,7 +46,7 @@ const SignIn = () => {
             width: isLargeScreen ? '450px' : '244px',
             fontSize: isLargeScreen ? '18px' : '12px',
             '& fieldset': {
-                border: 0,
+                border: err ? 1 : 0,
                 borderRadius: isLargeScreen ? '50px' : '25px',
             },
             '&:hover fieldset': {
@@ -51,7 +59,7 @@ const SignIn = () => {
             },
         },
         '& .MuiSvgIcon-root': {
-            color: 'grey', // Set initial icon color to grey
+            color: err ? red : 'grey', // Set initial icon color to grey
             fontSize: isLargeScreen ? '35px' : '20px', // Adjust icon size
             transition: 'color 0.3s', // Add transition for color change
         },
@@ -107,9 +115,12 @@ const SignIn = () => {
                 <Stack spacing={3}>
                     <Stack spacing={3}>
                         <TextField
+                            error={err}
                             sx={typeSomtingStyle}
                             placeholder="Email Address"
                             type="email"
+                            value = {email}
+                            onChange={(e) => setEmail(e.target.value)}
                             InputProps={{
                                 startAdornment: (
                                     <InputAdornment position="start">
@@ -119,9 +130,12 @@ const SignIn = () => {
                             }}
                         />
                         <TextField
+                            error={err}
                             sx={typeSomtingStyle}
                             placeholder="Password"
                             type="password"
+                            value = {password}
+                            onChange={(e) => setPassword(e.target.value)}
                             InputProps={{
                                 startAdornment: (
                                     <InputAdornment position="start">
@@ -132,7 +146,7 @@ const SignIn = () => {
                         />
                     </Stack>
                     <Stack mb={5} sx={{ justifyContent: 'center', alignItems: 'center' }} spacing={2}>
-                        <Signin_SignupBtn title="Sign In" />
+                        <Signin_SignupBtn title="Sign In" onClick={onSignIn} />
                         <Typography
                             sx={{
                                 fontFamily: 'Montserrat',
