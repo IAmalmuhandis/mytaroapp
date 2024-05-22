@@ -8,6 +8,7 @@ import { ReactComponent as Illustration } from '../assets/svg/Add color-rafiki 1
 import BlueBtn from '../component/blueBtn';
 import { NigeriaNaira } from '../utils/helpers';
 import ContinueBtn from '../component/continueBtn';
+import { HexColorPicker } from 'react-colorful';
 
 const Question4 = ({ onNext }) => {
   const theme = useTheme();
@@ -19,6 +20,7 @@ const Question4 = ({ onNext }) => {
 
   const [answer, setAnswer] = useState('');
   const [inputValue, setInputValue] = useState('');
+  const [color, setColor] = useState('#4169e1')
 
   const handleNext = () => {
     onNext();
@@ -88,39 +90,27 @@ const Question4 = ({ onNext }) => {
             <Stack spacing={2} sx={{alignItems: 'center', justifyContent: 'center'}}>
              <div style={{}}>   
              <Typography
-                sx={{
-                  fontFamily: 'Montserrat',
-                  fontSize: isLargeScreen ? '44px' : '14px',
-                  lineHeight: isLargeScreen ? '85px' : '30px',
-                  color: blue,
-                  fontWeight: '800',
-                  textAlign: 'center'
-                }}
+                fontFamily='Montserrat'
+                fontSize={{lg: 40, md: 35, xs: 15, xl: 45, sm: 30}}
+                color={blue}
+                fontWeight={800}
+                textAlign='center'
+                mt={3}
+                lineHeight={{xl: 1, lg: 1, md: 2, sm: 2, xs: 2}}
               >
-                Please Type The Color Name
+                Please Select The Color
               </Typography>
               </div>
-              <Stack spacing={3}>
-                <TextField
-                    value={inputValue}
-                    onChange={handleInputChange}
-                    sx={{
-                      backgroundColor: grey, 
-                      borderRadius: isLargeScreen ? '53px' : '30px',
-                      height: isLargeScreen ? '98px' : '57px', 
-                      width: isLargeScreen ? '369px' : '213px',
-                      '& .MuiOutlinedInput-root': {
-                      height: isLargeScreen ? '98px' : '57px', 
-                      width: isLargeScreen ? '369px' : '213px',
-                      fontSize: isLargeScreen ? '25px' : '15px',
-                      lineHeight: isLargeScreen ? '31px' : '18px',
-                      '& fieldset': {
-                        border: 'none', 
-                        color: blue,
-                      },
-                    },}}
-                    placeholder='Royal Blue'
-                />
+              <Stack spacing={3} mt={2}>
+                <Stack direction={{xl: 'row', lg: 'row', md: 'row', sm: 'column', xs: 'column'}} justifyContent='center' alignItems='center' spacing={3}>
+                  <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <HexColorPicker style={{width: '300px', height: '300px'}}  color={color} onChange={setColor} />
+                  </div>
+                  <Paper
+                    sx={{backgroundColor: color, width: '300px', height: '300px'}}  
+                  >
+                  </Paper>
+                </Stack>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <ContinueBtn onClick={handleNext} />
                </div> 
