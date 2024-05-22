@@ -22,10 +22,10 @@ const Question1 = ({ onNext }) => {
   const [err, setErr] = useState(false)
 
   const handleNext = () => {
-    // if(!inputValue.trim()){
-    //   setErr(true)
-    //   return;
-    // }
+    if(!inputValue.trim()){
+      setErr(true)
+      return;
+    }
     onNext();
   };
 
@@ -35,7 +35,7 @@ const Question1 = ({ onNext }) => {
 
   const handleNoClick = () => {
     setAnswer('No');
-    handleNext();
+    onNext();
   };
 
   const handleInputChange = (event) => {

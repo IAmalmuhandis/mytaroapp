@@ -35,7 +35,7 @@ const DateTimePicker = () => {
             actionBar: CustomActionBar,
           }}
         />
-        <MobileTimePicker sx={{marginTop: '-20px', border: '10px'}} label='SELECT TIME' />
+        <MobileTimePicker sx={{marginTop: '-20px', border: '10px'}} label='SELECT TIME' defaultValue={dayjs('2022-04-17T17:00')}/>
         </Stack>
       </LocalizationProvider>
     </ThemeProvider>
