@@ -2,7 +2,6 @@ import React from 'react'
 import Button from '@mui/material/Button';
 import { red } from '../utils/colors';
 import { Stack } from '@mui/material';
-import { ReactComponent as Logo } from '../assets/logo/Logo.svg';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useNavigate } from 'react-router-dom';

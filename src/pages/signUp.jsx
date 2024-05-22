@@ -1,4 +1,4 @@
-import { Container, Stack, Typography, TextField, InputAdornment, Button } from '@mui/material'
+import { Container, Stack, Typography, TextField, InputAdornment} from '@mui/material'
 import React from 'react'
 import { ReactComponent as Logo } from '../assets/logo/Logo.svg';
 import { ReactComponent as Illustration } from '../assets/svg/createAccount.svg';
@@ -12,8 +12,6 @@ import { blue, grey, red } from '../utils/colors';
 import Signin_SignupBtn from '../component/sigin_signupBtn';
 import { Link } from 'react-router-dom';
 import Separator from '../component/separator';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import GoogleIcon from '@mui/icons-material/Google';
 import SocialMedia from '../component/SocialMedia';
 import { Helmet } from 'react-helmet';
 

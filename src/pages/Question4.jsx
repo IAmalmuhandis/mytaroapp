@@ -1,12 +1,11 @@
-import { Container, Paper, Stack, TextField, Typography } from '@mui/material';
+import { Container, Paper, Stack, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { blue, grey } from '../utils/colors';
+import { blue} from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { ReactComponent as Illustration } from '../assets/svg/Add color-rafiki 1.svg';
 import BlueBtn from '../component/blueBtn';
-import { NigeriaNaira } from '../utils/helpers';
 import ContinueBtn from '../component/continueBtn';
 import { HexColorPicker } from 'react-colorful';
 
@@ -19,7 +18,6 @@ const Question4 = ({ onNext }) => {
   const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1024;
 
   const [answer, setAnswer] = useState('');
-  const [inputValue, setInputValue] = useState('');
   const [color, setColor] = useState('#4169e1')
 
   const handleNext = () => {
@@ -33,10 +31,6 @@ const Question4 = ({ onNext }) => {
   const handleNoClick = () => {
     setAnswer('No');
     handleNext();
-  };
-
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
   };
 
   return (

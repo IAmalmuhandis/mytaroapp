@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { Button, Container, Stack, TextField, Typography } from '@mui/material';
+import { Button, Container, Stack, Typography } from '@mui/material';
 import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { ReactComponent as Illustration } from '../assets/svg/Address-cuate 1.svg';

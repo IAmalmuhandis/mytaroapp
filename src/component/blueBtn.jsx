@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '@mui/material/Button';
 import { blue } from '../utils/colors'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
