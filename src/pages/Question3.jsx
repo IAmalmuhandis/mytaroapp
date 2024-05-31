@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { Button, Container, Stack, Typography } from '@mui/material';
+import { Button, Container, Grid, Stack, Typography } from '@mui/material';
 import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { ReactComponent as Illustration } from '../assets/svg/Address-cuate 1.svg';
@@ -25,7 +25,7 @@ const Btn = (props) => {
   const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1090
   const btnStyle = {
       width: isLargeScreen ? '230px' : '140px', 
-      height: isLargeScreen ? '70px'  : '45px', 
+      height: isLargeScreen ? '65px'  : '45px', 
       borderRadius: isLargeScreen ? '27px' : '14px', 
       padding: '5.6px', 
       fontSize: isLargeScreen ? '28px' : '16px',
@@ -50,26 +50,13 @@ const Question3 = ({onNext}) => {
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen;
   const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1024;
 
-  const typeSomtingStyle = {
-    backgroundColor: '#E7E7E7',
-    borderRadius: isLargeScreen ? '60px' : '20.29px',
-    fontWeight: '8.77px',
-    '& .MuiOutlinedInput-root': {
-      height: isLargeScreen ? '70px' : '35px', 
-      width: isLargeScreen ? '440px' : '164px',
-      fontSize: isLargeScreen ? '18px' : '12px',
-      '& fieldset': {
-        border: 'none', 
-      },
-    },
-  }
-
-  const handleNext = () => {
+  const handleNext = (location) => {
+    localStorage.setItem('location', JSON.stringify(location))
     onNext();
   };
 
   return (
-    <Container maxWidth="none">
+    <Container maxWidth="none" justifyContent='center'>
        <Typography
             mt={3}
             fontFamily='Montserrat'
@@ -94,34 +81,34 @@ const Question3 = ({onNext}) => {
           >
             What is the preferred location?
           </Typography>
-          <div
-            style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'left' }}
-          >
+          <div style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'left' }}>
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
-          <Stack mt={3} sx={{ alignItems: 'center', justifyContent: 'center' }} spacing={isDesktopScreen ? 30 : 2} direction={isDesktopScreen ? 'row' : 'column'}>
+          <Grid container>
+          <Stack  sx={{width: '100%'}} alignItems='center' justifyContent='center' mt={0} spacing={{xl: 30, lg: 15, md: 2, xs: 2, sm: 2}} direction={{xl:'row', lg: 'row', md: 'column', xs: 'column', sm: 'column'}}>
              <Stack>
-             <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 509 : 335} />
+                <Illustration width={isLargeScreen || isSmallLaptop ? 520 : 335} height={isLargeScreen ? 390 : 335} />
              </Stack>
              <Stack spacing={3}>
                 <Stack spacing={isLargeScreen ? 4 : 2} direction='row'>
-                    <Btn title='Kano' onClick={handleNext} />
-                    <Btn title='Kaduna' onClick={handleNext} />    
+                    <Btn title='Kano' onClick={() => handleNext('Kano')} />
+                    <Btn title='Kaduna' onClick={() => handleNext('Kaduna')} />    
                 </Stack>
                 <Stack spacing={isLargeScreen ? 4 : 2} direction='row'>
-                    <Btn title='Abuja' onClick={handleNext} />
-                    <Btn title='Katsina' onClick={handleNext} />    
+                    <Btn title='Abuja' onClick={() => handleNext('Abuja')} />
+                    <Btn title='Katsina' onClick={() => handleNext('Katsina')} />    
                 </Stack>
                 <Stack spacing={isLargeScreen ? 4 : 2} direction='row'>
-                    <Btn title='Jigawa' onClick={handleNext} />
-                    <Btn title='Bauchi' onClick={handleNext} />    
+                    <Btn title='Jigawa' onClick={() => handleNext('Jigawa')} />
+                    <Btn title='Bauchi' onClick={() => handleNext('Bauchi')} />    
                 </Stack>
                 <Stack spacing={isLargeScreen ? 4 : 2} direction='row'>
-                    <Btn title='Kebbi' onClick={handleNext} />
-                    <Btn title='Borno' onClick={handleNext} />    
+                    <Btn title='Kebbi' onClick={() => handleNext('Kebbi')} />
+                    <Btn title='Borno' onClick={() => handleNext('Borno')} />    
                 </Stack>
              </Stack>  
           </Stack>
+          </Grid>
     </Container>
   )
 }

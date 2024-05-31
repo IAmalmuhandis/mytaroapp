@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Button, Container, Stack, TextField, Typography } from '@mui/material';
@@ -24,8 +24,8 @@ const Btn = (props) => {
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
   const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1090
   const btnStyle = {
-      width: isLargeScreen ? '149px' : '77px', 
-      height: isLargeScreen ? '63px'  : '33px', 
+      width: isLargeScreen ? '139px' : '77px', 
+      height: isLargeScreen ? '50px'  : '33px', 
       borderRadius: isLargeScreen ? '27px' : '14px', 
       padding: '5.6px', 
       fontSize: isLargeScreen ? '28px' : '16px',
@@ -64,7 +64,8 @@ const Question2 = ({onNext}) => {
     },
   }
 
-  const handleNext = () => {
+  const handleNext = (guest) => {
+    localStorage.setItem('guest', JSON.stringify(guest))
     onNext();
   };
 
@@ -99,25 +100,25 @@ const Question2 = ({onNext}) => {
           >
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
-          <Stack mt={3} sx={{ alignItems: 'center', justifyContent: 'center' }} spacing={isDesktopScreen ? 30 : 5} direction={isDesktopScreen ? 'row' : 'column'}>
+          <Stack mt={0} sx={{ alignItems: 'center', justifyContent: 'center' }} spacing={{xl: 30, lg: 15, md: 2, xs: 2, sm: 2}} direction={{xl:'row', lg: 'row', md: 'column', xs: 'column', sm: 'column'}}>
              <Stack>
-             <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 509 : 335} />
+             <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 450 : 335} />
              </Stack>
-             <Stack spacing={3}>
+             <Stack spacing={2}>
                 <Stack spacing={1} direction='row'>
-                  <Btn title='100' onClick={handleNext} />
-                  <Btn title='200' onClick={handleNext} />
-                  <Btn title='300' onClick={handleNext} />
+                  <Btn title='100' onClick={() => handleNext(100)} />
+                  <Btn title='200' onClick={() => handleNext(200)} />
+                  <Btn title='300' onClick={() => handleNext(300)} />
                 </Stack>
                 <Stack spacing={1} direction='row'>
-                  <Btn title='400' onClick={handleNext} />
-                  <Btn title='500' onClick={handleNext} />
-                  <Btn title='600' onClick={handleNext} />
+                  <Btn title='400' onClick={() => handleNext(400)} />
+                  <Btn title='500' onClick={() => handleNext(500)} />
+                  <Btn title='600' onClick={() => handleNext(600)} />
                 </Stack>
                 <Stack spacing={1} direction='row'>
-                  <Btn title='700' onClick={handleNext} />
-                  <Btn title='800' onClick={handleNext} />
-                  <Btn title='900' onClick={handleNext} />
+                  <Btn title='700' onClick={() => handleNext(700)} />
+                  <Btn title='800' onClick={() => handleNext(800)} />
+                  <Btn title='900' onClick={() => handleNext(900)} />
                 </Stack>
                 <Stack spacing={0} direction="column" alignItems="center" mt={5}>
                 <Typography sx={{ color: blue, textAlign: 'center', fontWeight: '800', fontFamily: 'Montserrat', fontSize: isLargeScreen ? '22.29px' : '9px', lineHeight: '28.4px', letterSpacing: '1%' }}>Didn't find the answer?</Typography>

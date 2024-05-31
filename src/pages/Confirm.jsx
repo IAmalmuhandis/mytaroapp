@@ -1,5 +1,5 @@
 import { Container, Paper, Stack, Typography } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Back_Avater from '../component/Back_Avater';
 import { useTheme } from '@mui/material/styles';
@@ -14,6 +14,7 @@ import { ReactComponent as Color } from '../assets/svg/colorfilter.svg';
 import { blue } from '../utils/colors';
 import ContinueBtn from '../component/continueBtn';
 import { Helmet } from 'react-helmet';
+import { NigeriaNaira } from '../utils/helpers';
 
 
 const Confirm = () => {
@@ -34,6 +35,10 @@ const Confirm = () => {
         justifyContent: 'center',
         alignItems: 'center'
     }
+    const [budget, setBudget] = useState(JSON.parse(localStorage.getItem('budget')))
+    const [guest, setGuest] = useState(JSON.parse(localStorage.getItem('guest')))
+    const [location, setLocation] = useState(JSON.parse(localStorage.getItem('location')))
+    const [color, setColor] = useState(JSON.parse(localStorage.getItem('color')))
   return (
     <>
     <Helmet>
@@ -125,7 +130,7 @@ const Confirm = () => {
                                 letterSpacing: '1%',
                                 textAlign: 'center',
                               }}
-                            >6,000,000</Typography>
+                            >{NigeriaNaira.format(budget)}</Typography>
                         </Stack>
                     </Paper>
                 </Stack>
@@ -152,7 +157,7 @@ const Confirm = () => {
                                 letterSpacing: '1%',
                                 textAlign: 'center',
                               }}
-                            >Kano</Typography>
+                            >{location}</Typography>
                         </Stack>
                     </Paper>
                     <Paper sx={paperStyle} elevation={2}>
@@ -177,7 +182,7 @@ const Confirm = () => {
                                 letterSpacing: '1%',
                                 textAlign: 'center',
                               }}
-                            >400</Typography>
+                            >{guest}</Typography>
                         </Stack>
                     </Paper>
                 </Stack>
@@ -229,7 +234,7 @@ const Confirm = () => {
                                 letterSpacing: '1%',
                                 textAlign: 'center',
                               }}
-                            >Royal Blue</Typography>
+                            >{color}</Typography>
                         </Stack>
                     </Paper>
                 </Stack>

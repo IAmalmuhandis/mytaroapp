@@ -21,6 +21,7 @@ const Question4 = ({ onNext }) => {
   const [color, setColor] = useState('#4169e1')
 
   const handleNext = () => {
+    localStorage.setItem('color', JSON.stringify(color))
     onNext();
   };
 
@@ -69,7 +70,7 @@ const Question4 = ({ onNext }) => {
           </div>
           <Stack mt={isLargeScreen && -5} sx={{ alignItems: 'center', justifyContent: 'space-between' }} spacing={isLaptopScreen || isDesktopScreen ? 30 : 5} direction={isLaptopScreen || isDesktopScreen ? 'row' : 'column'}>
             <Stack>
-              <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 509 : 335} />
+              <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 450 : 335} />
             </Stack>
             <Stack spacing={3}>
               <BlueBtn title="Yes" onClick={handleYesClick} />

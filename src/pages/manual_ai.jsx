@@ -34,20 +34,19 @@ const Manual_Ai = () => {
     </Helmet>
     <Container maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', }}>
         <Logo_Btn />
-        <Container maxWidth="none" sx={{minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+        <Container maxWidth="none" sx={{height: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <Stack mt={isLargeScreen ? 0 : 15} sx={{justifyContent: 'center', alignItems: 'center'}} spacing={5}>
                 <Stack spacing={2} sx={{justifyContent: 'center', alignItems: 'center'}}>
                     <Question width={isLargeScreen ? '246px' : '155px'} height={isLargeScreen ? '188px' : '118px'} />
-                    <Typography sx={{ 
-                        fontFamily: 'Montserrat', 
-                        fontSize: isLargeScreen ? '44px' : '22px', 
-                        lineHeight: '40px', 
-                        color: blue, 
-                        fontWeight: '800',  
-                        textAlign: 'center' 
-                        }}
-                        mt={3}
-                        >How Do You Want To Plan Your Event?
+                    <Typography
+                      fontFamily='Montserrat'
+                      fontSize={{lg: 40, md: 35, xs: 15, xl: 45, sm: 25}}
+                      color={blue}
+                      fontWeight={800}
+                      textAlign='center'
+                      mt={3}
+                      lineHeight={{xl: 1, lg: 1, md: 2, sm: 2, xs: 2}}
+                      >How Do You Want TO Plan Your Event?
                     </Typography>
                     <Arrow width={isLargeScreen ? '193px' : '112px'} height={isLargeScreen ? '37px' : '23px'}/>
                 </Stack>

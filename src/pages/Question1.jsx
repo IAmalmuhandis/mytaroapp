@@ -9,7 +9,7 @@ import BlueBtn from '../component/blueBtn';
 import { NigeriaNaira } from '../utils/helpers';
 import ContinueBtn from '../component/continueBtn';
 
-const Question1 = ({ onNext }) => {
+const Question1 = ({ onNext}) => {
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.up('sm'));
   const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
@@ -26,6 +26,7 @@ const Question1 = ({ onNext }) => {
       setErr(true)
       return;
     }
+    localStorage.setItem('budget', JSON.stringify(inputValue))
     onNext();
   };
 
@@ -81,7 +82,7 @@ const Question1 = ({ onNext }) => {
             <Stack>
               <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 509 : 335} />
             </Stack>
-            <Stack spacing={2}>
+            <Stack spacing={isLargeScreen ? 2 : 1}>
               <BlueBtn title="Yes" onClick={handleYesClick} />
               <BlueBtn title="No" onClick={handleNoClick} />
             </Stack>

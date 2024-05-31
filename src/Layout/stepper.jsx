@@ -25,7 +25,7 @@ const StepperPage = () => {
     const navigate = useNavigate()
   
     const [activeStep, setActiveStep] = useState(0); // Tracks the current step of the stepper
-  
+    
     const handleNext = () => {
       activeStep === 5 ? navigate('/AiAssistant/Confirm') :  setActiveStep((prevActiveStep) => prevActiveStep + 1) // Move to the next step
     };
@@ -33,7 +33,7 @@ const StepperPage = () => {
     const handleBack = () => {
       activeStep === 0 ? navigate('/AiAssistant') : setActiveStep((prevActiveStep) => prevActiveStep - 1); // Move to the previous step
     };
-  
+
     const getStepContent = (step) => {
       switch (step) {
         case 0:
@@ -64,9 +64,6 @@ const StepperPage = () => {
         <ThemeProvider theme={theme}>
         <Stepper activeStep={activeStep} alternativeLabel>
           <Step>
-            <StepLabel> </StepLabel>
-          </Step>
-          <Step>
             <StepLabel></StepLabel>
           </Step>
           <Step>
@@ -81,7 +78,9 @@ const StepperPage = () => {
           <Step>
             <StepLabel></StepLabel>
           </Step>
-          {/* Add more steps as needed */}
+          <Step>
+            <StepLabel></StepLabel>
+          </Step>
         </Stepper>
         </ThemeProvider>
         <Container maxWidth="none" sx={{minHeight: '60vh', display: 'flex', flexDirection: 'column' }}>

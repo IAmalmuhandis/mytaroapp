@@ -44,7 +44,7 @@ const FirstPage = () => {
     <Helmet>
       <title>MyTaroApp: Plan your dream event with few clicks</title>
     </Helmet>
-    <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
+    <Container maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
       <Logo_Btn />
       <Container>
         <Typography
@@ -61,18 +61,15 @@ const FirstPage = () => {
           <Arrow width={isLargeScreen ? '193px' : '112px'} height={isLargeScreen ? '37px' : '23px'}/>
         </div>
       </Container>
-      <Grid container justifyContent="space-around" alignItems='flex-end' mt={isLargeScreen ? -12 : 0}>
+      <Grid container justifyContent="space-around" mt={isLargeScreen ? -12 : 0}>
         <div style={{ display: 'flex', justifyContent: 'center'}}>
           <Anniversary width={isLargeScreen ? 500 : 283} height={isLargeScreen ? 530 : 293}/>
         </div>
-        <Stack spacing={2} direction="column" mt={{xl: 0, lg: 0, md: -5, sm: 0, xs: 0}}>
-          <Grid alignItems='center'>  
+        <Stack alignItems='center' justifyContent='center' spacing={2} direction="column" mt={{xl: 4, lg: 4, md: 3, sm: 0, xs: 0}}>  
           <Stack spacing={isLargeScreen ? 4 : 2} direction={isLargeScreen ? 'row' : 'column'}>
             <BlueBtn title='Wedding' onClick={onWeddingClick} />
             <BlueBtn title='Conference' />
           </Stack>
-          </Grid>
-          <Grid alignItems='center'>
           <Stack spacing={isLargeScreen ? 4 : 2} direction={isLargeScreen ? 'row' : 'column'}>
               <BlueBtn title='Birthday' />
               <BlueBtn title='Concert' />
@@ -93,7 +90,6 @@ const FirstPage = () => {
           />
           </div>
           </Stack>
-        </Grid>
       </Stack>
     </Grid>
     </Container>
