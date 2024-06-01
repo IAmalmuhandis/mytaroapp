@@ -65,7 +65,7 @@ const FirstPage = () => {
         <div style={{ display: 'flex', justifyContent: 'center'}}>
           <Anniversary width={isLargeScreen ? 500 : 283} height={isLargeScreen ? 530 : 293}/>
         </div>
-        <Stack alignItems='center' justifyContent='center' spacing={2} direction="column" mt={{xl: 4, lg: 4, md: 3, sm: 0, xs: 0}}>  
+        <Stack alignItems='center' justifyContent='center' spacing={2} direction="column" mt={{xl: 4, lg: 3, md: 2, sm: 0, xs: 0}}>  
           <Stack spacing={isLargeScreen ? 4 : 2} direction={isLargeScreen ? 'row' : 'column'}>
             <BlueBtn title='Wedding' onClick={onWeddingClick} />
             <BlueBtn title='Conference' />
