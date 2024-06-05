@@ -46,7 +46,7 @@ const Manual_Ai = () => {
                       textAlign='center'
                       mt={3}
                       lineHeight={{xl: 1, lg: 1, md: 2, sm: 2, xs: 2}}
-                      >How Do You Want TO Plan Your Event?
+                      >How Do You Want To Plan Your Event?
                     </Typography>
                     <Arrow width={isLargeScreen ? '193px' : '112px'} height={isLargeScreen ? '37px' : '23px'}/>
                 </Stack>

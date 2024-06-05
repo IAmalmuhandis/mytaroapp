@@ -83,7 +83,7 @@ const Confirm = () => {
         <Container sx={{display: 'flex', flexDirection: 'column', maxHeight: '100vh'}}>
             <Stack mt={isLargeScreen ? 2 : 4} direction={isLargeScreen ? 'row' : 'column'} spacing={3} sx={{justifyContent: 'center', alignItems: 'center'}}>  
                 <Stack direction={isLargeScreen ? 'column' : 'row'} spacing={isLargeScreen ? 5 : 4}>
-                    <Paper sx={paperStyle} elevation={2}>
+                    <Paper sx={paperStyle} elevation={0} className='drop-shadow-xl'>
                       <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
                           <Typography
                             sx={{
@@ -108,7 +108,7 @@ const Confirm = () => {
                           >Wedding</Typography>
                       </Stack>
                     </Paper>
-                    <Paper sx={paperStyle} elevation={2}>
+                    <Paper sx={paperStyle} elevation={0} className='drop-shadow-xl'>
                       <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
                             <Typography
                               sx={{
@@ -135,7 +135,7 @@ const Confirm = () => {
                     </Paper>
                 </Stack>
                 <Stack direction={isLargeScreen ? 'column' : 'row'} spacing={isLargeScreen ? 5 : 4}>
-                    <Paper sx={paperStyle} elevation={2}>
+                    <Paper sx={paperStyle} elevation={0} className='drop-shadow-xl'>
                     <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
                             <Typography
                               sx={{
@@ -160,7 +160,7 @@ const Confirm = () => {
                             >{location}</Typography>
                         </Stack>
                     </Paper>
-                    <Paper sx={paperStyle} elevation={2}>
+                    <Paper sx={paperStyle} elevation={0} className='drop-shadow-xl'>
                     <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
                             <Typography
                               sx={{
@@ -187,7 +187,7 @@ const Confirm = () => {
                     </Paper>
                 </Stack>
                 <Stack direction={isLargeScreen ? 'column' : 'row'} spacing={isLargeScreen ? 5 : 4}>
-                    <Paper sx={paperStyle} elevation={2}>
+                    <Paper sx={paperStyle} elevation={0} className='drop-shadow-xl'>
                     <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
                             <Typography
                               sx={{
@@ -212,7 +212,7 @@ const Confirm = () => {
                             >5th March 2024 {'\n'} 12:00pm</Typography>
                         </Stack>
                     </Paper>
-                    <Paper sx={paperStyle} elevation={2}>
+                    <Paper sx={paperStyle} elevation={0} className='drop-shadow-xl'>
                     <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
                             <Typography
                               sx={{
