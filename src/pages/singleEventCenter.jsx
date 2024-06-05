@@ -22,7 +22,8 @@ const SingleEventCenter = () => {
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen;
 
   return (
-    <div className="relative w-full h-[40vh] md:h-[50vh] lg:h-[70vh]">
+    <div className='container overflow-x-hidden w-screen h-screen'>
+    <div className="relative w-full h-[40vh] m-auto md:h-[50vh] lg:h-[70vh]">
       <img
         src={Image}
         alt="Event"
@@ -77,6 +78,7 @@ const SingleEventCenter = () => {
               <p style={{color: blue}} className='text-center md:text-sm text-xs font-[Montserrat] font-[600]'>Max</p>         
           </Paper>
       </div>
+    </div>
     </div>
   );
 }
