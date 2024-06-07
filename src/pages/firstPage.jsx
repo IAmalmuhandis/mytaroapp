@@ -44,7 +44,7 @@ const FirstPage = () => {
     <Helmet>
       <title>MyTaroApp: Plan your dream event with few clicks</title>
     </Helmet>
-    <Container maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+    <Container className='' maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
       <Logo_Btn />
       <Container>
         <Typography
