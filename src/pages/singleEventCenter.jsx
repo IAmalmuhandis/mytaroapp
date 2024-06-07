@@ -21,6 +21,12 @@ import Instagram from '../component/socialmedia/instagram';
 import Facebook from '../component/socialmedia/facebook';
 import Twitter from '../component/socialmedia/twitter';
 import ContinueBtn from '../component/continueBtn';
+import Image1 from '../assets/images/Flower centerpiece bouquets with pink and white eustomas.png'
+import Image2 from '../assets/images/Luxurious dinner hall with large crystal chandelier.png'
+import Image3 from '../assets/images/Wedding dinner table set. classy white decor with greenery.png'
+import ImageList from '../component/imageList';
+
+const images = [Image1, Image2, Image3, Image1, Image2, Image3, Image1, Image2, Image3]
 
 const SingleEventCenter = () => {
   const theme = useTheme();
@@ -96,13 +102,9 @@ const SingleEventCenter = () => {
             <p  className='md:text-xl text-sm text-left font-[Montserrat] font-[400] m-3 leading-loose'>Pioneering Excellence since November 2008, Afficient Event Center have been the conerstone of memorable occations in Kano for over 16 years. As the first event center in the region, we pride our self in offering a diverse range of services to cater for various events and needs. </p>
         </div>
       </div>
-      {/* <div className='flex flex-row shrink-0 w-full m-auto overflow-scroll'>
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i, k) => (
-            <Paper className='h-[300px] w-[300px] flex bg-red-700 justify-around items-center gap-96'>Paper</Paper>
-          ))}
-      </div> */}
-      <div style={{color: blue}} className='w-full mx-auto'>
-          <h1 className='text-center lg:-mt-10 text-xl md:text-4xl font-[800] font-[Montserrat]'>Specification Of The Venue</h1>
+      <ImageList images={images} />
+      <div style={{color: blue}} className='w-full mx-auto mt-20'>
+          <h1 className='text-center -mt-10 text-xl md:text-4xl font-[800] font-[Montserrat]'>Specification Of The Venue</h1>
           <p className='text-center text-base md:text-lg font-[400] m-4'>Capacity of the venue, service provided, packages of the event center</p>
       </div>
       <div className='flex flex-col md:flex-row w-full -mt-14 lg:-mt-20 h-fit p-5 justify-around'>
@@ -110,8 +112,8 @@ const SingleEventCenter = () => {
           <Haloween width={isLargeScreen ? 500 : 300} height={isLargeScreen ? 450 : 270} />
         </div>
         <div style={{color: blue}} className='basis-1/3 flex justify-center items-center flex-col'>
-            <h1 className='md:text-2xl text-xl font-[Montserrat] font-[800]'>About Afficient Event Center</h1>
-            <p  className='md:text-xl text-sm text-left font-[Montserrat] font-[400] m-3 leading-loose'>Pioneering Excellence since November 2008, Afficient Event Center have been the conerstone of memorable occations in Kano for over 16 years. As the first event center in the region, we pride our self in offering a diverse range of services to cater for various events and needs. </p>
+            <h1 className='md:text-2xl text-xl font-[Montserrat] font-[800]'>Capacity</h1>
+            <p  className='md:text-xl text-sm text-left font-[Montserrat] font-[400] m-3 leading-loose'>Indoor: accomodate up to 500 guests <br /> <br /> Outdoor: perfect for large gatherings, accomodating up to 1500 attendees <br /> <br /> Grand Hall: spacious enough for grand events hosting between 1000 to 2000 prople</p>
         </div>
       </div>
       <div className='flex flex-col md:flex-row-reverse w-full h-fit p-5 -mt-14 lg:-mt-36 justify-around'>
@@ -119,22 +121,22 @@ const SingleEventCenter = () => {
           <Wedding width={isLargeScreen ? 500 : 300} height={isLargeScreen ? 450 : 270} />
         </div>
         <div style={{color: blue}} className='basis-1/3 flex justify-center items-center flex-col'>
-            <h1 className='md:text-2xl text-xl font-[Montserrat] font-[800]'>About Afficient Event Center</h1>
-            <p  className='md:text-xl text-sm text-left font-[Montserrat] font-[400] m-3 leading-'>Pioneering Excellence since November 2008, Afficient Event Center have been the conerstone of memorable occations in Kano for over 16 years. As the first event center in the region, we pride our self in offering a diverse range of services to cater for various events and needs. </p>
+            <h1 className='md:text-2xl text-xl font-[Montserrat] font-[800]'>Services</h1>
+            <p  className='md:text-xl text-sm text-left font-[Montserrat] font-[400] m-3 leading-loose'>DJ and Caterer Recommendation: ensuring your event is accompanied by the finest entertainment and cuisine <br /> <br /> Marriage Preping Services: from hair saloons to counseling programs, diet planning to yoga and gym facilities, we offer comprehensive support for couples embarking on their journey together.</p>
         </div>
       </div>
-      <div className='flex flex-col md:flex-row w-full h-fit p-5 mt-0 lg:-mt-32 justify-around'>
+      <div className='flex flex-col md:flex-row w-full h-fit p-5 mt-0 lg:-mt-20 justify-around'>
         <div className='basis-1/3 flex justify-center items-center'>
           <Package width={isLargeScreen ? 500 : 300} height={isLargeScreen ? 450 : 270} />
         </div>
         <div style={{color: blue}} className='basis-1/3 flex justify-center items-center flex-col mt-10'>
-            <h1 className='md:text-2xl text-xl font-[Montserrat] font-[800]'>About Afficient Event Center</h1>
-            <p  className='md:text-xl text-sm text-left font-[Montserrat] font-[400] m-3 leading-'>Pioneering Excellence since November 2008, Afficient Event Center have been the conerstone of memorable occations in Kano for over 16 years. As the first event center in the region, we pride our self in offering a diverse range of services to cater for various events and needs. </p>
+            <h1 className='md:text-2xl text-xl font-[Montserrat] font-[800]'>Packages</h1>
+            <p  className='md:text-xl text-sm text-left font-[Montserrat] font-[400] m-3 leading-loose'>Standard Package: inclucive of decoration, hall rentals, bouncers, traffic wardens and a police car with officers on standby to ensure the safety and smooth flow of your event.</p>
         </div>
       </div>
       <div style={{color: blue}} className='w-full h-fit p-5'>
           <h1 className='text-center lg:-mt-10 text-xl md:text-4xl font-[800] font-[Montserrat]'>Mission and Vision</h1>
-          <p className='text-center text-sm md:text-xl font-[400] mx-auto m-4 md:w-1/2 w-full'>At Afficient Event Center, we are commited to transforming your vision into reality, ensuring every moment is infused with elegance, professionalism and unforgettable experience.</p>
+          <p className='text-center text-sm md:text-xl font-[400] font-[Montserrat] mx-auto m-4 md:w-1/2 w-full leading-loose'>At Afficient Event Center, we are commited to transforming your vision into reality, ensuring every moment is infused with elegance, professionalism and unforgettable experience.</p>
           <div className='flex flex-row mt-5 md:gap-10 gap-5 w-full md:w-1/2 mx-auto justify-center'>
             <Instagram />
             <Facebook />
