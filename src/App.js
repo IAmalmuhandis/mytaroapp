@@ -11,6 +11,8 @@ import Confirm from './pages/Confirm';
 import EventCenters from './pages/EventCenters';
 import Manual from './pages/manual';
 import SingleEventCenter from './pages/singleEventCenter';
+import HireOtherService from './pages/hireOtherService';
+import ChooseService from './pages/chooseServices';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route path='/Manual' element={<Manual />} />
         <Route path='/Manual/event_centers' element={<EventCenters />} />
         <Route path='/Manual/event_centers/single' element={<SingleEventCenter />} />
+        <Route path='/Manual/hire_other_service' element={<HireOtherService />} />
+        <Route path='/Manual/hire_other_service/choose_service' element={<ChooseService />} />
       </Routes>
     </BrowserRouter>
   </>

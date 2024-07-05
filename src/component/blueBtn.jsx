@@ -7,7 +7,7 @@ const BlueBtn = (props) => {
         backgroundColor: blue,
     }
     return (
-        <button className='xl:w-[21rem] lg-w-80 lg:h-20 md:w-72 md:h-16 w-60 h-12 rounded-3xl lg:p-5 md:p-4 p-2 lg:text-3xl md:text-2xl text-lg font-[500] text-white btnAnimation' style={btnStyle} onClick={props.onClick}>{props.title}</button>
+        <button className='xl:w-[21rem] lg-w-80 lg:h-20 md:w-72 md:h-16 w-52 h-12 rounded-3xl lg:text-3xl md:text-2xl text-lg font-[500] text-white btnAnimation' style={btnStyle} onClick={props.onClick}>{props.title}</button>
     )
 }
 

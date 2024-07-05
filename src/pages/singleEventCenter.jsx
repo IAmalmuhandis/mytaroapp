@@ -25,6 +25,7 @@ import Image1 from '../assets/images/Flower centerpiece bouquets with pink and w
 import Image2 from '../assets/images/Luxurious dinner hall with large crystal chandelier.png'
 import Image3 from '../assets/images/Wedding dinner table set. classy white decor with greenery.png'
 import ImageList from '../component/imageList';
+import { useNavigate } from 'react-router-dom';
 
 const images = [Image1, Image2, Image3, Image1, Image2, Image3, Image1, Image2, Image3]
 
@@ -34,6 +35,12 @@ const SingleEventCenter = () => {
   const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
   const isDesktopScreen = useMediaQuery(theme.breakpoints.up('lg'));
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen;
+
+  const navigate = useNavigate()
+
+  const handleContinue = () =>{
+    navigate('/Manual/hire_other_service')
+  }
 
   return (
     <div className='container mx-auto max-w-fit overflow-x-hidden w-screen h-fit'>
@@ -121,7 +128,7 @@ const SingleEventCenter = () => {
           <Wedding width={isLargeScreen ? 500 : 300} height={isLargeScreen ? 450 : 270} />
         </div>
         <div style={{color: blue}} className='basis-1/3 flex justify-center items-center flex-col'>
-            <h1 className='md:text-2xl text-xl font-[Montserrat] font-[800]'>Services</h1>
+            <h1 className='md:text-2xl text-xl text-left font-[Montserrat] font-[800]'>Services</h1>
             <p  className='md:text-xl text-sm text-left font-[Montserrat] font-[400] m-3 leading-loose'>DJ and Caterer Recommendation: ensuring your event is accompanied by the finest entertainment and cuisine <br /> <br /> Marriage Preping Services: from hair saloons to counseling programs, diet planning to yoga and gym facilities, we offer comprehensive support for couples embarking on their journey together.</p>
         </div>
       </div>
@@ -144,7 +151,7 @@ const SingleEventCenter = () => {
           </div>
       </div>
       <div className='flex w-full h-fit justify-center items-center my-10 mt-5'>
-          <ContinueBtn />
+          <ContinueBtn onClick={handleContinue} />
       </div>
     </div>
   );
