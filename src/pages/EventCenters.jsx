@@ -22,6 +22,57 @@ const EventCenters = () => {
   const isDesktopScreen = useMediaQuery(theme.breakpoints.up('lg'));
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
   const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1090
+
+  const eventCentersList = [
+    {
+        img: Img5,
+        title: 'Amani Event Center',
+        experience: '4 Years Of Experience',
+        capacity: 'Up to 1000 capacity',
+        rating: 5
+    },
+    {
+        img: Img2,
+        title: 'Afficienct Event Center',
+        experience: '16 Years Of Experience',
+        capacity: 'Up to 3000 capacity',
+        rating: 3
+    },
+    {
+        img: Img3,
+        title: 'Fabs Event Center',
+        experience: '5 Years Of Experience',
+        capacity: 'Up to 700 capacity',
+        rating: 3
+    },
+    {
+        img: Img4,
+        title: 'Fele Event Center',
+        experience: '6 Years Of Experience',
+        capacity: 'Up to 700 capacity',
+        rating: 4
+    },
+    {
+        title: 'Moon Event Center',
+        experience: '6 Years Of Experience',
+        capacity: 'Up to 700 capacity',
+        rating: 0
+    },
+    {
+        img: Img5,
+        title: 'Meena Event Center',
+        experience: '6 Years Of Experience',
+        capacity: 'Up to 700 capacity',
+        rating: 4
+    },
+    {
+        title: 'Star Event Center',
+        experience: '6 Years Of Experience',
+        capacity: 'Up to 700 capacity',
+        rating: 4
+    }
+  ]
+
   return (
     <>
     <Helmet>
@@ -55,25 +106,12 @@ const EventCenters = () => {
                 <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
             </div>
         </Grid>
-        <Grid container mt={2} spacing={2} justifyContent='center'>
-            <Grid item>
-                <MediaCard img={Img5} title='Amani Event Center' experience='4 years of experience' capacity='Up to 1000 capacity' rating={5} />
-            </Grid>
-            <Grid item>
-                <MediaCard img={Img2} title='Afficienct Event Center' experience='16 years of experience' capacity='Up to 3000 capacity' rating={3} />
-            </Grid>
-            <Grid item>
-                <MediaCard img={Img3} title='Fabs Event Center' experience='5 years of experience' capacity='Up to 700 capacity' rating={4} />
-            </Grid>
-            <Grid item>
-                <MediaCard img={Img4} title='Fele Event Center' experience='6 years of experience' capacity='Up to 700 capacity' rating={5} />
-            </Grid>
-            <Grid item>
-                <MediaCard img={Img1} title='Meena Event Center' experience='9 years of experience' capacity='Up to 1000 capacity' rating={4} />
-            </Grid>
-            <Grid item>
-                <MediaCard title='Star Event Center' experience='9 years of experience' capacity='Up to 1000 capacity' rating={2} />
-            </Grid>
+        <Grid className='w-full px-2 py-4 mx-auto' container mt={2} spacing={2} justifyContent='center'>
+            {eventCentersList.map((i, k) =>(
+                <Grid className='w-full md:w-fit' item>
+                    <MediaCard img={i.img} title={i.title} experience={i.experience} capacity={i.capacity} rating={i.rating} />
+                </Grid>
+            ))}
         </Grid>
     </Container>
     </>

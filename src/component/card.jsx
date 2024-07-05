@@ -29,15 +29,15 @@ export default function MediaCard({img, title, experience, capacity, rating}) {
   }
 
   return (
-    <Card>
+    <Card className='w-full'>
        {
         img ? (
-            <CardMedia              
-                sx={{width: 300, height: 200, objectFit: 'cover' }}
+            <CardMedia
+                className='w-full md:w-80 h-56 object-cover'              
                 image={img}
           />  
         ) : (
-            <Skeleton variant="rectangular" width={300} height={200} />
+            <Skeleton variant="rectangular" className='w-full md:w-80' height={200} />
         )
        } 
       <CardContent>
