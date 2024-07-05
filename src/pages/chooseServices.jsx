@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet';
 import BlueBtn from '../component/blueBtn';
 
 const ChooseService = () => {
+  const navigate = useNavigate()
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
   const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
@@ -22,7 +23,7 @@ const ChooseService = () => {
       <title>Want To Hire Other Services?</title>
     </Helmet>
     <div className='w-full fixed top-0'>
-      <Back_Avater />
+      <Back_Avater onClick={() => navigate('/Manual/hire_other_service')} />
     </div>
     <div className='w-full h-screen max-w-full mt-8 p-4 flex justify-center items-center overflow-hidden'>
       <div className='mt-3 w-full'>
@@ -47,8 +48,8 @@ const ChooseService = () => {
             </div>
             <div>
               <Stack className='gap-2 md:gap-5'>
-                <BlueBtn title='DJ' />
-                <BlueBtn title='MC' />
+                <BlueBtn title='Disk Jockey (DJ)' onClick={() => navigate('/Manual/dj')} />
+                <BlueBtn onClick={() => navigate('/Manual/mc')} title='MC' />
                 <BlueBtn title='CATERER' />
               </Stack>
             </div>

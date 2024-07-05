@@ -13,6 +13,8 @@ import Manual from './pages/manual';
 import SingleEventCenter from './pages/singleEventCenter';
 import HireOtherService from './pages/hireOtherService';
 import ChooseService from './pages/chooseServices';
+import Djs from './pages/dj';
+import Mcs from './pages/mc';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path='/Manual/event_centers/single' element={<SingleEventCenter />} />
         <Route path='/Manual/hire_other_service' element={<HireOtherService />} />
         <Route path='/Manual/hire_other_service/choose_service' element={<ChooseService />} />
+        <Route path='/Manual/dj' element={<Djs />} />
+        <Route path='/Manual/mc' element={<Mcs />} />
       </Routes>
     </BrowserRouter>
   </>
