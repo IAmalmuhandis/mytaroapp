@@ -6,7 +6,6 @@ import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { ReactComponent as Illustration } from '../assets/svg/Address-cuate 1.svg';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import styles from '../assets/css/bluebtn.module.css'
 
 const customTheme = createTheme({
     palette: {
@@ -37,7 +36,7 @@ const Btn = (props) => {
   }
   return (
       <ThemeProvider theme={customTheme}>
-        <Button className={styles.button} color='primary' disableElevation sx={btnStyle} variant="contained" onClick={props.onClick}>{props.title}</Button>
+        <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={props.onClick}>{props.title}</Button>
       </ThemeProvider>
   )
 }

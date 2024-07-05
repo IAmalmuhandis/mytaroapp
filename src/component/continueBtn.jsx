@@ -5,7 +5,7 @@ import { useTheme } from '@mui/material/styles';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import styles from '../assets/css/bluebtn.module.css'
+import '../assets/css/btnAnimation.css';
 
 const RedcustomTheme = createTheme({
     palette: {
@@ -44,7 +44,7 @@ const ContinueBtn = ({onClick, color=red}) => {
     }
     return (
         <ThemeProvider theme={color === red ? RedcustomTheme : BluecustomTheme }>
-            <Button className={styles.button} color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Continue <ChevronRightIcon sx={{fontSize: isLargeScreen ? '35px' : '20px'}} /></Button>
+            <Button className='btnAnimation' color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Continue <ChevronRightIcon sx={{fontSize: isLargeScreen ? '35px' : '20px'}} /></Button>
         </ThemeProvider>
     )
 }

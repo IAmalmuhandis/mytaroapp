@@ -8,56 +8,30 @@ import { useNavigate } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { deepOrange } from '@mui/material/colors';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import styles from '../assets/css/bluebtn.module.css'
 
-const customTheme = createTheme({
-    palette: {
-      primary: {
-        main: red, 
-      },
-    },
-});
 
-const Avt = () =>{
-    return(
-        <Avatar
-        sx={{ bgcolor: deepOrange[500] }}
-        alt="Remy Sharp"
-        src="/broken-image.jpg"
-      >
-        B
-      </Avatar>
-    )
-}
+// const Avt = () =>{
+//     return(
+//         <Avatar
+//         sx={{ bgcolor: deepOrange[500] }}
+//         alt="Remy Sharp"
+//         src="/broken-image.jpg"
+//       >
+//         B
+//       </Avatar>
+//     )
+// }
 
 const SigninBtn = (props) => {
 
   const navigate = useNavigate();
-
-  const btnStyle = {
-    width: props.width, 
-    height: props.height, 
-    borderRadius: '32px', 
-    padding: '5.6px', 
-    fontSize: props.fontSz,
-    textTransform: 'none',
-    backgroundColor: red,
-    fontFamily: 'Montserrat',
-    fontWeight: '500px',
-    lineHeight: '10.97px',
-    letterSpacing: '-3%',
-    marginRight: '-10px'
-  }
 
   const onClick = () =>{
     navigate('/signin')
   }
   
   return (
-    <ThemeProvider theme={customTheme}>
-        <Button className={styles.button} color='primary' disableElevation sx={btnStyle} variant="contained" onClick={onClick}>Sign in</Button>
-    </ThemeProvider>
+    <button className='lg:w-52 lg:h-[3.3rem] md:w-48 md:h-12 w-36 h-9 rounded-3xl md:text-xl text-xs text-white font-[500] btnAnimation' style={{backgroundColor: red}} onClick={onClick}>Sign in</button>
   )
 }
 

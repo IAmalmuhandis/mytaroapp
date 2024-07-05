@@ -9,9 +9,9 @@ import { blue, red } from '../utils/colors';
 import { Stack } from '@mui/material';
 import Rating from '@mui/material/Rating';
 import Skeleton from '@mui/material/Skeleton'
-import styles from '../assets/css/bluebtn.module.css'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
+import '../assets/css/btnAnimation.css';
 
 const customTheme = createTheme({
     palette: {
@@ -64,7 +64,7 @@ export default function MediaCard({img, title, experience, capacity, rating}) {
         <Stack direction='row' width='100%' justifyContent='space-between'>
             <Rating defaultValue={rating} readOnly />
             <ThemeProvider theme={customTheme}>
-                <Button className={styles.button} size='small' variant='contained' onClick={onClick}>View</Button>
+                <Button className='btnAnimation' size='small' variant='contained' onClick={onClick}>View</Button>
             </ThemeProvider>
         </Stack>
       </CardActions>

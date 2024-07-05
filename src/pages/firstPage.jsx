@@ -44,7 +44,7 @@ const FirstPage = () => {
     <Helmet>
       <title>MyTaroApp: Plan your dream event with few clicks</title>
     </Helmet>
-    <Container className='' maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+    <Container className='pb-3' maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
       <Logo_Btn />
       <Container>
         <Typography
@@ -65,7 +65,7 @@ const FirstPage = () => {
         <div style={{ display: 'flex', justifyContent: 'center'}}>
           <Anniversary width={isLargeScreen ? 500 : 283} height={isLargeScreen ? 530 : 293}/>
         </div>
-        <Stack alignItems='center' justifyContent='center' spacing={2} direction="column" mt={{xl: 4, lg: 3, md: 2, sm: 0, xs: 0}}>  
+        <Stack className='sm:mb-3' alignItems='center' justifyContent='center' spacing={2} direction="column" mt={{xl: 4, lg: 3, md: 2, sm: 0, xs: 0}}>  
           <Stack spacing={isLargeScreen ? 4 : 2} direction={isLargeScreen ? 'row' : 'column'}>
             <BlueBtn title='Wedding' onClick={onWeddingClick} />
             <BlueBtn title='Conference' />
@@ -74,7 +74,7 @@ const FirstPage = () => {
               <BlueBtn title='Birthday' />
               <BlueBtn title='Concert' />
           </Stack>
-          <Stack spacing={1} direction="column" alignItems="center" mt={5}>
+          {/* <Stack spacing={1} direction="column" alignItems="center" mt={5}>
             <Typography sx={{ color: blue, textAlign: 'center', fontWeight: '800', fontFamily: 'Montserrat', fontSize: isLargeScreen ? '22.29px' : '9px', lineHeight: '28.4px', letterSpacing: '1%' }}>Didn't find the answer?</Typography>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
             <TextField
@@ -89,7 +89,7 @@ const FirstPage = () => {
             }}
           />
           </div>
-          </Stack>
+          </Stack> */}
       </Stack>
     </Grid>
     </Container>
