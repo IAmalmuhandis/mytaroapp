@@ -34,14 +34,11 @@ const Ai_assistant = () => {
         <Stack className='justify-around items-center ' spacing={isDesktopScreen ? 10 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
             <Illustration width={isLargeScreen ? 700 : 281} height={isLargeScreen ? 600 : 270} />
             <Stack spacing={3}>
-              <Typography
-                mt={3}
-                fontFamily='Montserrat'
-                fontSize={{xl: 35, lg: 35, md: 35, sm: 30, xs: 25 }}
-                color={blue}
-                fontWeight={800}
-                lineHeight={1.5}
-                textAlign='center'
+              <Typography className='mt-3 font-[Montserrat] text-center'
+                 fontSize={{xl: 35, lg: 35, md: 35, sm: 30, xs: 25 }}
+                 color={blue}
+                 fontWeight={800}
+                 lineHeight={1.5}
                 >Welcome To My Taro Ai Assistant
               </Typography>
               <div className='flex justify-center mt-0'>

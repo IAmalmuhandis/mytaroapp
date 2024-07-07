@@ -27,11 +27,11 @@ const HireOtherService = () => {
     <Helmet>
       <title>Want To Hire Other Services?</title>
     </Helmet>
-    <div className='w-full fixed top-0'>
+    <div className='w-full relative px-5 top-0'>
       <Back_Avater />
     </div>
     <div className='w-full h-screen max-w-full mt-8 p-4 flex justify-center items-center overflow-hidden'>
-      <div className='mt-3 w-full'>
+      <div className='-mt-14 w-full'>
         <div className='flex flex-col gap-2'>
           <Typography
             fontFamily='Montserrat'

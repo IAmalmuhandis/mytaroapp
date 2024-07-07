@@ -22,11 +22,11 @@ const ChooseService = () => {
     <Helmet>
       <title>Want To Hire Other Services?</title>
     </Helmet>
-    <div className='w-full fixed top-0'>
+    <div className='w-full relative top-0 px-5'>
       <Back_Avater onClick={() => navigate('/Manual/hire_other_service')} />
     </div>
     <div className='w-full h-screen max-w-full mt-8 p-4 flex justify-center items-center overflow-hidden'>
-      <div className='mt-3 w-full'>
+      <div className='-mt-14 w-full'>
         <div className='flex flex-col gap-2'>
           <Typography
             fontFamily='Montserrat'
@@ -38,7 +38,7 @@ const ChooseService = () => {
             lineHeight={{xl: 1, lg: 1, md: 2, sm: 2, xs: 2}}
             >Which Services Do You Want To Hire?
           </Typography>
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3px'}}>
+          <div className='flex justify-center mt-0'>
             <Arrow width={isLargeScreen ? '193px' : '112px'} height={isLargeScreen ? '37px' : '23px'}/>
           </div>
         </div>
