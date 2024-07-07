@@ -74,7 +74,7 @@ const Question6 = ({ onNext }) => {
             <Stack>
               <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 509 : 335} />
             </Stack>
-            <Stack spacing={{xl: 3, lg: 3, md: 2, xs: 1, sm: 1}}>
+            <Stack className='pb-3' spacing={{xl: 3, lg: 3, md: 2, xs: 1, sm: 1}}>
               <BlueBtn title="Yes" onClick={handleYesClick} />
               <BlueBtn title="No" onClick={handleNoClick} />
             </Stack>

@@ -68,7 +68,7 @@ const Question4 = ({ onNext }) => {
           >
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
-          <Stack mt={isLargeScreen && -5} sx={{ alignItems: 'center', justifyContent: 'space-between' }} spacing={isLaptopScreen || isDesktopScreen ? 30 : 5} direction={isLaptopScreen || isDesktopScreen ? 'row' : 'column'}>
+          <Stack className='pb-4' mt={isLargeScreen && -5} sx={{ alignItems: 'center', justifyContent: 'space-between' }} spacing={isLaptopScreen || isDesktopScreen ? 30 : 0} direction={isLaptopScreen || isDesktopScreen ? 'row' : 'column'}>
             <Stack>
               <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 450 : 335} />
             </Stack>
@@ -96,7 +96,7 @@ const Question4 = ({ onNext }) => {
                 Please Select The Color
               </Typography>
               </div>
-              <Stack spacing={3} mt={2}>
+              <Stack className='pb-4' spacing={3} mt={2}>
                 <Stack direction={{xl: 'row', lg: 'row', md: 'row', sm: 'column', xs: 'column'}} justifyContent='center' alignItems='center' spacing={3}>
                   <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                     <HexColorPicker style={{width: '300px', height: '300px'}}  color={color} onChange={setColor} />

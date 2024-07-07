@@ -172,7 +172,7 @@ const Question1 = ({ onNext}) => {
                 />
               </Stack>
               </Stack>
-              <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <div className='mb-4' style={{ display: 'flex', justifyContent: 'center' }}>
                   <ContinueBtn onClick={handleNext} />
                </div> 
             </Stack>

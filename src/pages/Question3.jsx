@@ -6,6 +6,7 @@ import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { ReactComponent as Illustration } from '../assets/svg/Address-cuate 1.svg';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import '../assets/css/btnAnimation.css'
 
 const customTheme = createTheme({
     palette: {
@@ -36,7 +37,7 @@ const Btn = (props) => {
   }
   return (
       <ThemeProvider theme={customTheme}>
-        <Button color='primary' disableElevation sx={btnStyle} variant="contained" onClick={props.onClick}>{props.title}</Button>
+        <Button className='btnAnimation' color='primary' disableElevation sx={btnStyle} variant="contained" onClick={props.onClick}>{props.title}</Button>
       </ThemeProvider>
   )
 }
@@ -83,7 +84,7 @@ const Question3 = ({onNext}) => {
           <div style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'left' }}>
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
-          <Grid container>
+          <Grid className='pb-4' container>
           <Stack  sx={{width: '100%'}} alignItems='center' justifyContent='center' mt={0} spacing={{xl: 30, lg: 15, md: 2, xs: 2, sm: 2}} direction={{xl:'row', lg: 'row', md: 'column', xs: 'column', sm: 'column'}}>
              <Stack>
                 <Illustration width={isLargeScreen || isSmallLaptop ? 520 : 335} height={isLargeScreen ? 390 : 335} />

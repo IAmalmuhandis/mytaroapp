@@ -106,7 +106,7 @@ const SingleEventCenter = () => {
         </div>
         <div style={{color: blue}} className='basis-1/3 flex justify-center items-center flex-col'>
             <h1 className='md:text-2xl text-xl font-[Montserrat] font-[800]'>About Afficient Event Center</h1>
-            <p  className='md:text-xl text-sm text-left font-[Montserrat] font-[400] m-3 leading-loose'>Pioneering Excellence since November 2008, Afficient Event Center have been the conerstone of memorable occations in Kano for over 16 years. As the first event center in the region, we pride our self in offering a diverse range of services to cater for various events and needs. </p>
+            <p  className='md:text-xl text-sm text-center font-[Montserrat] font-[400] m-3 leading-loose'>Pioneering Excellence since November 2008, Afficient Event Center have been the conerstone of memorable occations in Kano for over 16 years. As the first event center in the region, we pride our self in offering a diverse range of services to cater for various events and needs. </p>
         </div>
       </div>
       <ImageList images={images} />
@@ -120,7 +120,7 @@ const SingleEventCenter = () => {
         </div>
         <div style={{color: blue}} className='basis-1/3 flex justify-center items-center flex-col'>
             <h1 className='md:text-2xl text-xl font-[Montserrat] font-[800]'>Capacity</h1>
-            <p  className='md:text-xl text-sm text-left font-[Montserrat] font-[400] m-3 leading-loose'>Indoor: accomodate up to 500 guests <br /> <br /> Outdoor: perfect for large gatherings, accomodating up to 1500 attendees <br /> <br /> Grand Hall: spacious enough for grand events hosting between 1000 to 2000 prople</p>
+            <p  className='md:text-xl text-sm text-center font-[Montserrat] font-[400] m-3 leading-loose'>Indoor: accomodate up to 500 guests <br /> <br /> Outdoor: perfect for large gatherings, accomodating up to 1500 attendees <br /> <br /> Grand Hall: spacious enough for grand events hosting between 1000 to 2000 prople</p>
         </div>
       </div>
       <div className='flex flex-col md:flex-row-reverse w-full h-fit p-5 -mt-14 lg:-mt-36 justify-around'>
@@ -129,7 +129,7 @@ const SingleEventCenter = () => {
         </div>
         <div style={{color: blue}} className='basis-1/3 flex justify-center items-center flex-col'>
             <h1 className='md:text-2xl text-xl text-left font-[Montserrat] font-[800]'>Services</h1>
-            <p  className='md:text-xl text-sm text-left font-[Montserrat] font-[400] m-3 leading-loose'>DJ and Caterer Recommendation: ensuring your event is accompanied by the finest entertainment and cuisine <br /> <br /> Marriage Preping Services: from hair saloons to counseling programs, diet planning to yoga and gym facilities, we offer comprehensive support for couples embarking on their journey together.</p>
+            <p  className='md:text-xl text-sm text-center font-[Montserrat] font-[400] m-3 leading-loose'>DJ and Caterer Recommendation: ensuring your event is accompanied by the finest entertainment and cuisine <br /> <br /> Marriage Preping Services: from hair saloons to counseling programs, diet planning to yoga and gym facilities, we offer comprehensive support for couples embarking on their journey together.</p>
         </div>
       </div>
       <div className='flex flex-col md:flex-row w-full h-fit p-5 mt-0 lg:-mt-20 justify-around'>
@@ -138,7 +138,7 @@ const SingleEventCenter = () => {
         </div>
         <div style={{color: blue}} className='basis-1/3 flex justify-center items-center flex-col mt-10'>
             <h1 className='md:text-2xl text-xl font-[Montserrat] font-[800]'>Packages</h1>
-            <p  className='md:text-xl text-sm text-left font-[Montserrat] font-[400] m-3 leading-loose'>Standard Package: inclucive of decoration, hall rentals, bouncers, traffic wardens and a police car with officers on standby to ensure the safety and smooth flow of your event.</p>
+            <p  className='md:text-xl text-sm text-center font-[Montserrat] font-[400] m-3 leading-loose'>Standard Package: inclucive of decoration, hall rentals, bouncers, traffic wardens and a police car with officers on standby to ensure the safety and smooth flow of your event.</p>
         </div>
       </div>
       <div style={{color: blue}} className='w-full h-fit p-5'>

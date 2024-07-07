@@ -16,7 +16,6 @@ import ContinueBtn from '../component/continueBtn';
 import { Helmet } from 'react-helmet';
 import { NigeriaNaira } from '../utils/helpers';
 
-
 const Confirm = () => {
   const theme = useTheme()
   const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
@@ -239,7 +238,7 @@ const Confirm = () => {
                     </Paper>
                 </Stack>
             </Stack>
-            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '30px'}}>
+            <div className='flex justify-center items-center mt-5 pb-4'>
                 <ContinueBtn />
             </div>
         </Container>

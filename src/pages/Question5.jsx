@@ -51,15 +51,17 @@ const Question5 = ({onNext}) => {
           >
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
-          <Stack mt={3} sx={{ alignItems: 'center', justifyContent: 'center' }} spacing={isDesktopScreen ? 30 : 2} direction={isDesktopScreen ? 'row' : 'column'}>
+          <Stack className='-mt-5' sx={{ alignItems: 'center', justifyContent: 'center' }} spacing={isDesktopScreen ? 30 : 2} direction={isDesktopScreen ? 'row' : 'column'}>
              <Stack>
-             <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 509 : 335} />
+             <Illustration width={isLargeScreen || isSmallLaptop ? 430 : 335} height={isLargeScreen ? 430 : 335} />
              </Stack>
              <Stack sx={{justifyContent:'center', alignItems: 'center'}} spacing={2}>
                 <DateTimePicker />
-                <ContinueBtn onClick={handleNext} />
              </Stack>  
           </Stack>
+          <div className='w-full pb-4 flex  xl:mt-0 mt-2 justify-center items-center'>
+                <ContinueBtn onClick={handleNext} />
+          </div>
     </Container>
   )
 }

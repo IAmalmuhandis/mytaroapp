@@ -6,6 +6,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'; // Import for
 import { blue } from '../utils/colors';
 import { Stack } from '@mui/material';
 import { getTodayDate } from '../utils/helpers';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const customTheme = createTheme({
   palette: {
@@ -24,11 +26,16 @@ const CustomActionBar = () =>{
 }
 
 const DateTimePicker = () => {
+  const theme = useTheme();
+  const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
+  const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
+  const isDesktopScreen = useMediaQuery(theme.breakpoints.up('lg'));
+  const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
   return (
     <ThemeProvider theme={customTheme}>
       <LocalizationProvider  dateAdapter={AdapterDayjs}>
         <Stack>
-        <StaticDatePicker orientation='portrait'
+        <StaticDatePicker orientation={isLargeScreen ? 'landscape' : 'portrait'}
           defaultValue={dayjs(getTodayDate())} 
           slots={{
             // Override default <ActionBar /> with a custom one
