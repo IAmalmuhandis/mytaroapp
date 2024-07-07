@@ -65,12 +65,10 @@ const Question6 = ({ onNext }) => {
           >
              Are there any additional details, preference or requirement that you would like to share for the event?
           </Typography>
-          <div
-            style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'left' }}
-          >
+          <div className='mt-1 flex items-center justify-start lg:justify-center'>
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
-          <Stack mt={isLargeScreen && -5} sx={{ alignItems: 'center', justifyContent: 'space-between' }} spacing={isLaptopScreen || isDesktopScreen ? 30 : 5} direction={isLaptopScreen || isDesktopScreen ? 'row' : 'column'}>
+          <Stack mt={isLargeScreen && -5} className='items-center justify-between' spacing={isLaptopScreen || isDesktopScreen ? 30 : 5} direction={isLaptopScreen || isDesktopScreen ? 'row' : 'column'}>
             <Stack>
               <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 509 : 335} />
             </Stack>
@@ -82,10 +80,10 @@ const Question6 = ({ onNext }) => {
         </div>
       )}
       {answer === 'Yes' && (
-         <Container maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', }}>
-         <Container maxWidth="none" sx={{minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-            <Stack spacing={2} sx={{alignItems: 'center', justifyContent: 'center'}}>
-             <div style={{}}>   
+         <Container maxWidth="none" className='flex flex-col justify-between'>
+         <Container maxWidth="none" className='min-h-[60vh] flex flex-col justify-center items-center'>
+            <Stack spacing={2} className='items-center justify-center'>
+             <div>   
              <Typography
                 sx={{
                   fontFamily: 'Montserrat',
@@ -99,9 +97,7 @@ const Question6 = ({ onNext }) => {
                 Please Type The Detail Below
               </Typography>
               </div>
-              <div
-                style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'flex-start' }}
-              >
+              <div className='mt-1 flex items-center justify-start lg:justify-center'>
                 <Arrow width={isLargeScreen || isSmallLaptop ? '193px' : '112px'} height={isLargeScreen || isSmallLaptop ? '37px' : '23px'} />
             </div>
               <Stack spacing={3}>
@@ -115,7 +111,7 @@ const Question6 = ({ onNext }) => {
                     fontSize: '20px',
                     resize: 'none'
                 }}></textarea>
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <div className='flex justify-center'>
                   <ContinueBtn onClick={handleNext} />
                </div> 
               </Stack>

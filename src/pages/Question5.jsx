@@ -46,21 +46,19 @@ const Question5 = ({onNext}) => {
           >
             What is the proposed date and time for the event?
           </Typography>
-          <div
-            style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'left' }}
-          >
+          <div className='mt-1 flex items-center justify-start lg:justify-center'>
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
-          <Stack className='-mt-5' sx={{ alignItems: 'center', justifyContent: 'center' }} spacing={isDesktopScreen ? 30 : 2} direction={isDesktopScreen ? 'row' : 'column'}>
+          <Stack className='-mt-5 items-center justify-center' spacing={isDesktopScreen ? 30 : 2} direction={isDesktopScreen ? 'row' : 'column'}>
              <Stack>
              <Illustration width={isLargeScreen || isSmallLaptop ? 430 : 335} height={isLargeScreen ? 430 : 335} />
              </Stack>
-             <Stack sx={{justifyContent:'center', alignItems: 'center'}} spacing={2}>
+             <Stack className='justify-center items-center' spacing={2}>
                 <DateTimePicker />
              </Stack>  
           </Stack>
-          <div className='w-full pb-4 flex  xl:mt-0 mt-2 justify-center items-center'>
-                <ContinueBtn onClick={handleNext} />
+          <div className='w-full pb-4 flex xl:mt-0 mt-2 justify-center items-center'>
+              <ContinueBtn onClick={handleNext} />
           </div>
     </Container>
   )

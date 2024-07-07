@@ -63,12 +63,10 @@ const Question4 = ({ onNext }) => {
           >
             Do you have any specific themes or color schemes in mind for the event?
           </Typography>
-          <div
-            style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'left' }}
-          >
+          <div className='mt-1 flex items-center justify-start lg:justify-center'>
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
-          <Stack className='pb-4' mt={isLargeScreen && -5} sx={{ alignItems: 'center', justifyContent: 'space-between' }} spacing={isLaptopScreen || isDesktopScreen ? 30 : 0} direction={isLaptopScreen || isDesktopScreen ? 'row' : 'column'}>
+          <Stack className='pb-4 items-center justify-center' mt={isLargeScreen && -5} spacing={isLaptopScreen || isDesktopScreen ? 30 : 0} direction={isLaptopScreen || isDesktopScreen ? 'row' : 'column'}>
             <Stack>
               <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 450 : 335} />
             </Stack>
@@ -80,10 +78,10 @@ const Question4 = ({ onNext }) => {
         </div>
       )}
       {answer === 'Yes' && (
-         <Container maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', }}>
-         <Container maxWidth="none" sx={{minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-            <Stack spacing={2} sx={{alignItems: 'center', justifyContent: 'center'}}>
-             <div style={{}}>   
+         <Container maxWidth="none" className='flex flex-col justify-between'>
+         <Container maxWidth="none" className='min-h-[60vh] flex flex-col justify-center items-center'>
+            <Stack spacing={2} className='items-center justify-center'>
+             <div>   
              <Typography
                 fontFamily='Montserrat'
                 fontSize={{lg: 40, md: 35, xs: 15, xl: 45, sm: 30}}
@@ -98,7 +96,7 @@ const Question4 = ({ onNext }) => {
               </div>
               <Stack className='pb-4' spacing={3} mt={2}>
                 <Stack direction={{xl: 'row', lg: 'row', md: 'row', sm: 'column', xs: 'column'}} justifyContent='center' alignItems='center' spacing={3}>
-                  <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                  <div className='flex justify-center items-center'>
                     <HexColorPicker style={{width: '300px', height: '300px'}}  color={color} onChange={setColor} />
                   </div>
                   <Paper
@@ -106,7 +104,7 @@ const Question4 = ({ onNext }) => {
                   >
                   </Paper>
                 </Stack>
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <div className='flex justify-center'>
                   <ContinueBtn onClick={handleNext} />
                </div> 
               </Stack>

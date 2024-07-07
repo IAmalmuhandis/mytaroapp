@@ -95,10 +95,10 @@ const Question2 = ({onNext}) => {
           >
             How many guest are you expecting to attend?
           </Typography>
-          <div style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'left' }}>
+          <div className='mt-1 flex items-center justify-start lg:justify-center'>
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
-          <Stack className='pb-4' mt={0} sx={{ alignItems: 'center', justifyContent: 'center' }} spacing={{xl: 30, lg: 15, md: 2, xs: 2, sm: 2}} direction={{xl:'row', lg: 'row', md: 'column', xs: 'column', sm: 'column'}}>
+          <Stack className='pb-4 items-center justify-center' mt={0} spacing={{xl: 30, lg: 15, md: 2, xs: 2, sm: 2}} direction={{xl:'row', lg: 'row', md: 'column', xs: 'column', sm: 'column'}}>
              <Stack>
              <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 450 : 335} />
              </Stack>
@@ -119,8 +119,8 @@ const Question2 = ({onNext}) => {
                   <Btn title='900' onClick={() => handleNext(900)} />
                 </Stack>
                 <Stack spacing={0} direction="column" alignItems="center" mt={5}>
-                <Typography sx={{ color: blue, textAlign: 'center', fontWeight: '800', fontFamily: 'Montserrat', fontSize: isLargeScreen ? '22.29px' : '9px', lineHeight: '28.4px', letterSpacing: '1%' }}>Didn't find the answer?</Typography>
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <Typography className='items-center font-[Montserrat] ' sx={{ color: blue, fontWeight: 800, fontSize: isLargeScreen ? '22.29px' : '9px', lineHeight: '28.4px', letterSpacing: '1%' }}>Didn't find the answer?</Typography>
+                <div className='flex justify-center' >
                 <TextField
                 sx={typeSomtingStyle}
                 placeholder="Type something.........."

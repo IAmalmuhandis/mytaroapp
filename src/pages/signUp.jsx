@@ -77,8 +77,8 @@ const SignUp = () => {
     <Helmet>
       <title>Sign up</title>
     </Helmet>
-    <Container maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-        <Stack mt={3} sx={{justifyContent: 'center', alignItems: 'center'}} spacing={1}>
+    <Container maxWidth="none" className='flex flex-col justify-center items-center'>
+        <Stack mt={3} className='justify-center items-center' spacing={1}>
             <Logo width={isLargeScreen ? 187 : 57} height={isLargeScreen ? 109 : 57}/>
             <Typography sx={{ 
                 fontFamily: 'Montserrat', 
@@ -93,7 +93,7 @@ const SignUp = () => {
                 Create New Account
             </Typography>
         </Stack>
-        <Stack mt={5} sx={{justifyContent: 'space-around', alignItems: 'center'}} spacing={isDesktopScreen ? 20 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
+        <Stack mt={5} className='justify-around items-center' spacing={isDesktopScreen ? 20 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
             <Illustration width={isLargeScreen ? 509 : 168.82} height={isLargeScreen ? 509 : 168.82} />
             <Stack spacing={3}>
                 <Stack spacing={3}>
@@ -145,7 +145,7 @@ const SignUp = () => {
                         }}
                     />
                 </Stack>
-                <Stack mb={5} sx={{justifyContent: 'center', alignItems: 'center'}} spacing={2}>
+                <Stack mb={5} className='justify-center items-center' spacing={2}>
                     <Signin_SignupBtn title='Sign Up' />
                     <Typography sx={{ 
                         fontFamily: 'Montserrat', 
@@ -160,9 +160,9 @@ const SignUp = () => {
                         Already have an account? <Link to='/signin' style={{color: red}}>Sign in</Link>
                     </Typography>
                     <Separator />
-                    <div style={{marginTop: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                           <SocialMedia />
-                      </div>
+                    <div className='mt-5 flex justify-center items-center'>
+                        <SocialMedia />
+                    </div>
                 </Stack>
             </Stack>
         </Stack>

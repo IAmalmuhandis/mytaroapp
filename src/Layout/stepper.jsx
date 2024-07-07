@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Stepper, Step, StepLabel, Container, ThemeProvider, createTheme } from '@mui/material';
 import {Stack } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import Back_Avater from '../component/Back_Avater';
 import {red} from '@mui/material/colors';
 import Question1 from '../pages/Question1';
@@ -59,7 +57,7 @@ const StepperPage = () => {
         <title>Answer the Questions</title>
       </Helmet>
       <Back_Avater onClick={handleBack} />
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
+      <div className='flex justify-center mt-7'>
       <Container>
         <ThemeProvider theme={theme}>
         <Stepper activeStep={activeStep} alternativeLabel>
@@ -83,7 +81,7 @@ const StepperPage = () => {
           </Step>
         </Stepper>
         </ThemeProvider>
-        <Container maxWidth="none" sx={{minHeight: '60vh', display: 'flex', flexDirection: 'column' }}>
+        <Container maxWidth="none" className='min-h-[60vh] flex flex-col'>
           {getStepContent(activeStep)}
         </Container>
       </Container>
@@ -92,15 +90,9 @@ const StepperPage = () => {
     );
   };
 
-const S = () => {
-    const theme = useTheme();
-    const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
-    const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
-    const isDesktopScreen = useMediaQuery(theme.breakpoints.up('lg'));
-    const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
-    const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1024  
+const S = () => { 
   return (
-    <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
+    <Container maxWidth="none" className='min-h-[80vh] flex flex-col justify-between overflow-hidden'>
         <Stack mt={3} spacing={4}>
              <StepperPage />
         </Stack>    

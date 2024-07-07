@@ -81,7 +81,7 @@ const Question3 = ({onNext}) => {
           >
             What is the preferred location?
           </Typography>
-          <div style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'left' }}>
+          <div className='mt-1 flex items-center justify-start lg:justify-center'>
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
           <Grid className='pb-4' container>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { red } from '../utils/colors';
-import { Stack } from '@mui/material';
 import { ReactComponent as Logo } from '../assets/logo/Logo.svg';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -28,10 +27,10 @@ const Logo_Btn = () =>{
   const isDesktopScreen = useMediaQuery(theme.breakpoints.up('lg'));
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
   return(
-    <Stack spacing={2} direction="row" mx={1} mt={{ xs: 3, sm: 5, md: 7 }} justifyContent='space-between'>
+    <div className='flex flex-row justify-between md:mt-8 mt-5 w-full'>
       <Link to='/'><Logo width={isLargeScreen ? 187 : 65} height={isLargeScreen ? 109 : 65}/></Link>
       <SigninBtn />
-    </Stack>
+    </div>
   )
 }
 
