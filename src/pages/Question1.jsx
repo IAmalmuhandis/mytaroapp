@@ -73,16 +73,14 @@ const Question1 = ({ onNext}) => {
           >
             Do you have a budget?
           </Typography>
-          <div
-            style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: isLargeScreen ? 'center' : 'left' }}
-          >
+          <div className='mt-1 flex items-center justify-start lg:justify-center'>
             <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
           </div>
-          <Stack sx={{ alignItems: 'center', justifyContent: 'space-between' }} spacing={isDesktopScreen ? 30 : 5} direction={isDesktopScreen ? 'row-reverse' : 'column'}>
+          <Stack className='items-center justify-between' spacing={isDesktopScreen ? 30 : 5} direction={isDesktopScreen ? 'row-reverse' : 'column'}>
             <Stack>
               <Illustration width={isLargeScreen || isSmallLaptop ? 509 : 335} height={isLargeScreen ? 509 : 335} />
             </Stack>
-            <Stack spacing={isLargeScreen ? 2 : 1}>
+            <Stack className='pb-4' spacing={isLargeScreen ? 2 : 1}>
               <BlueBtn title="Yes" onClick={handleYesClick} />
               <BlueBtn title="No" onClick={handleNoClick} />
             </Stack>
@@ -90,7 +88,7 @@ const Question1 = ({ onNext}) => {
         </div>
       )}
       {answer === 'Yes' && (
-         <Container maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', }}>
+         <Container maxWidth="none" className='flex flex-col justify-between'>
           <Stack  mt={5} spacing={2}>
                 <Typography
                 sx={{
@@ -104,14 +102,14 @@ const Question1 = ({ onNext}) => {
               >
                 Please State The Amount Below
               </Typography>
-              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3px'}}>
+              <div className='flex justify-center mt-0'>
                 <Arrow width={isLargeScreen ? '193px' : '112px'} height={isLargeScreen ? '37px' : '23px'}/>
               </div>
             </Stack>
          <Container maxWidth="none" sx={{minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <Stack mt={-5} spacing={5}>
               <Stack spacing={4} sx={{alignItems: 'center', justifyContent: 'center'}}>
-             <div style={{}}>   
+             <div>   
             <Typography
                 sx={{
                   fontFamily: 'Montserrat',
@@ -172,7 +170,7 @@ const Question1 = ({ onNext}) => {
                 />
               </Stack>
               </Stack>
-              <div className='mb-4' style={{ display: 'flex', justifyContent: 'center' }}>
+              <div className='mb-4 flex justify-center'>
                   <ContinueBtn onClick={handleNext} />
                </div> 
             </Stack>

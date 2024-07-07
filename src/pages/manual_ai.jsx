@@ -32,11 +32,11 @@ const Manual_Ai = () => {
     <Helmet>
       <title>Select</title>
     </Helmet>
-    <Container maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', }}>
+    <Container maxWidth="none" className='flex flex-col justify-between'>
         <Logo_Btn />
-        <Container maxWidth="none" sx={{height: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-            <Stack mt={isLargeScreen ? 0 : 15} sx={{justifyContent: 'center', alignItems: 'center'}} spacing={5}>
-                <Stack spacing={2} sx={{justifyContent: 'center', alignItems: 'center'}}>
+        <Container maxWidth="none" className='h-[60vh] flex flex-col justify-center items-center pb-4'>
+            <Stack mt={isLargeScreen ? 0 : 15} className='justify-center items-center' spacing={5}>
+                <Stack spacing={2} className='justify-center items-center'>
                     <Question width={isLargeScreen ? '246px' : '155px'} height={isLargeScreen ? '188px' : '118px'} />
                     <Typography
                       fontFamily='Montserrat'

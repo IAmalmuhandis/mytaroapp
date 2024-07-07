@@ -16,6 +16,10 @@ import ContinueBtn from '../component/continueBtn';
 import { Helmet } from 'react-helmet';
 import { NigeriaNaira } from '../utils/helpers';
 
+const cont = () =>{
+
+}
+
 const Confirm = () => {
   const theme = useTheme()
   const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
@@ -212,7 +216,7 @@ const Confirm = () => {
                         </Stack>
                     </Paper>
                     <Paper sx={paperStyle} elevation={0} className='drop-shadow-xl'>
-                    <Stack spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
+                    <Stack className='w-full' spacing={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
                             <Typography
                               sx={{
                                 fontFamily: 'Montserrat',
@@ -224,16 +228,7 @@ const Confirm = () => {
                               }}
                             >Color</Typography>
                             <Color width={isLargeScreen ? '77px' : '36px'} height={isLargeScreen ? '77px' : '36px'} />
-                            <Typography
-                              sx={{
-                                fontFamily: 'Montserrat',
-                                fontSize: isLargeScreen ? '22px' : '11px',
-                                color: blue,
-                                fontWeight: '700',
-                                letterSpacing: '1%',
-                                textAlign: 'center',
-                              }}
-                            >{color}</Typography>
+                            <div className='w-2/3 md:h-8 h-6' style={{backgroundColor: color}}></div>
                         </Stack>
                     </Paper>
                 </Stack>

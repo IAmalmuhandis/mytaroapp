@@ -28,10 +28,10 @@ const Manual = () => {
     <Helmet>
       <title>Manual Organizing</title>
     </Helmet>
-    <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
+    <Container maxWidth="none" className='min-h-[80vh] flex flex-col justify-center overflow-hidden'>
         <Back_Avater onClick={() => navigate('/choose')} />
-        <Container maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-        <Stack  sx={{justifyContent: 'space-around', alignItems: 'center'}} spacing={isDesktopScreen ? 10 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
+        <Container maxWidth="none" className='flex flex-col justify-center items-center'>
+        <Stack className='justify-center items-center' spacing={isDesktopScreen ? 10 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
             <Illustration width={isLargeScreen ? 700 : 281} height={isLargeScreen ? 600 : 270} />
             <Stack spacing={3}>
               <Typography
@@ -44,7 +44,7 @@ const Manual = () => {
                 textAlign='center'
                 >Plan Your Dream Event With Your Fingers
               </Typography>
-              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3px'}}>
+              <div className='flex justify-center mt-0'>
                 <Arrow width={isLargeScreen ? '193px' : '112px'} height={isLargeScreen ? '37px' : '23px'}/>
               </div>
               <Stack spacing={5}>
@@ -59,7 +59,7 @@ const Manual = () => {
                   mt={0}
                   >With Taro manual event organising, you will be able to organise your event with your prefered data
                 </Typography>
-                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
+                <div  className='flex justify-center pb-4'>
                   <ContinueBtn onClick={onContinue} color={blue}/>
                 </div>
               </Stack>

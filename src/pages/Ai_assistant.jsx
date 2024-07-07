@@ -28,10 +28,10 @@ const Ai_assistant = () => {
     <Helmet>
       <title>AI Assitant</title>
     </Helmet>
-    <Container maxWidth="none" sx={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
+    <Container maxWidth="none" className='min-h-[80vh] flex flex-col justify-center overflow-hidden'>
         <Back_Avater onClick={() => navigate('/choose')} />
-        <Container maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-        <Stack  sx={{justifyContent: 'space-around', alignItems: 'center'}} spacing={isDesktopScreen ? 10 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
+        <Container maxWidth="none" className='flex flex-col justify-center items-center'>
+        <Stack className='justify-around items-center ' spacing={isDesktopScreen ? 10 : 4} direction={isDesktopScreen ? 'row' : 'column'}>
             <Illustration width={isLargeScreen ? 700 : 281} height={isLargeScreen ? 600 : 270} />
             <Stack spacing={3}>
               <Typography
@@ -44,10 +44,10 @@ const Ai_assistant = () => {
                 textAlign='center'
                 >Welcome To My Taro Ai Assistant
               </Typography>
-              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3px'}}>
+              <div className='flex justify-center mt-0'>
                 <Arrow width={isLargeScreen ? '193px' : '112px'} height={isLargeScreen ? '37px' : '23px'}/>
               </div>
-              <Stack spacing={5}>
+              <Stack spacing={3}>
                 <Typography sx={{ 
                   fontFamily: 'Montserrat', 
                   fontSize: isLargeScreen ? '28px' : '16px', 
@@ -59,7 +59,7 @@ const Ai_assistant = () => {
                   mt={0}
                   >With few questions, we will be able to organize your event base on your given details
                 </Typography>
-                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
+                <div className='flex justify-center pb-4'>
                   <ContinueBtn onClick={onContinue} color={blue}/>
                 </div>
               </Stack>

@@ -44,7 +44,7 @@ const FirstPage = () => {
     <Helmet>
       <title>MyTaroApp: Plan your dream event with few clicks</title>
     </Helmet>
-    <Container className='pb-3' maxWidth="none" sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+    <Container className='pb-3 flex flex-col justify-between' maxWidth="none">
       <Logo_Btn />
       <Container>
         <Typography
@@ -57,15 +57,15 @@ const FirstPage = () => {
           lineHeight={{xl: 1, lg: 1, md: 2, sm: 2, xs: 2}}
           >What Type Of Event Are You Planning?
         </Typography>
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3px'}}>
+        <div className='flex justify-center mt-1'>
           <Arrow width={isLargeScreen ? '193px' : '112px'} height={isLargeScreen ? '37px' : '23px'}/>
         </div>
       </Container>
       <Grid container justifyContent="space-around" mt={isLargeScreen ? -12 : 0}>
-        <div style={{ display: 'flex', justifyContent: 'center'}}>
+        <div className='flex justify-center'>
           <Anniversary width={isLargeScreen ? 500 : 283} height={isLargeScreen ? 530 : 293}/>
         </div>
-        <Stack className='sm:mb-3' alignItems='center' justifyContent='center' spacing={2} direction="column" mt={{xl: 4, lg: 3, md: 2, sm: 0, xs: 0}}>  
+        <Stack className='sm:mb-3 items-center justify-center flex-col' spacing={2} mt={{xl: 4, lg: 3, md: 2, sm: 0, xs: 0}}>  
           <Stack spacing={isLargeScreen ? 4 : 2} direction={isLargeScreen ? 'row' : 'column'}>
             <BlueBtn title='Wedding' onClick={onWeddingClick} />
             <BlueBtn title='Conference' />
