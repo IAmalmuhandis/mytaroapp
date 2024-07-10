@@ -50,7 +50,7 @@ const Manual_Ai = () => {
                     </Typography>
                     <Arrow width={isLargeScreen ? '193px' : '112px'} height={isLargeScreen ? '37px' : '23px'}/>
                 </Stack>
-                <Stack spacing={2} direction={isLargeScreen ? 'row' : 'column'}>
+                <Stack className='pb-4' spacing={2} direction={isLargeScreen ? 'row' : 'column'}>
                     <BlueBtn title='Manually' onClick={onManualPress} />
                     <BlueBtn title='Ai Assistant' onClick={onAiPress} />
                 </Stack>
