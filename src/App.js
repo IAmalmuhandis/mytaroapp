@@ -15,6 +15,7 @@ import HireOtherService from './pages/hireOtherService';
 import ChooseService from './pages/chooseServices';
 import Djs from './pages/dj';
 import Mcs from './pages/mc';
+import SingleDj from './pages/singleDj';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='/Manual' element={<Manual />} />
         <Route path='/Manual/event_centers' element={<EventCenters />} />
         <Route path='/Manual/event_centers/single' element={<SingleEventCenter />} />
+        <Route path='/Manual/dj/single' element={<SingleDj />} />
         <Route path='/Manual/hire_other_service' element={<HireOtherService />} />
         <Route path='/Manual/hire_other_service/choose_service' element={<ChooseService />} />
         <Route path='/Manual/dj' element={<Djs />} />

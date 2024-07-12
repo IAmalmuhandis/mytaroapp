@@ -21,11 +21,11 @@ const customTheme = createTheme({
     },
 });
 
-export default function MediaCard({img, title, experience, capacity, rating}) {
+export default function MediaCard({img, title, experience, capacity, rating, nav}) {
   const navigate = useNavigate()
   
   const onClick = () =>{
-    navigate('/Manual/event_centers/single')
+    navigate(nav)
   }
 
   return (
