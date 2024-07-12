@@ -20,7 +20,7 @@ const Manual = () => {
     const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1024  
 
     const onContinue = () => {
-      navigate('/Manual/event_centers')
+      navigate('/event_centers')
     }
 
   return (

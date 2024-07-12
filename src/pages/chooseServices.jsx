@@ -48,9 +48,9 @@ const ChooseService = () => {
             </div>
             <div>
               <Stack className='gap-2 md:gap-5'>
-                <BlueBtn title='Disk Jockey (DJ)' onClick={() => navigate('/Manual/dj')} />
-                <BlueBtn onClick={() => navigate('/Manual/mc')} title='MC' />
-                <BlueBtn title='CATERER' />
+                <BlueBtn title='Disk Jockey (DJ)' onClick={() => navigate('/vendor/dj')} />
+                <BlueBtn onClick={() => navigate('/vendor/mc')} title='MC' />
+                <BlueBtn title='CATERER' onClick={() => navigate('/vendor/caterer')} />
               </Stack>
             </div>
         </div>

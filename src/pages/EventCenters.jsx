@@ -109,7 +109,7 @@ const EventCenters = () => {
         <Grid className='w-full px-2 py-4 mx-auto' container mt={2} spacing={2} justifyContent='center'>
             {eventCentersList.map((i, k) =>(
                 <Grid className='w-full md:w-fit' item>
-                    <MediaCard img={i.img} title={i.title} experience={i.experience} capacity={i.capacity} rating={i.rating} nav='/Manual/event_centers/single' />
+                    <MediaCard img={i.img} title={i.title} experience={i.experience} capacity={i.capacity} rating={i.rating} nav='/event_centers/single' />
                 </Grid>
             ))}
         </Grid>

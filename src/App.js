@@ -16,6 +16,8 @@ import ChooseService from './pages/chooseServices';
 import Djs from './pages/dj';
 import Mcs from './pages/mc';
 import SingleDj from './pages/singleDj';
+import Caterer from './pages/caterer';
+import SingleCaterer from './pages/singleCaterer';
 
 function App() {
   return (
@@ -30,13 +32,15 @@ function App() {
         <Route path='/AiAssistant/stepper' element={<S />} />
         <Route path='/AiAssistant/Confirm' element={<Confirm />} />
         <Route path='/Manual' element={<Manual />} />
-        <Route path='/Manual/event_centers' element={<EventCenters />} />
-        <Route path='/Manual/event_centers/single' element={<SingleEventCenter />} />
-        <Route path='/Manual/dj/single' element={<SingleDj />} />
+        <Route path='/event_centers' element={<EventCenters />} />
+        <Route path='/event_centers/single' element={<SingleEventCenter />} />
+        <Route path='/vendor/dj/single' element={<SingleDj />} />
+        <Route path='/vendor/caterer/single' element={<SingleCaterer />} />
         <Route path='/Manual/hire_other_service' element={<HireOtherService />} />
         <Route path='/Manual/hire_other_service/choose_service' element={<ChooseService />} />
-        <Route path='/Manual/dj' element={<Djs />} />
-        <Route path='/Manual/mc' element={<Mcs />} />
+        <Route path='/vendor/dj' element={<Djs />} />
+        <Route path='/vendor/mc' element={<Mcs />} />
+        <Route path='/vendor/caterer' element={<Caterer />} />
       </Routes>
     </BrowserRouter>
   </>

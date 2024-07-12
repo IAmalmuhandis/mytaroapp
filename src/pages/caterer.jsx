@@ -8,11 +8,11 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import MediaCard from '../component/card'
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
-import Img1 from '../assets/images/Screenshot (50) 1.png'
-import Img2 from '../assets/images/Screenshot (51) 1.png'
+import Img1 from '../assets/images/burger1.png'
+import Img2 from '../assets/images/burger2.png'
 
 
-const Mcs = () => {
+const Caterer = () => {
   const navigate = useNavigate()
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
@@ -80,7 +80,7 @@ const Mcs = () => {
                 lineHeight={2}
                 fontFamily='Montserrat'
             >
-                Choose Your Preffered Master of Ceremony (MC)
+                Choose Your Preffered Caterer
             </Typography>
             <Typography
                 mt={1} 
@@ -91,7 +91,7 @@ const Mcs = () => {
                 lineHeight={2}
                 fontFamily='Montserrat'
             >
-                Click To View MC's Information
+                Click To View Caterer's Information
             </Typography>
             <div style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                 <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
@@ -100,7 +100,7 @@ const Mcs = () => {
         <Grid className='w-full px-2 py-4 mx-auto' container mt={2} spacing={2} justifyContent='center'>
             {eventCentersList.map((i, k) =>(
                 <Grid className='w-full md:w-fit' item>
-                    <MediaCard img={i.img} title={i.title} experience={i.experience} capacity={i.capacity} rating={i.rating} nav='/Manual/dj/single' />
+                    <MediaCard img={i.img} title={i.title} experience={i.experience} capacity={i.capacity} rating={i.rating} nav='/vendor/caterer/single' />
                 </Grid>
             ))}
         </Grid>
@@ -109,4 +109,4 @@ const Mcs = () => {
   )
 }
 
-export default Mcs
+export default Caterer
