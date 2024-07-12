@@ -153,7 +153,7 @@ const SignIn = () => {
                             Don't have an account? <Link to="/signup" style={{ color: red }}>Sign up</Link>
                         </Typography>
                         <Separator />
-                        <div className='mt-5 flex justify-center items-center'>
+                        <div className='mt-5 mx-auto w-full flex justify-center items-center'>
                            <SocialMedia />
                        </div>
                     </Stack>
