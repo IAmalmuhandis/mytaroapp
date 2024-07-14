@@ -5,7 +5,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Logo_Btn from '../component/signIn_Logo';
 import { ReactComponent as Question } from '../assets/svg/question.svg';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
-import BlueBtn from '../component/blueBtn';
+import BlueBtn from '../component/buttons/blueBtn';
 import { blue } from '../utils/colors';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';

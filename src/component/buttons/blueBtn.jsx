@@ -1,6 +1,6 @@
 import React from 'react'
-import { blue } from '../utils/colors'
-import '../assets/css/btnAnimation.css'
+import { blue } from '../../utils/colors'
+import '../../assets/css/btnAnimation.css'
 
 const BlueBtn = (props) => {
     return (

@@ -5,7 +5,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { blue, grey } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { ReactComponent as Illustration } from '../assets/svg/Banknote-pana 1.svg';
-import BlueBtn from '../component/blueBtn';
+import BlueBtn from '../component/buttons/blueBtn';
 import { NigeriaNaira } from '../utils/helpers';
 import ContinueBtn from '../component/continueBtn';
 

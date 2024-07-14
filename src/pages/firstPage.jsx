@@ -4,13 +4,13 @@ import { ReactComponent as Anniversary } from '../assets/svg/Work anniversary-pa
 import Stack from '@mui/material/Stack';
 import { Container, Typography, InputAdornment, TextField, Grid } from '@mui/material';
 import { blue } from '../utils/colors';
-import BlueBtn from '../component/blueBtn';
 import SearchIcon from '@mui/icons-material/Search';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useNavigate } from 'react-router-dom';
 import Logo_Btn from '../component/signIn_Logo';
 import { Helmet } from 'react-helmet';
+import BlueBtn from '../component/buttons/blueBtn';
 
 const FirstPage = () => {
   const theme = useTheme();

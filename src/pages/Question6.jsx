@@ -5,7 +5,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { blue, grey } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { ReactComponent as Illustration } from '../assets/svg/Questions-cuate 1.svg';
-import BlueBtn from '../component/blueBtn';
+import BlueBtn from '../component/buttons/blueBtn';
 import ContinueBtn from '../component/continueBtn';
 
 const Question6 = ({ onNext }) => {

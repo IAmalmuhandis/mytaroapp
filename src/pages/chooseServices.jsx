@@ -8,7 +8,7 @@ import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import BlueBtn from '../component/blueBtn';
+import BlueBtn from '../component/buttons/blueBtn';
 
 const ChooseService = () => {
   const navigate = useNavigate()
