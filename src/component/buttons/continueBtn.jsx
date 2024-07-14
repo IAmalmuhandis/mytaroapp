@@ -1,11 +1,11 @@
 import React from 'react'
 import Button from '@mui/material/Button';
-import { blue, red } from '../utils/colors'
+import { blue, red } from '../../utils/colors'
 import { useTheme } from '@mui/material/styles';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import '../assets/css/btnAnimation.css';
+import '../../assets/css/btnAnimation.css'
 
 const RedcustomTheme = createTheme({
     palette: {

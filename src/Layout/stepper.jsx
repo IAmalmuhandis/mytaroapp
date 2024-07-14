@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Stepper, Step, StepLabel, Container, ThemeProvider, createTheme } from '@mui/material';
 import {Stack } from '@mui/material';
-import Back_Avater from '../component/Back_Avater';
+import Back_Avater from '../component/topNavigation/Back_Avater';
 import {red} from '@mui/material/colors';
 import Question1 from '../pages/Question1';
 import Question2 from '../pages/Question2';

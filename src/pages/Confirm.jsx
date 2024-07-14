@@ -1,7 +1,7 @@
 import { Container, Paper, Stack, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import Back_Avater from '../component/Back_Avater';
+import Back_Avater from '../component/topNavigation/Back_Avater';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
@@ -12,7 +12,7 @@ import { ReactComponent as Calender } from '../assets/svg/calendar.svg';
 import { ReactComponent as Capacity } from '../assets/svg/people.svg';
 import { ReactComponent as Color } from '../assets/svg/colorfilter.svg';
 import { blue } from '../utils/colors';
-import ContinueBtn from '../component/continueBtn';
+import ContinueBtn from '../component/buttons/continueBtn';
 import { Helmet } from 'react-helmet';
 import { NigeriaNaira } from '../utils/helpers';
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../assets/css/separator.module.css'
+import styles from '../../assets/css/separator.module.css'
 
 const Separator = () => {
   return (

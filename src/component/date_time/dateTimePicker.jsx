@@ -3,9 +3,9 @@ import dayjs from 'dayjs';
 import { LocalizationProvider, MobileTimePicker, StaticDatePicker} from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { createTheme, ThemeProvider } from '@mui/material/styles'; // Import for theming
-import { blue } from '../utils/colors';
+import { blue } from '../../utils/colors';
 import { Stack } from '@mui/material';
-import { getTodayDate } from '../utils/helpers';
+import { getTodayDate } from '../../utils/helpers';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 

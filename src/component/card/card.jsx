@@ -5,13 +5,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { blue, red } from '../utils/colors';
+import { blue, red } from '../../utils/colors';
 import { Stack } from '@mui/material';
 import Rating from '@mui/material/Rating';
 import Skeleton from '@mui/material/Skeleton'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
-import '../assets/css/btnAnimation.css';
+import '../../assets/css/btnAnimation.css';
 
 const customTheme = createTheme({
     palette: {

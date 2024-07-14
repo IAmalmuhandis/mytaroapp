@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Back_Avater from '../component/Back_Avater'
+import Back_Avater from '../component/topNavigation/Back_Avater'
 import { Stack, Typography } from '@mui/material';
 import { ReactComponent as Illustration } from '../assets/svg/Catering service-bro 1.svg';
 import { blue } from '../utils/colors';

@@ -6,7 +6,7 @@ import { blue, grey } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { ReactComponent as Illustration } from '../assets/svg/Questions-cuate 1.svg';
 import BlueBtn from '../component/buttons/blueBtn';
-import ContinueBtn from '../component/continueBtn';
+import ContinueBtn from '../component/buttons/continueBtn';
 
 const Question6 = ({ onNext }) => {
   const theme = useTheme();

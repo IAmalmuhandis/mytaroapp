@@ -20,11 +20,11 @@ import { blue } from '../utils/colors';
 import Instagram from '../component/socialmedia/instagram';
 import Facebook from '../component/socialmedia/facebook';
 import Twitter from '../component/socialmedia/twitter';
-import ContinueBtn from '../component/continueBtn';
+import ContinueBtn from '../component/buttons/continueBtn';
 import Image1 from '../assets/images/Flower centerpiece bouquets with pink and white eustomas.png'
 import Image2 from '../assets/images/Luxurious dinner hall with large crystal chandelier.png'
 import Image3 from '../assets/images/Wedding dinner table set. classy white decor with greenery.png'
-import ImageList from '../component/imageList';
+import ImageList from '../component/image/imageList';
 import { useNavigate } from 'react-router-dom';
 
 const images = [Image1, Image2, Image3, Image1, Image2, Image3, Image1, Image2, Image3]

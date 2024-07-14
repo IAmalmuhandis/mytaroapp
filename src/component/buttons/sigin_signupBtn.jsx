@@ -1,10 +1,10 @@
 import React from 'react'
 import Button from '@mui/material/Button';
-import { red } from '../utils/colors'
+import { red } from '../../utils/colors'
 import { useTheme } from '@mui/material/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import '../assets/css/btnAnimation.css';
+import '../../assets/css/btnAnimation.css';
 
 const customTheme = createTheme({
     palette: {

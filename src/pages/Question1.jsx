@@ -7,7 +7,7 @@ import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { ReactComponent as Illustration } from '../assets/svg/Banknote-pana 1.svg';
 import BlueBtn from '../component/buttons/blueBtn';
 import { NigeriaNaira } from '../utils/helpers';
-import ContinueBtn from '../component/continueBtn';
+import ContinueBtn from '../component/buttons/continueBtn';
 
 const Question1 = ({ onNext}) => {
   const theme = useTheme();

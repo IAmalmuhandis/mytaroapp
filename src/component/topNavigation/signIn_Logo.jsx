@@ -1,10 +1,10 @@
 import React from 'react'
-import { red } from '../utils/colors';
-import { ReactComponent as Logo } from '../assets/logo/Logo.svg';
+import { red } from '../../utils/colors';
+import { ReactComponent as Logo } from '../../assets/logo/Logo.svg';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Link, useNavigate } from 'react-router-dom';
-import '../assets/css/btnAnimation.css';
+import '../../assets/css/btnAnimation.css';
 
 const SigninBtn = () => {
 

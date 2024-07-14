@@ -7,10 +7,10 @@ import LockIcon from '@mui/icons-material/Lock';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { blue, grey, red } from '../utils/colors';
-import Signin_SignupBtn from '../component/sigin_signupBtn';
+import Signin_SignupBtn from '../component/buttons/sigin_signupBtn';
 import { Link } from 'react-router-dom';
-import SocialMedia from '../component/SocialMedia';
-import Separator from '../component/separator';
+import SocialMedia from '../component/socialmedia/SocialMedia';
+import Separator from '../component/util/separator';
 import { Helmet } from 'react-helmet';
 
 const SignIn = () => {

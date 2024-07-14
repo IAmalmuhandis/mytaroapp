@@ -2,13 +2,13 @@ import React from 'react'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Container, Stack, Typography } from '@mui/material';
-import Back_Avater from '../component/Back_Avater';
+import Back_Avater from '../component/topNavigation/Back_Avater';
 import { ReactComponent as Illustration } from '../assets/svg/Robot face-pana (1).svg';
 import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
-import ContinueBtn from '../component/continueBtn';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import ContinueBtn from '../component/buttons/continueBtn';
 
 const Ai_assistant = () => {
     const navigate = useNavigate()

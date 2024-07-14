@@ -6,7 +6,7 @@ import { blue} from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { ReactComponent as Illustration } from '../assets/svg/Add color-rafiki 1.svg';
 import BlueBtn from '../component/buttons/blueBtn';
-import ContinueBtn from '../component/continueBtn';
+import ContinueBtn from '../component/buttons/continueBtn';
 import { HexColorPicker } from 'react-colorful';
 
 const Question4 = ({ onNext }) => {

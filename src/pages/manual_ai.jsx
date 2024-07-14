@@ -2,7 +2,7 @@ import { Container, Stack, Typography } from '@mui/material'
 import React from 'react'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Logo_Btn from '../component/signIn_Logo';
+import Logo_Btn from '../component/topNavigation/signIn_Logo';
 import { ReactComponent as Question } from '../assets/svg/question.svg';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import BlueBtn from '../component/buttons/blueBtn';

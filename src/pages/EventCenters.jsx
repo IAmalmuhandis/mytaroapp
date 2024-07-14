@@ -1,12 +1,12 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Back_Avater from '../component/Back_Avater'
+import Back_Avater from '../component/topNavigation/Back_Avater'
 import { Container, Grid, Typography } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { blue } from '../utils/colors'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import MediaCard from '../component/card'
+import MediaCard from '../component/card/card'
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import Img1 from '../assets/images/Wedding tables decorated with flowers.png'
 import Img2 from '../assets/images/Screenshot (27) 1.png'

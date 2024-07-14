@@ -5,8 +5,8 @@ import { Container, Stack, Typography } from '@mui/material';
 import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { ReactComponent as Illustration } from '../assets/svg/Date picker-pana 1.svg';
-import ContinueBtn from '../component/continueBtn';
-import DateTimePicker from '../component/dateTimePicker';
+import ContinueBtn from '../component/buttons/continueBtn';
+import DateTimePicker from '../component/date_time/dateTimePicker';
 
 const Question5 = ({onNext}) => {
   const theme = useTheme();

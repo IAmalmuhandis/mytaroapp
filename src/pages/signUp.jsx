@@ -9,10 +9,10 @@ import LockIcon from '@mui/icons-material/Lock';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { blue, grey, red } from '../utils/colors';
-import Signin_SignupBtn from '../component/sigin_signupBtn';
+import Signin_SignupBtn from '../component/buttons/sigin_signupBtn';
 import { Link } from 'react-router-dom';
-import Separator from '../component/separator';
-import SocialMedia from '../component/SocialMedia';
+import Separator from '../component/util/separator';
+import SocialMedia from '../component/socialmedia/SocialMedia';
 import { Helmet } from 'react-helmet';
 
 const SignUp = () => {
@@ -160,7 +160,7 @@ const SignUp = () => {
                         Already have an account? <Link to='/signin' style={{color: red}}>Sign in</Link>
                     </Typography>
                     <Separator />
-                    <div className='mt-5 flex justify-center items-center'>
+                    <div className='mt-5 flex w-full justify-center items-center'>
                         <SocialMedia />
                     </div>
                 </Stack>
