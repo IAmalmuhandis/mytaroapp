@@ -2,11 +2,11 @@ import { Container, Stack, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { blue, grey } from '../utils/colors';
-import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
-import { ReactComponent as Illustration } from '../assets/svg/Questions-cuate 1.svg';
-import BlueBtn from '../component/buttons/blueBtn';
-import ContinueBtn from '../component/buttons/continueBtn';
+import { blue, grey } from '../../utils/colors';
+import { ReactComponent as Arrow } from '../../assets/svg/Arrow.svg';
+import { ReactComponent as Illustration } from '../../assets/svg/Questions-cuate 1.svg';
+import BlueBtn from '../../component/buttons/blueBtn';
+import ContinueBtn from '../../component/buttons/continueBtn';
 
 const Question6 = ({ onNext }) => {
   const theme = useTheme();

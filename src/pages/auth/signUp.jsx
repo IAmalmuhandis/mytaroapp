@@ -1,18 +1,18 @@
 import { Container, Stack, Typography, TextField, InputAdornment} from '@mui/material'
 import React from 'react'
-import { ReactComponent as Logo } from '../assets/logo/Logo.svg';
-import { ReactComponent as Illustration } from '../assets/svg/createAccount.svg';
+import { ReactComponent as Logo } from '../../assets/logo/Logo.svg';
+import { ReactComponent as Illustration } from '../../assets/svg/createAccount.svg';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LockIcon from '@mui/icons-material/Lock';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { blue, grey, red } from '../utils/colors';
-import Signin_SignupBtn from '../component/buttons/sigin_signupBtn';
+import { blue, grey, red } from '../../utils/colors';
+import Signin_SignupBtn from '../../component/buttons/sigin_signupBtn';
 import { Link } from 'react-router-dom';
-import Separator from '../component/util/separator';
-import SocialMedia from '../component/socialmedia/SocialMedia';
+import Separator from '../../component/util/separator';
+import SocialMedia from '../../component/socialmedia/SocialMedia';
 import { Helmet } from 'react-helmet';
 
 const SignUp = () => {

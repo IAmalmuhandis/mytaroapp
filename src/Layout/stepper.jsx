@@ -3,13 +3,13 @@ import { Stepper, Step, StepLabel, Container, ThemeProvider, createTheme } from 
 import {Stack } from '@mui/material';
 import Back_Avater from '../component/topNavigation/Back_Avater';
 import {red} from '@mui/material/colors';
-import Question1 from '../pages/Question1';
-import Question2 from '../pages/Question2';
+import Question1 from '../pages/Ai_Questions/Question1';
+import Question2 from '../pages/Ai_Questions/Question2';
 import { useNavigate } from 'react-router-dom';
-import Question3 from '../pages/Question3';
-import Question4 from '../pages/Question4';
-import Question5 from '../pages/Question5';
-import Question6 from '../pages/Question6';
+import Question3 from '../pages/Ai_Questions/Question3';
+import Question4 from '../pages/Ai_Questions/Question4';
+import Question5 from '../pages/Ai_Questions/Question5';
+import Question6 from '../pages/Ai_Questions/Question6';
 import { Helmet } from 'react-helmet';
 
 const theme = createTheme({

@@ -2,12 +2,12 @@ import { Container, Paper, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { blue, grey } from '../utils/colors';
-import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
-import { ReactComponent as Illustration } from '../assets/svg/Banknote-pana 1.svg';
-import BlueBtn from '../component/buttons/blueBtn';
-import { NigeriaNaira } from '../utils/helpers';
-import ContinueBtn from '../component/buttons/continueBtn';
+import { blue, grey } from '../../utils/colors';
+import { ReactComponent as Arrow } from '../../assets/svg/Arrow.svg';
+import { ReactComponent as Illustration } from '../../assets/svg/Banknote-pana 1.svg';
+import BlueBtn from '../../component/buttons/blueBtn';
+import { NigeriaNaira } from '../../utils/helpers';
+import ContinueBtn from '../../component/buttons/continueBtn';
 
 const Question1 = ({ onNext}) => {
   const theme = useTheme();

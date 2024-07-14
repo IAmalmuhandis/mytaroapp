@@ -1,18 +1,20 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Back_Avater from '../component/topNavigation/Back_Avater'
+import Back_Avater from '../../component/topNavigation/Back_Avater'
 import { Container, Grid, Typography } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
-import { blue } from '../utils/colors'
+import { blue } from '../../utils/colors'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import MediaCard from '../component/card/card'
-import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
-import Img1 from '../assets/images/Screenshot (50) 1.png'
-import Img2 from '../assets/images/Screenshot (51) 1.png'
+import MediaCard from '../../component/card/card'
+import { ReactComponent as Arrow } from '../../assets/svg/Arrow.svg';
+import Img1 from '../../assets/images/Wedding tables decorated with flowers.png'
+import Img2 from '../../assets/images/Screenshot (27) 1.png'
+import Img3 from '../../assets/images/Screenshot (28) 1.png'
+import Img4 from '../../assets/images/White chiavari chairs for guests, ceremonial wedding arch on the decorated for the wedding ceremony.png'
+import Img5 from '../../assets/images/Screenshot (25) 1.png'
 
-
-const Mcs = () => {
+const EventCenters = () => {
   const navigate = useNavigate()
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
@@ -23,43 +25,50 @@ const Mcs = () => {
 
   const eventCentersList = [
     {
-        img: Img2,
-        title: 'Jonny Black',
+        img: Img5,
+        title: 'Amani Event Center',
         experience: '4 Years Of Experience',
+        capacity: 'Up to 1000 capacity',
         rating: 5
     },
     {
-        img: Img1,
-        title: 'Janet Doe',
+        img: Img2,
+        title: 'Afficienct Event Center',
         experience: '16 Years Of Experience',
+        capacity: 'Up to 3000 capacity',
         rating: 3
     },
     {
-        title: 'Rick Sanchez',
+        img: Img3,
+        title: 'Fabs Event Center',
         experience: '5 Years Of Experience',
+        capacity: 'Up to 700 capacity',
         rating: 3
     },
     {
-        img: Img1,
-        title: 'John DOe',
+        img: Img4,
+        title: 'Fele Event Center',
         experience: '6 Years Of Experience',
+        capacity: 'Up to 700 capacity',
         rating: 4
     },
     {
-        title: 'Mary Smith',
+        title: 'Moon Event Center',
         experience: '6 Years Of Experience',
+        capacity: 'Up to 700 capacity',
         rating: 0
     },
     {
-        img: Img1,
-        title: 'Dj Fele',
+        img: Img5,
+        title: 'Meena Event Center',
         experience: '6 Years Of Experience',
+        capacity: 'Up to 700 capacity',
         rating: 4
     },
     {
-        img: Img2,
-        title: 'Juliana Doe',
+        title: 'Star Event Center',
         experience: '6 Years Of Experience',
+        capacity: 'Up to 700 capacity',
         rating: 4
     }
   ]
@@ -70,7 +79,7 @@ const Mcs = () => {
         <title>Select Event Center</title>
     </Helmet>
     <Container maxWidth="none" sx={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-        <Back_Avater onClick={() => navigate('/Manual/hire_other_service/choose_service')} />
+        <Back_Avater onClick={() => navigate('/Manual')} />
         <Grid>
             <Typography 
                 color={blue}
@@ -80,7 +89,7 @@ const Mcs = () => {
                 lineHeight={2}
                 fontFamily='Montserrat'
             >
-                Choose Your Preffered Master of Ceremony (MC)
+                Choose Your Preffered Event Venue
             </Typography>
             <Typography
                 mt={1} 
@@ -91,7 +100,7 @@ const Mcs = () => {
                 lineHeight={2}
                 fontFamily='Montserrat'
             >
-                Click To View MC's Information
+                Click to view Venue Information
             </Typography>
             <div style={{ marginTop: '5px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                 <Arrow width={isLargeScreen || isSmallLaptop ? '173px' : '112px'} height={isLargeScreen || isSmallLaptop ? '27px' : '23px'} />
@@ -100,7 +109,7 @@ const Mcs = () => {
         <Grid className='w-full px-2 py-4 mx-auto' container mt={2} spacing={2} justifyContent='center'>
             {eventCentersList.map((i, k) =>(
                 <Grid className='w-full md:w-fit' item>
-                    <MediaCard img={i.img} title={i.title} experience={i.experience} capacity={i.capacity} rating={i.rating} nav='/Manual/dj/single' />
+                    <MediaCard img={i.img} title={i.title} experience={i.experience} capacity={i.capacity} rating={i.rating} nav='/event_centers/single' />
                 </Grid>
             ))}
         </Grid>
@@ -109,4 +118,4 @@ const Mcs = () => {
   )
 }
 
-export default Mcs
+export default EventCenters

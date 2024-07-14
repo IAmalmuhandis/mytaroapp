@@ -1,23 +1,23 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import FirstPage from './pages/firstPage';
+import FirstPage from './pages/HomePage';
 import './App.css'
 import Manual_Ai from './pages/manual_ai';
-import SignUp from './pages/signUp';
-import SignIn from './pages/signIn';
+import SignUp from './pages/auth/signUp';
+import SignIn from './pages/auth/signIn';
 import Ai_assistant from './pages/Ai_assistant';
 import S from './Layout/stepper';
 import Confirm from './pages/Confirm';
-import EventCenters from './pages/EventCenters';
+import EventCenters from './pages/eventCenter/EventCenters';
 import Manual from './pages/manual';
-import SingleEventCenter from './pages/singleEventCenter';
+import SingleEventCenter from './pages/eventCenter/singleEventCenter';
 import HireOtherService from './pages/hireOtherService';
 import ChooseService from './pages/chooseServices';
-import Djs from './pages/dj';
-import Mcs from './pages/mc';
-import SingleDj from './pages/singleDj';
-import Caterer from './pages/caterer';
-import SingleCaterer from './pages/singleCaterer';
+import Djs from './pages/vendors/dj';
+import Mcs from './pages/vendors/mc';
+import SingleDj from './pages/vendors/singleDj';
+import Caterer from './pages/vendors/caterer';
+import SingleCaterer from './pages/vendors/singleCaterer';
 
 function App() {
   return (
