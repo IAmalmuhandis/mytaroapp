@@ -31,7 +31,7 @@ const HireOtherService = () => {
       <Back_Avater onClick={() => navigate('/event_centers/single')} />
     </div>
     <div className='w-full h-fit max-w-full mt-8 p-4 flex justify-center items-center overflow-hidden'>
-      <div className=' mt-2 lg:mt-0 w-full'>
+      <div className='mt-2 lg:mt-0 w-full'>
         <div className='flex flex-col gap-2'>
           <Typography
             fontFamily='Montserrat'
