@@ -21,20 +21,6 @@ const FirstPage = () => {
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
   const isSmallLaptop = window.innerWidth >= 900 && window.innerWidth <= 1090
 
-  // const typeSomtingStyle = {
-  //   backgroundColor: '#E7E7E7',
-  //   borderRadius: isLargeScreen ? '60px' : '20.29px',
-  //   fontWeight: '8.77px',
-  //   '& .MuiOutlinedInput-root': {
-  //     height: isLargeScreen ? '70px' : '35px', 
-  //     width: isLargeScreen ? '490px' : '194px',
-  //     fontSize: isLargeScreen ? '18px' : '12px',
-  //     '& fieldset': {
-  //       border: 'none', 
-  //     },
-  //   },
-  // }
-
   const onWeddingClick = () =>{
     navigate('/choose')
   }

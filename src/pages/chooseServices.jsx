@@ -25,8 +25,8 @@ const ChooseService = () => {
     <div className='w-full relative top-0 px-5'>
       <Back_Avater onClick={() => navigate('/Manual/hire_other_service')} />
     </div>
-    <div className='w-full h-screen max-w-full mt-8 p-4 flex justify-center items-center overflow-hidden'>
-      <div className='-mt-14 w-full'>
+    <div className='w-full h-fit max-w-full mt-8 p-4 flex justify-center items-center overflow-hidden'>
+      <div className='mt-2 lg:mt-0 w-full'>
         <div className='flex flex-col gap-2'>
           <Typography
             fontFamily='Montserrat'
