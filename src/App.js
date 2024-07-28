@@ -18,6 +18,8 @@ import Mcs from './pages/vendors/mc';
 import SingleDj from './pages/vendors/singleDj';
 import Caterer from './pages/vendors/caterer';
 import SingleCaterer from './pages/vendors/singleCaterer';
+import PaymentMethod from './pages/paymentMethod';
+import CardPayment from './pages/cardPayment';
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
         <Route path='/vendor/dj' element={<Djs />} />
         <Route path='/vendor/mc' element={<Mcs />} />
         <Route path='/vendor/caterer' element={<Caterer />} />
+        <Route path='/paymentMethod' element={<PaymentMethod />} />
+        <Route path='/cardPayment' element={<CardPayment />} />
       </Routes>
     </BrowserRouter>
   </>

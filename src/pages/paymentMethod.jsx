@@ -3,14 +3,14 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Back_Avater from '../component/topNavigation/Back_Avater'
 import { Stack, Typography } from '@mui/material';
-import { ReactComponent as Illustration } from '../assets/svg/Catering service-bro 1.svg';
+import { ReactComponent as Illustration } from '../assets/svg/Mystery box-pana.svg';
 import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import BlueBtn from '../component/buttons/blueBtn';
 
-const HireOtherService = () => {
+const PaymentMethod = () => {
   const navigate = useNavigate()
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.up('sm'))
@@ -18,24 +18,20 @@ const HireOtherService = () => {
   const isDesktopScreen = useMediaQuery(theme.breakpoints.up('lg'));
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
 
-  const handleYesClick = () =>{
-    navigate('/Manual/hire_other_service/choose_service')
-  }
-
-  const handleNoClick = () =>{
-    navigate('/paymentMethod')
+  const handleCardPaymentClick = () =>{
+    navigate('/cardPayment')
   }
 
   return (
     <>
     <Helmet>
-      <title>Want To Hire Other Services?</title>
+      <title>Card Payment</title>
     </Helmet>
     <div className='w-full relative px-5 top-0'>
-      <Back_Avater onClick={() => navigate('/event_centers/single')} />
+      <Back_Avater onClick={() => navigate('/Manual/hire_other_service/choose_service')} />
     </div>
     <div className='w-full h-fit max-w-full mt-8 p-4 flex justify-center items-center overflow-hidden'>
-      <div className=' mt-2 lg:mt-0 w-full'>
+      <div className='mt-2 lg:mt-0 w-full'>
         <div className='flex flex-col gap-2'>
           <Typography
             fontFamily='Montserrat'
@@ -51,14 +47,14 @@ const HireOtherService = () => {
             <Arrow width={isLargeScreen ? '193px' : '112px'} height={isLargeScreen ? '37px' : '23px'}/>
           </div>
         </div>
-        <div className='w-full flex flex-col lg:flex-row-reverse md:gap-0 justify-around items-center px-5'>
+        <div className='w-full flex flex-col gap-10 lg:flex-row-reverse md:gap-0 justify-around items-center px-5'>
             <div>
                <Illustration width={isLargeScreen ? 600 : 281} height={isLargeScreen ? 470 : 270} />
             </div>
             <div>
-              <Stack className='gap-2 md:gap-5'>
-                <BlueBtn title='Yes' onClick={handleYesClick} />
-                <BlueBtn title='No' onClick={handleNoClick} />
+              <Stack className='gap-3 md:gap-5'>
+                <BlueBtn title='Card Payment' onClick={handleCardPaymentClick} />
+                <BlueBtn title='Bank Transfer' />
               </Stack>
             </div>
         </div>
@@ -68,4 +64,4 @@ const HireOtherService = () => {
   )
 }
 
-export default HireOtherService
+export default PaymentMethod
