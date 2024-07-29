@@ -20,6 +20,7 @@ import Caterer from './pages/vendors/caterer';
 import SingleCaterer from './pages/vendors/singleCaterer';
 import PaymentMethod from './pages/paymentMethod';
 import CardPayment from './pages/cardPayment';
+import OtpVerification from './pages/otpVerification';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
         <Route path='/vendor/caterer' element={<Caterer />} />
         <Route path='/paymentMethod' element={<PaymentMethod />} />
         <Route path='/cardPayment' element={<CardPayment />} />
+        <Route path='/otpVerification' element={<OtpVerification />} />
       </Routes>
     </BrowserRouter>
   </>

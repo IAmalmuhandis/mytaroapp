@@ -28,7 +28,7 @@ const PaymentMethod = () => {
       <title>Card Payment</title>
     </Helmet>
     <div className='w-full relative px-5 top-0'>
-      <Back_Avater onClick={() => navigate('/Manual/hire_other_service/choose_service')} />
+      <Back_Avater onClick={() => navigate('/Manual/hire_other_service')} />
     </div>
     <div className='w-full h-fit max-w-full mt-8 p-4 flex justify-center items-center overflow-hidden'>
       <div className='mt-2 lg:mt-0 w-full'>
@@ -41,7 +41,7 @@ const PaymentMethod = () => {
             textAlign='center'
             mt={3}
             lineHeight={{xl: 1, lg: 1, md: 2, sm: 2, xs: 2}}
-            >Are You Interested In Hiring Other Services?
+            >Please Select Payment Method
           </Typography>
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3px'}}>
             <Arrow width={isLargeScreen ? '193px' : '112px'} height={isLargeScreen ? '37px' : '23px'}/>

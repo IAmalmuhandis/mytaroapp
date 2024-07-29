@@ -8,7 +8,6 @@ import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import BlueBtn from '../component/buttons/blueBtn';
 import { NigeriaNaira } from '../utils/helpers';
 import ContinueBtn from '../component/buttons/continueBtn';
 
@@ -19,14 +18,6 @@ const CardPayment = () => {
   const isLaptopScreen = useMediaQuery(theme.breakpoints.up('md'));
   const isDesktopScreen = useMediaQuery(theme.breakpoints.up('lg'));
   const isLargeScreen = isTablet || isLaptopScreen || isDesktopScreen
-
-  const handleYesClick = () =>{
-    navigate('/Manual/hire_other_service/choose_service')
-  }
-
-  const handleNoClick = () =>{
-    navigate('/paymentMethod')
-  }
 
   return (
     <>
@@ -57,7 +48,7 @@ const CardPayment = () => {
               </div>
               <TextField className='w-full' id="cardNumber" label="Card Pin" variant="standard" />
               <div className='w-full flex justify-center items-center mt-4'>
-                <ContinueBtn />
+                <ContinueBtn onClick={() => navigate('/otpVerification')} />
               </div>
             </div>
         </div>
