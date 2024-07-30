@@ -22,6 +22,7 @@ import PaymentMethod from './pages/paymentMethod';
 import CardPayment from './pages/cardPayment';
 import OtpVerification from './pages/otpVerification';
 import SuccessfullPage from './pages/successfulPage';
+import BankTransfer from './pages/bankTransfer';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
         <Route path='/cardPayment' element={<CardPayment />} />
         <Route path='/otpVerification' element={<OtpVerification />} />
         <Route path='/successfull' element={<SuccessfullPage />} />
+        <Route path='/bankTransfer' element={<BankTransfer />} />
       </Routes>
     </BrowserRouter>
   </>

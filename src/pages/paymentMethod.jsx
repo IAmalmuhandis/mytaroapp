@@ -22,6 +22,10 @@ const PaymentMethod = () => {
     navigate('/cardPayment')
   }
 
+  const handleBankTransferClick = () =>{
+    navigate('/bankTransfer')
+  }
+
   return (
     <>
     <Helmet>
@@ -54,7 +58,7 @@ const PaymentMethod = () => {
             <div>
               <Stack className='gap-3 md:gap-5'>
                 <BlueBtn title='Card Payment' onClick={handleCardPaymentClick} />
-                <BlueBtn title='Bank Transfer' />
+                <BlueBtn title='Bank Transfer' onClick={handleBankTransferClick} />
               </Stack>
             </div>
         </div>
