@@ -2,7 +2,7 @@ import React from 'react'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Back_Avater from '../component/topNavigation/Back_Avater'
-import { Stack, TextField, Typography } from '@mui/material';
+import { TextField } from '@mui/material';
 import { ReactComponent as Illustration } from '../assets/svg/Payment Information-cuate.svg';
 import { blue } from '../utils/colors';
 import { ReactComponent as Arrow } from '../assets/svg/Arrow.svg';

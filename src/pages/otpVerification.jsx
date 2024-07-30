@@ -39,7 +39,7 @@ const OtpVerification = () => {
             <input type='number' style={{backgroundColor: grey, outlineColor: blue, color: blue}} className='h-10 md:h-20 w-[60%] rounded-full lg:text-2xl tracking-widest lg:p-10 md:p-8 p-8' />
         </div>
         <div className='flex mt-5 items-center justify-center'>
-            <ContinueBtn />
+            <ContinueBtn onClick={() => navigate('/successfull')} />
         </div>
       </div>
     </div>
