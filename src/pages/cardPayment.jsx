@@ -27,7 +27,7 @@ const CardPayment = () => {
     <div className='w-full relative px-5 top-0'>
       <Back_Avater onClick={() => navigate('/paymentMethod')} />
     </div>
-    <div className='w-full h-fit max-w-full mt-0 p-4 flex justify-center items-center overflow-hidden'>
+    <div className='w-full h-[80vh] lg:h-fit max-w-full mt-0 p-4 flex justify-center items-center overflow-hidden'>
       <div className=' mt-2 lg:mt-0 w-full'>
         <div className='flex flex-col gap-2'>
           <p style={{color:blue}} className='font-[Montserrat] font-[800] text-center mt-1 text-3xl md:text-4xl lg:text-5xl'>Add Debit Card</p>
@@ -47,7 +47,7 @@ const CardPayment = () => {
                 <TextField className='w-full basis-1/2' id="cvv" label="CVV" variant="standard" />
               </div>
               <TextField className='w-full' id="cardNumber" label="Card Pin" variant="standard" />
-              <div className='w-full flex justify-center items-center mt-4'>
+              <div className='w-full flex justify-center items-center mt-10 lg:mt-4'>
                 <ContinueBtn onClick={() => navigate('/otpVerification')} />
               </div>
             </div>
