@@ -1,59 +1,62 @@
-import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css';
+import PageLoading from './component/loading/pageLoading';
 import FirstPage from './pages/HomePage';
-import './App.css'
-import Manual_Ai from './pages/manual_ai';
-import SignUp from './pages/auth/signUp';
-import SignIn from './pages/auth/signIn';
-import Ai_assistant from './pages/Ai_assistant';
-import S from './Layout/stepper';
-import Confirm from './pages/Confirm';
-import EventCenters from './pages/eventCenter/EventCenters';
-import Manual from './pages/manual';
-import SingleEventCenter from './pages/eventCenter/singleEventCenter';
-import HireOtherService from './pages/hireOtherService';
-import ChooseService from './pages/chooseServices';
-import Djs from './pages/vendors/dj';
-import Mcs from './pages/vendors/mc';
-import SingleDj from './pages/vendors/singleDj';
-import Caterer from './pages/vendors/caterer';
-import SingleCaterer from './pages/vendors/singleCaterer';
-import PaymentMethod from './pages/paymentMethod';
-import CardPayment from './pages/cardPayment';
-import OtpVerification from './pages/otpVerification';
-import SuccessfullPage from './pages/successfulPage';
-import BankTransfer from './pages/bankTransfer';
+// Lazy import of components
+//const FirstPage = lazy(() => import('./pages/HomePage'));
+const Manual_Ai = lazy(() => import('./pages/manual_ai'));
+const SignUp = lazy(() => import('./pages/auth/signUp'));
+const SignIn = lazy(() => import('./pages/auth/signIn'));
+const Ai_assistant = lazy(() => import('./pages/Ai_assistant'));
+const S = lazy(() => import('./Layout/stepper'));
+const Confirm = lazy(() => import('./pages/Confirm'));
+const EventCenters = lazy(() => import('./pages/eventCenter/EventCenters'));
+const Manual = lazy(() => import('./pages/manual'));
+const SingleEventCenter = lazy(() => import('./pages/eventCenter/singleEventCenter'));
+const HireOtherService = lazy(() => import('./pages/hireOtherService'));
+const ChooseService = lazy(() => import('./pages/chooseServices'));
+const Djs = lazy(() => import('./pages/vendors/dj'));
+const Mcs = lazy(() => import('./pages/vendors/mc'));
+const SingleDj = lazy(() => import('./pages/vendors/singleDj'));
+const Caterer = lazy(() => import('./pages/vendors/caterer'));
+const SingleCaterer = lazy(() => import('./pages/vendors/singleCaterer'));
+const PaymentMethod = lazy(() => import('./pages/paymentMethod'));
+const CardPayment = lazy(() => import('./pages/cardPayment'));
+const OtpVerification = lazy(() => import('./pages/otpVerification'));
+const SuccessfullPage = lazy(() => import('./pages/successfulPage'));
+const BankTransfer = lazy(() => import('./pages/bankTransfer'));
 
 function App() {
   return (
-    <>
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<FirstPage />} />
-        <Route path='/choose' element={<Manual_Ai />} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/signin' element={<SignIn />} />
-        <Route path='/AiAssistant' element={<Ai_assistant />} />
-        <Route path='/AiAssistant/stepper' element={<S />} />
-        <Route path='/AiAssistant/Confirm' element={<Confirm />} />
-        <Route path='/Manual' element={<Manual />} />
-        <Route path='/event_centers' element={<EventCenters />} />
-        <Route path='/event_centers/single' element={<SingleEventCenter />} />
-        <Route path='/vendor/dj/single' element={<SingleDj />} />
-        <Route path='/vendor/caterer/single' element={<SingleCaterer />} />
-        <Route path='/Manual/hire_other_service' element={<HireOtherService />} />
-        <Route path='/Manual/hire_other_service/choose_service' element={<ChooseService />} />
-        <Route path='/vendor/dj' element={<Djs />} />
-        <Route path='/vendor/mc' element={<Mcs />} />
-        <Route path='/vendor/caterer' element={<Caterer />} />
-        <Route path='/paymentMethod' element={<PaymentMethod />} />
-        <Route path='/cardPayment' element={<CardPayment />} />
-        <Route path='/otpVerification' element={<OtpVerification />} />
-        <Route path='/successfull' element={<SuccessfullPage />} />
-        <Route path='/bankTransfer' element={<BankTransfer />} />
-      </Routes>
+      <Suspense fallback={<PageLoading />}>
+        <Routes>
+          <Route path="/" element={<FirstPage />} />
+          <Route path="/choose" element={<Manual_Ai />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/AiAssistant" element={<Ai_assistant />} />
+          <Route path="/AiAssistant/stepper" element={<S />} />
+          <Route path="/AiAssistant/Confirm" element={<Confirm />} />
+          <Route path="/Manual" element={<Manual />} />
+          <Route path="/event_centers" element={<EventCenters />} />
+          <Route path="/event_centers/single" element={<SingleEventCenter />} />
+          <Route path="/vendor/dj/single" element={<SingleDj />} />
+          <Route path="/vendor/caterer/single" element={<SingleCaterer />} />
+          <Route path="/Manual/hire_other_service" element={<HireOtherService />} />
+          <Route path="/Manual/hire_other_service/choose_service" element={<ChooseService />} />
+          <Route path="/vendor/dj" element={<Djs />} />
+          <Route path="/vendor/mc" element={<Mcs />} />
+          <Route path="/vendor/caterer" element={<Caterer />} />
+          <Route path="/paymentMethod" element={<PaymentMethod />} />
+          <Route path="/cardPayment" element={<CardPayment />} />
+          <Route path="/otpVerification" element={<OtpVerification />} />
+          <Route path="/successfull" element={<SuccessfullPage />} />
+          <Route path="/bankTransfer" element={<BankTransfer />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
-  </>
   );
 }
 
