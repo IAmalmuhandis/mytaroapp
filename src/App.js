@@ -7,6 +7,9 @@ import SignUp from './pages/auth/signUp'
 import Ai_assistant from './pages/Ai_assistant'
 import Manual from './pages/manual'
 import ChooseService from './pages/chooseServices'
+import PageLoading2 from './component/loading/pageLoading2';
+import PageLoading3 from './component/loading/pageLoading3';
+import PageLoading4 from './component/loading/pageLoading4';
 // Lazy import of components
 const FirstPage = lazy(() => import('./pages/HomePage'));
 //const Manual_Ai = lazy(() => import('./pages/manual_ai'));
