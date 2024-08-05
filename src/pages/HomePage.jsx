@@ -28,7 +28,7 @@ const FirstPage = () => {
   return (
     <>
     <Helmet>
-      <title>MyTaroApp: Plan your dream event with few clicks</title>
+      <title>MyTaroApp: Plan your dream event with just a few clicks</title>
     </Helmet>
     <Container className='pb-3 flex flex-col justify-between' maxWidth="none">
       <Logo_Btn />
