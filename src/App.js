@@ -2,24 +2,24 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import PageLoading from './component/loading/pageLoading';
+import Manual_Ai from './pages/manual_ai'
+import SignUp from './pages/auth/signUp'
+import Ai_assistant from './pages/Ai_assistant'
+import Manual from './pages/manual'
+import ChooseService from './pages/chooseServices'
 // Lazy import of components
 const FirstPage = lazy(() => import('./pages/HomePage'));
 //const Manual_Ai = lazy(() => import('./pages/manual_ai'));
-import Manual_Ai from './pages/manual_ai'
 //const SignUp = lazy(() => import('./pages/auth/signUp'));
-import SignUp from './pages/auth/signUp'
 const SignIn = lazy(() => import('./pages/auth/signIn'));
 //const Ai_assistant = lazy(() => import('./pages/Ai_assistant'));
-import Ai_assistant from './pages/Ai_assistant'
 const S = lazy(() => import('./Layout/stepper'));
 const Confirm = lazy(() => import('./pages/Confirm'));
 const EventCenters = lazy(() => import('./pages/eventCenter/EventCenters'));
 //const Manual = lazy(() => import('./pages/manual'));
-import Manual from './pages/manual'
 const SingleEventCenter = lazy(() => import('./pages/eventCenter/singleEventCenter'));
 const HireOtherService = lazy(() => import('./pages/hireOtherService'));
 //const ChooseService = lazy(() => import('./pages/chooseServices'));
-import ChooseService from './pages/chooseServices'
 const Djs = lazy(() => import('./pages/vendors/dj'));
 const Mcs = lazy(() => import('./pages/vendors/mc'));
 const SingleDj = lazy(() => import('./pages/vendors/singleDj'));
