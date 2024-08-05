@@ -4,7 +4,6 @@ import './App.css';
 import PageLoading from './component/loading/pageLoading';
 import FirstPage from './pages/HomePage';
 // Lazy import of components
-//const FirstPage = lazy(() => import('./pages/HomePage'));
 const Manual_Ai = lazy(() => import('./pages/manual_ai'));
 const SignUp = lazy(() => import('./pages/auth/signUp'));
 const SignIn = lazy(() => import('./pages/auth/signIn'));
