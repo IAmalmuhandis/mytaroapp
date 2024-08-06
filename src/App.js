@@ -7,6 +7,7 @@ import SignUp from './pages/auth/signUp'
 import Ai_assistant from './pages/Ai_assistant'
 import Manual from './pages/manual'
 import ChooseService from './pages/chooseServices'
+import PaymentMethod from './pages/paymentMethod';
 import PageLoading2 from './component/loading/pageLoading2';
 import PageLoading3 from './component/loading/pageLoading3';
 import PageLoading4 from './component/loading/pageLoading4';
@@ -28,7 +29,7 @@ const Mcs = lazy(() => import('./pages/vendors/mc'));
 const SingleDj = lazy(() => import('./pages/vendors/singleDj'));
 const Caterer = lazy(() => import('./pages/vendors/caterer'));
 const SingleCaterer = lazy(() => import('./pages/vendors/singleCaterer'));
-const PaymentMethod = lazy(() => import('./pages/paymentMethod'));
+// const PaymentMethod = lazy(() => import('./pages/paymentMethod'));
 const CardPayment = lazy(() => import('./pages/cardPayment'));
 const OtpVerification = lazy(() => import('./pages/otpVerification'));
 const SuccessfullPage = lazy(() => import('./pages/successfulPage'));

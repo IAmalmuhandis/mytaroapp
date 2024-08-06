@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 import '../assets/css/btnAnimation.css';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Confetti from 'react-confetti'; 
-import { useWindowSize } from 'react-use'; 
+import { useWindowSize,  } from 'react-use'; 
 
 const Btn = (props) => {
   return (
